@@ -23,7 +23,7 @@ const WhySection = () => {
           <div className="col">
             <div className={styles.whySectionCard}>
               <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-2 text-md-start text-center">
                   <img src={cardIcon1} alt="card-icon-1" />
                 </div>
                 <div className="col-md">
@@ -40,7 +40,7 @@ const WhySection = () => {
           <div className="col">
             <div className={styles.whySectionCard}>
               <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-2 text-md-start text-center ">
                   <img src={cardIcon2} alt="card-icon-2" />
                 </div>
                 <div className="col-md">
@@ -57,7 +57,7 @@ const WhySection = () => {
           <div className="col">
             <div className={styles.whySectionCard}>
               <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-2 text-md-start text-center">
                   <img src={cardIcon3} alt="card-icon-3" />
                 </div>
                 <div className="col-md">
@@ -76,7 +76,7 @@ const WhySection = () => {
           <div className="col">
             <div className={styles.whySectionCard}>
               <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-2 text-md-start text-center">
                   <img src={cardIcon4} alt="card-icon-4" />
                 </div>
                 <div className="col-md">
@@ -95,7 +95,7 @@ const WhySection = () => {
           <div className="col">
             <div className={styles.whySectionCard}>
               <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-2 text-md-start text-center">
                   <img src={cardIcon5} alt="card-icon-5" />
                 </div>
                 <div className="col-md">
@@ -115,7 +115,7 @@ const WhySection = () => {
           <div className="col">
             <div className={styles.whySectionCard}>
               <div className="row">
-                <div className="col-md-2">
+                <div className="col-md-2 text-md-start text-center">
                   <img src={cardIcon6} alt="card-icon-6" />
                 </div>
                 <div className="col-md">
