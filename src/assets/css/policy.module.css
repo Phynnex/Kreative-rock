@@ -1,0 +1,32 @@
+.policyBg {
+  background-color: #f4f9fe;
+  width: 100%;
+  padding: 100px 0;
+}
+
+.policySection {
+  margin-top: 50px;
+}
+
+.policyHeader,
+.policySection h2 {
+  font-size: 36px;
+  color: #263238;
+  margin-top: 40px;
+}
+
+.policySection p {
+  font-size: 25px;
+  color: #263238;
+}
+
+@media screen and (max-width: 768px) {
+  .policyHeader,
+  .policySection h2 {
+    font-size: 24px;
+  }
+
+  .policySection p {
+    font-size: 14px;
+  }
+}

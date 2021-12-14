@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+body {
+  font-family: "Lora", serif !important;
+  /* font-size: 14px !important; */
+}
+
+:root {
+  --pri-color: #ff7900;
+  --sec-color: #00cca7;
+  --bg-color: #f4f9fe;
+}
+
+.pri-color {
+  color: var(--pri-color);
+}
+
+.sec-color {
+  color: var(--sec-color);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+input,
+select,
+textarea {
+  border: none;
+}
+
+.pri-btn {
+  padding: 10px 20px;
+  color: #fff !important;
+  background-color: var(--pri-color);
+  border-radius: 25px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+nav {
+  height: 83px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  z-index: 1;
+}
+
+.logo {
+  margin-top: 10px;
+  width: 200px;
+}
+
+.menu-items {
+  margin-top: 25px;
+}
+
+.menu-items > li {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.menu-items a,
+.menu-items li > button,
+.mobile-nav a {
+  color: #212121;
+}
+
+.menu-items a:hover,
+.menu-items li > button:hover,
+.mobile-nav a:hover,
+.mobile-nav li > button:hover {
+  color: var(--sec-color);
+}
+
+.activeNavMenu {
+  color: var(--sec-color) !important;
+}
+
+.mobile-nav {
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  top: 83px;
+  background-color: #fff;
+}
+
+.mobile-nav .dropdown-item:hover,
+.menu-items .dropdown-item:hover {
+  background-color: transparent !important;
+}
+
+.space-before-footer {
+  width: 100%;
+  height: 200px;
+  background: #f9fcff;
+}
+
+footer {
+  padding: 300px 0 20px;
+  background: var(--bg-color);
+  background-image: url(./assets/images/footer-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+}
+
+.footer-content {
+  margin-top: 150px;
+}
+
+.subscribe-wrapper {
+  max-width: 400px;
+  text-align: center;
+}
+
+.subscribe-box {
+  max-width: 800px;
+  border-radius: 22px;
+  background: #00cca7;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.subscribe-input-box {
+  max-width: 281px;
+  height: 40px;
+  border: 0;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.subscribe-btn {
+  padding: 8px 20px;
+  color: #fff !important;
+  background-color: var(--pri-color);
+  border: none;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer-link-column {
+  max-width: 200px;
+}
+
+.copyright-bar {
+  background-color: var(--sec-color);
+}
+@media screen and (max-width: 768px) {
+  footer {
+    background-color: #00a386;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .menu-items > li {
+    font-size: 18px;
+  }
+
+  .menu-items {
+    margin-top: 27px;
+  }
+}

@@ -1,0 +1,204 @@
+.DMPageHero {
+  background-color: #fafafa;
+  padding: 200px 0 100px;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../images/Ellipse\ 262.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
+
+.DMPageHero header {
+  max-width: 717px;
+}
+
+.DMPageHero h1 {
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.DMPageHero p {
+  font-size: 18px;
+  max-width: 580px;
+}
+
+.DMPageHeroCircle {
+  height: 400px;
+  width: 400px;
+  left: -206px;
+  top: 193px;
+  border-radius: 50%;
+  position: absolute;
+  background: #e7fffb;
+}
+
+/* styling for all section in digital marketing page */
+section {
+  padding: 100px o;
+}
+
+section header > h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.whySection,
+.whatWeCanDoSection,
+.whyUseUsSection,
+.callbackFormSection {
+  background-color: #f9fcff;
+  border-bottom: 1px solid #cfcfcf;
+  position: relative;
+  overflow: hidden;
+}
+
+/* why section */
+
+.whySectionHeaderBorder {
+  height: 4px;
+  max-width: 335px;
+  border-radius: 2px;
+  background-color: var(--sec-color);
+}
+
+.whySectionContent {
+  max-width: 957px;
+  text-align: center;
+  font-size: 18px;
+  color: #263238;
+}
+
+/* what we can do section */
+.whatWeCanDoCard {
+  min-height: 457px;
+  max-width: 373px;
+  border-radius: 33px;
+  border: 2px solid #cfcfcf;
+  background-color: #fff;
+}
+
+.whatWeCanDoCardIconWrapper {
+  height: 76px;
+  max-width: 76px;
+  border-radius: 50%;
+  border: 2px solid #cfcfcf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #cfcfcf;
+}
+
+.whatWeCanDoCardHeader {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.whatWeCanDoCardContent {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.whatWeCanDoCard:hover {
+  border-color: var(--pri-color);
+}
+
+.whatWeCanDoCard:hover .whatWeCanDoCardIconWrapper,
+.whatWeCanDoCard:hover path {
+  border-color: var(--pri-color);
+  color: var(--pri-color);
+  fill: var(--pri-color) !important;
+}
+
+/* why use us section */
+
+.whyUseUsHeaderBorder {
+  height: 4px;
+  max-width: 157px;
+  background-color: var(--sec-color);
+}
+
+.whyUseUsCard {
+  min-height: 302px;
+  max-width: 682px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+/* callback form section */
+
+.callbackFormSectionHeaderBorder {
+  height: 4px;
+  max-width: 250px;
+  background-color: var(--sec-color);
+}
+
+.callbackForm {
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: #dbf7f7;
+}
+
+.callbackForm label {
+  font-size: 20px;
+}
+
+.callbackInputBox {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+.callbackTextarea {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 769px) {
+  .DMPageHero h1 {
+    font-size: 34px;
+  }
+
+  .DMPageHero {
+    background-position: left top;
+  }
+
+  section header > h2 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .whyUseUsCardText,
+  .whySectionContent,
+  .whatWeCanDoCardContent {
+    font-size: 16px;
+  }
+
+  .callbackForm {
+    padding: 50px 0;
+  }
+
+  .callbackForm label {
+    font-size: 20px;
+  }
+
+  .callbackTextarea,
+  .callbackInputBox {
+    font-size: 18px;
+  }
+}

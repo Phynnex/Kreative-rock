@@ -1,0 +1,157 @@
+/* home hero */
+.homeHero {
+  width: 100%;
+  position: relative;
+  /* top: 86px; */
+}
+.heroBoxTextDiv {
+  padding-top: 150px;
+  height: 400px;
+  background-color: #fefefe;
+}
+
+.heroText {
+  max-width: 550px;
+}
+
+.heroImg {
+  width: 400px;
+  height: 450px;
+}
+
+.heroBtnDiv {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  background-color: var(--sec-color);
+}
+
+.homeHero h1 {
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.homeHero p {
+  font-size: 24px;
+}
+
+section {
+  padding: 100px 0;
+}
+.whySection,
+.servicesSection,
+.clientsSection {
+  background-color: #f9fcff;
+}
+
+section header {
+  max-width: 610px;
+  margin: auto;
+}
+
+section header > h2 {
+  font-size: 30px;
+}
+
+section header > p {
+  font-size: 25px;
+  color: #564a4a;
+}
+
+.sectionHeaderBorder {
+  height: 3px;
+  max-width: 416px;
+  border-radius: 6px;
+  margin: auto;
+  background-color: var(--sec-color);
+}
+
+.whySectionCard {
+  max-width: 426px;
+  min-height: 232px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0px 4px 100px 7px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.whySectionCard h5 {
+  font-size: 20px;
+}
+
+.whySectionCard p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* services section */
+.servicesCard {
+  max-width: 612px;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  color: #564a4a;
+}
+
+.servicesCard:hover {
+  background-color: #fff;
+  border: 2px solid var(--pri-color);
+}
+
+.servicesSectionBorder,
+.enquirySectionBorder {
+  height: 3px;
+  max-width: 205px;
+  border-radius: 6px;
+  margin: auto;
+  background-color: var(--sec-color);
+}
+
+.clientSectionBorder {
+  height: 3px;
+  max-width: 175px;
+  border-radius: 6px;
+  margin: auto;
+  background-color: var(--sec-color);
+}
+
+/* enquiry form section */
+.enquiryFormSection {
+  background: #dbf7f7;
+}
+
+.enquiryForm label {
+  font-size: 20px;
+}
+
+.enquiryInputBox {
+  height: 50px;
+  border: none;
+  font-size: 14px;
+}
+
+.enquiryInputBox:focus,
+.enquiryTextarea:focus {
+  outline: none;
+}
+
+.enquiryTextarea {
+  height: 200px;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .homeHero h1 {
+    font-size: 34px;
+  }
+
+  section header > p {
+    font-size: 18px;
+  }
+
+  .whySectionCard p {
+    font-size: 14px;
+  }
+}

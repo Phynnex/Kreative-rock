@@ -1,0 +1,41 @@
+.notificationWrapper {
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.notificationBox {
+  max-width: 978px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px 0px #272d3b33;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 50px auto;
+}
+
+.notificationBoxText {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.notificationHeader {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.messageWrapper {
+  font-size: 14px;
+}
+
+.message {
+  max-width: 778px;
+}
+
+@media screen and (max-width: 768px) {
+  .notificationHeader {
+    font-size: 18px;
+  }
+}

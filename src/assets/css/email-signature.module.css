@@ -1,0 +1,200 @@
+.hero {
+  width: 100%;
+  padding: 200px 0 100px;
+  background-color: #f0f7fc;
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.heroH1 {
+  font-size: 60px;
+}
+
+.heroText {
+  font-size: 24px;
+}
+
+section {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #f4f9fe;
+}
+
+.sectionHeader {
+  max-width: 850px;
+  text-align: center;
+  margin: auto;
+}
+
+.sectionHeader > h2 {
+  font-size: 30px;
+}
+
+.sectionHeader > p {
+  font-size: 20px;
+}
+/* section two */
+
+.sectionTwo {
+  width: 100%;
+  padding: 100px 0;
+  background-color: #f4f9fe;
+}
+
+.sectionTwoHeaderBorder {
+  height: 3px;
+  max-width: 544px;
+  border-radius: 6px;
+  background-color: var(--sec-color);
+  margin: auto;
+}
+
+.sectionTwoCard {
+  min-height: 216px;
+  max-width: 325px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 100px 7px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sectionTwoCardHeader {
+  font-size: 20px;
+  font-weight: 700;
+  color: #263238;
+}
+
+/* prcing section */
+.pricingHeaderBorder {
+  width: 114px;
+  height: 2px;
+  background: var(--sec-color);
+  margin: auto;
+}
+
+.pricingTable,
+.pricingTable td,
+.pricingTable th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.pricingTable td {
+  padding: 20px;
+  width: 150px;
+}
+.pricingTable th {
+  height: 150px;
+}
+
+.pricingToggleSwitch {
+  position: relative;
+  display: inline-block;
+  width: 91px;
+  height: 43px;
+}
+
+.pricingToggleSwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pricingToggleSlider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: 1px solid var(--sec-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.pricingToggleSlider:before {
+  position: absolute;
+  content: "";
+  height: 38.43px;
+  width: 38.43px;
+  left: 2px;
+  bottom: 1px;
+  background-color: var(--pri-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.pricingToggleSwitch input:checked + .pricingToggleSlider:before {
+  -webkit-transform: translateX(45.43px);
+  -ms-transform: translateX(45.43px);
+  transform: translateX(45.43px);
+}
+
+.pricingToggleRound {
+  border-radius: 74px;
+}
+
+.pricingToggleRound:before {
+  border-radius: 50%;
+}
+
+/* email signature deployment */
+.deploymentCard {
+  max-width: 376px;
+  min-height: 250px;
+  background: #ffffff;
+  box-shadow: 5px 20px 50px rgba(74, 153, 211, 0.2);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.deploymentCardText {
+  font-size: 24px;
+}
+
+.deploymentCardImg {
+  width: 140px;
+}
+
+@media screen and (max-width: 768px) {
+  .heroH1 {
+    font-size: 40px;
+  }
+
+  .sectionHeader > h2 {
+    font-size: 24px;
+  }
+
+  .sectionHeader > p {
+    font-size: 16px;
+  }
+
+  .pricingTable,
+  .pricingTable td,
+  .pricingTable th {
+    font-size: 16px;
+  }
+
+  .pricingTableImg {
+    width: 40px;
+  }
+
+  .deploymentCardImg {
+    width: 100px;
+  }
+
+  .deploymentCardText {
+    font-size: 16px;
+  }
+}

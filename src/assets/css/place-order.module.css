@@ -1,0 +1,12 @@
+.placeOrderWrapper {
+  padding: 100px 0 100px;
+  background-color: var(--bg-color);
+}
+
+.placeOrderHeaderBorder {
+  height: 2px;
+  max-width: 170px;
+  border-radius: 10px;
+  background-color: var(--sec-color);
+  margin: auto;
+}

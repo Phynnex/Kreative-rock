@@ -1,0 +1,48 @@
+.hero-img {
+	width: 100%;
+	margin-top: -12px;
+}
+
+.banner-text {
+	text-align: center;
+}
+.CardGrid {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	grid-gap: 25px;
+	place-items: center;
+	margin: 1rem 0;
+}
+.free-email-img {
+	width: 100%;
+	height: inherit;
+}
+.div-email-temp {
+	width: 100%;
+	cursor: pointer;
+}
+.div-email-temp:hover {
+	transform: scale(1, 1);
+	cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+	.hero-img {
+		max-width: 100%;
+		height: auto;
+		margin-top: 10px;
+	}
+	.free-email-img {
+		width: 110%;
+		height: inherit;
+	}
+	.CardGrid {
+		width: 90%;
+		display: grid;
+		grid-template-columns: repeat(1, auto);
+		grid-gap: 15px;
+	}
+	.div-email-temp {
+		width: 100%;
+	}
+}
