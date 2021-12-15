@@ -22,7 +22,7 @@ const Clients = () => {
           </p>
         </header>
 
-        <div className="row row-cols-md-3 row-cols-1 gy-3 mt-5">
+        <div className="row row-cols-md-3 row-cols-1 gy-3 mt-5 align-items-center">
           <div className="col">
             <div className="text-center">
               <img className="img-fluid" src={Logo1} alt="" />
