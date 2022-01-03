@@ -36,6 +36,31 @@
   font-size: 24px;
 }
 
+.secondHero {
+  background: linear-gradient(to right, #fff 80%, var(--sec-color) 20%);
+  padding-top: 150px;
+  height: 600px;
+}
+
+.thridHero {
+  height: 600px;
+  padding-top: 150px;
+  background: linear-gradient(to right, #fff 80%, #ebf6f0 20%);
+}
+
+.fourthHero {
+  height: 600px;
+  padding-top: 150px;
+  background: #ebf6f0;
+}
+
+.homeHeroCarousel [data-bs-target] {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+  border: 1px solid var(--pri-color) !important;
+}
+
 section {
   padding: 100px 0;
 }
@@ -145,6 +170,10 @@ section header > p {
 @media screen and (max-width: 768px) {
   .homeHero h1 {
     font-size: 34px;
+  }
+
+  .homeHero p {
+    font-size: 18px;
   }
 
   section header > p {
