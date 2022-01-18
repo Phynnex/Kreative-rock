@@ -9,7 +9,10 @@ const PlaceOrder = () => {
       <div className="container">
         <div className="row row-cols-3 justify-content-end">
           <div className="col-lg-1 col">
-            <Link className="btn btn-outline-warning rounded-pill" to="#">
+            <Link
+              className="btn btn-outline-warning rounded-pill"
+              to="/view-place-order"
+            >
               View
             </Link>
           </div>
