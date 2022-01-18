@@ -1,0 +1,155 @@
+.emailSignatureContainer {
+  padding: 32px 52px 128px 71px;
+}
+
+.emailSignatureh2 {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+
+.emailSignatureh3 {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+}
+
+.emailSignatureh4 {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.emailSignatureIconGreen {
+  width: 11px;
+  height: 11px;
+  background: #00cca7;
+  border-radius: 50px;
+}
+
+.emailSignatureIconOrange {
+  width: 11px;
+  height: 11px;
+  background: #ff7900;
+  border-radius: 50px;
+}
+
+input[type='text'] {
+  background: #efeaea;
+  width: 187px;
+  padding: 8px 16px 8px 16px;
+  height: 27px;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  color: #918d8d;
+}
+
+input[type='text']:focus {
+  border-color: transparent;
+  outline: none;
+}
+
+textarea {
+  background: #efeaea;
+  width: 187px;
+  padding: 8px 10px 8px 16px;
+  height: 48px;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 6px;
+  color: #918d8d;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+select {
+  background: #efeaea;
+  font-family: Lucida Calligraphy;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+  width: 192px;
+  height: 27px;
+  padding: 6px 10px 6px 14px;
+}
+
+select:focus {
+  outline: none;
+}
+
+.emailSignatureSignOffLabel {
+  width: 142px;
+  height: 70px;
+  background: #efeaea;
+  cursor: pointer;
+}
+
+.emailSignatureSignOffRadioInput {
+  display: none;
+}
+
+.emailSignatureSignOffPseudoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lucida Calligraphy;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.emailSignatureSignOffCheckedIcon {
+  display: none;
+}
+
+.emailSignatureSignOffLabel
+  input:checked
+  ~ .emailSignatureSignOffPseudoContainer {
+  border: 1px solid rgba(0, 204, 167, 0.71);
+}
+
+.emailSignatureSignOffLabel input:checked ~ .emailSignatureSignOffCheckedIcon {
+  display: block;
+  position: relative;
+  width: 11px;
+  height: 11px;
+  left: 88%;
+  bottom: 90%;
+  border-radius: 50px;
+  background: #ff7900;
+}
+
+.emailSignatureBannerCard {
+  width: 253px;
+  height: 55px;
+}
+
+.emailSignatureColorButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  margin-left: 9px;
+}
