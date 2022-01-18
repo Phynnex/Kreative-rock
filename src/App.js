@@ -18,6 +18,7 @@ import EmailSignature from './pages/EmailSignature'
 import Register from './components/sign-up/Register'
 import ReferralCode from './pages/ReferralCode'
 import PlaceOrder from './pages/PlaceOrder'
+import ViewPlaceOrder from "./pages/ViewPlaceOrder";
 import Notification from './pages/Notification'
 import EmailTemplates from "./pages/EmailTemplates";
 
@@ -126,10 +127,38 @@ function App() {
           }
         />
 
-        <Route path="/referral-code" element={<Mainlayout><ReferralCode/></Mainlayout>} />
-        <Route path="/place-order" element={<Mainlayout><PlaceOrder/></Mainlayout>} />
-        <Route path="/notification" element={<Mainlayout><Notification/></Mainlayout>} />
-
+        <Route
+          path="/referral-code"
+          element={
+            <Mainlayout>
+              <ReferralCode />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/place-order"
+          element={
+            <Mainlayout>
+              <PlaceOrder />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/view-place-order"
+          element={
+            <Mainlayout>
+              <ViewPlaceOrder />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/notification"
+          element={
+            <Mainlayout>
+              <Notification />
+            </Mainlayout>
+          }
+        />
       </Routes>
     </Router>
   );
