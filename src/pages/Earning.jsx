@@ -13,6 +13,7 @@ const Earning = () => {
       <div style={{ textAlign: "center" }}>
         <h2>Wallet</h2>
       </div>
+      <div className="earning-header"></div>
       <br />
       <br />
       <br />
@@ -39,9 +40,9 @@ const Earning = () => {
           </div>
         </div>
         <div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div className="fund-wallet-header">
             <h4>Fund Wallet</h4>
-            <button>PAY NOW</button>
+            <button className="pay-now-btn">PAY NOW</button>
           </div>
           <div
             style={{

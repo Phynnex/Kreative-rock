@@ -21,7 +21,7 @@ const Transactions = [
   },
   {
     name: "Elite Admin",
-    status: "Successful",
+    status: "Pending",
     inflow: "0",
     outflow: "0",
     date: "April 18, 2017",
@@ -30,7 +30,7 @@ const Transactions = [
   },
   {
     name: "Elite Admin",
-    status: "Successful",
+    status: "Cancelled",
     inflow: "0",
     outflow: "0",
     date: "April 18, 2017",
@@ -59,25 +59,23 @@ const TransactionTable = () => {
           {Transactions.map((row) => (
             <tr>
               <td data-label="Name">{row.name}</td>
-              <div className="status">
-                <td
-                  data-label="Status"
-                  style={{
-                    backgroundColor:
-                      (row.status === "Approved" && "#44BBA5") ||
-                      (row.status === "Pending" && "#44005E") ||
-                      (row.status === "Cancelled" && "#E94F37"),
-                  }}
-                >
-                  {row.status}
-                </td>
-              </div>
-
+              <td
+                data-label="Status"
+                className="status"
+                style={{
+                  backgroundColor:
+                    (row.status === "Successful" && "#44BBA5") ||
+                    (row.status === "Pending" && "#FF7900") ||
+                    (row.status === "Cancelled" && "#E94F37"),
+                }}
+              >
+                {row.status}
+              </td>
               <td data-label="Inflow">{row.inflow}</td>
               <td data-label="Outflow">{row.outflow}</td>
               <td data-label="Date">{row.date}</td>
               <td data-label="Withdraw">{row.withdraw}</td>
-              <td data-label="Balanc">{row.balance}</td>
+              <td data-label="Balance">{row.balance}</td>
             </tr>
           ))}
         </tbody>

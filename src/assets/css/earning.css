@@ -1,3 +1,62 @@
+.earning-header {
+  height: 3px;
+  max-width: 110px;
+  border-radius: 6px;
+  margin: auto;
+  background-color: var(--sec-color);
+}
+
+
+/* Fund Wallet Styles */
+.fund-wallet-header { 
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay-now-btn{
+  /* font-weight: bold;
+  font-size: 0.75rem;
+  background-color: #FF7900;
+  border-radius: 4px;
+  padding: 3px 10px; */
+
+  
+  width: 163px;
+  height: 39px;
+  color: white;
+  background: #FF7900;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin: -12px 12px 0px 0px;
+}
+
+.fund-wallet-container { 
+  margin: 2rem 4rem 1rem;
+}
+
+.fund-wallet-div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.fund-wallet-img-div {
+  display: flex;
+}
+
+.fund-wallet-text-div { 
+  margin-left: .5rem; 
+}
+
+.fund-wallet-text-text { 
+  margin-bottom: -.2rem; 
+}
+
+/* End of Fund Wallet Styles */
+
+
+
+/* Transaction Table Styles */
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -32,16 +91,18 @@ table th {
   text-transform: uppercase;
 }
 
-status {
+.status {
   font-weight: bold;
   font-size: 0.75rem;
   color: white;
-  background-color: grey;
-  border-radius: 8px;
-  padding: 3px 24px;
+  border-radius: 12px;
+  padding: 3px 10px;
   display: inline-block;
-  margin-left: 32px;
+  margin-left: 3rem;
+  margin-top: .5rem;
 }
+
+/* End of Transaction Table Styles */
 
 @media screen and (max-width: 600px) {
   table {

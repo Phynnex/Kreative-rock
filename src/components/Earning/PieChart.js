@@ -2,11 +2,11 @@ import React, { PureComponent } from "react";
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 const data = [
-  { name: "Group A", value: 1400 },
-  { name: "Group B", value: 800 },
+  { name: "Group A", value: 800 },
+  { name: "Group B", value: 1400 },
 ];
 
-const COLORS = ["#00CCA7", "#FF7900"];
+const COLORS = ["#FF7900","#00CCA7"];
 
 export default class Example extends PureComponent {
   render() {

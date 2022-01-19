@@ -5,20 +5,14 @@ import Wallet3 from "../../../assets/images/earning/Wallet3.png";
 const FundWallet = () => {
   return (
     <>
-      <div style={{ margin: "2rem 4rem 1rem" }}>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "2rem",
-          }}
-        >
-          <div style={{ display: "flex" }}>
+      <div className="fund-wallet-container">
+        <div className="fund-wallet-div">
+          <div className="fund-wallet-img-div">
             <div>
               <img src={Wallet1} alt="" />
             </div>
-            <div style={{ marginLeft: ".5rem" }}>
-              <p style={{ marginBottom: "-.2rem" }}>
+            <div className="fund-wallet-text-div">
+              <p className="fund-wallet-text-text">
                 Lorem ipsum dolor sit amet.
               </p>
               <p>21.01.2021 3pm</p>
@@ -28,19 +22,13 @@ const FundWallet = () => {
             <p>$25</p>
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "2rem",
-          }}
-        >
-          <div style={{ display: "flex" }}>
+        <div className="fund-wallet-div">
+          <div className="fund-wallet-img-div">
             <div>
               <img src={Wallet2} alt="" />
             </div>
-            <div style={{ marginLeft: ".5rem" }}>
-              <p style={{ marginBottom: "-.2rem" }}>
+            <div className="fund-wallet-text-div">
+              <p className="fund-wallet-text-text">
                 Lorem ipsum dolor sit amet.
               </p>
               <p>21.01.2021 3pm</p>
@@ -50,19 +38,13 @@ const FundWallet = () => {
             <p>$25</p>
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            marginBottom: "2rem",
-          }}
-        >
-          <div style={{ display: "flex" }}>
+        <div className="fund-wallet-div">
+          <div className="fund-wallet-img-div">
             <div>
               <img src={Wallet3} alt="" />
             </div>
-            <div style={{ marginLeft: ".5rem" }}>
-              <p style={{ marginBottom: "-.2rem" }}>
+            <div className="fund-wallet-text-div">
+              <p className="fund-wallet-text-text">
                 Lorem ipsum dolor sit amet.
               </p>
               <p>21.01.2021 3pm</p>
