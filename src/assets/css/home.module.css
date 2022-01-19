@@ -155,6 +155,7 @@ section header > p {
   height: 50px;
   border: none;
   font-size: 14px;
+  padding-left: 10px;
 }
 
 .enquiryInputBox:focus,
@@ -165,6 +166,7 @@ section header > p {
 .enquiryTextarea {
   height: 200px;
   border: none;
+  padding-left: 10px;
 }
 
 @media screen and (max-width: 768px) {

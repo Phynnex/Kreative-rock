@@ -20,6 +20,7 @@ import ReferralCode from './pages/ReferralCode'
 import PlaceOrder from './pages/PlaceOrder'
 import ViewPlaceOrder from "./pages/ViewPlaceOrder";
 import Notification from './pages/Notification'
+import Earning from "./pages/Earning";
 import EmailTemplates from "./pages/EmailTemplates";
 
 
@@ -156,6 +157,14 @@ function App() {
           element={
             <Mainlayout>
               <Notification />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/earning"
+          element={
+            <Mainlayout>
+              <Earning />
             </Mainlayout>
           }
         />
