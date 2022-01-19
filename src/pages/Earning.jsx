@@ -18,24 +18,10 @@ const Earning = () => {
       <br />
       <br />
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          margin: "0px 64px",
-        }}
-      >
+      <div className="wallets-container">
         <div>
           <h4>Wallet Balance</h4>
-          <div
-            style={{
-              border: "2px solid #CFCFCF",
-              background: "#fff",
-              width: "435px",
-              height: "350px",
-              borderRadius: "10px",
-            }}
-          >
+          <div className="wallet-balance-box">
             <PieChart />
           </div>
         </div>
@@ -44,15 +30,7 @@ const Earning = () => {
             <h4>Fund Wallet</h4>
             <button className="pay-now-btn">PAY NOW</button>
           </div>
-          <div
-            style={{
-              border: "2px solid #CFCFCF",
-              background: "#fff",
-              width: "617px",
-              height: "350px",
-              borderRadius: "10px",
-            }}
-          >
+          <div className="fund-wallet-box">
             <FundWallet />
           </div>
         </div>

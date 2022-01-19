@@ -1,6 +1,6 @@
 .earning-header {
   height: 3px;
-  max-width: 110px;
+  max-width: 90px;
   border-radius: 6px;
   margin: auto;
   background-color: var(--sec-color);
@@ -8,30 +8,44 @@
 
 
 /* Fund Wallet Styles */
+.wallets-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .fund-wallet-header { 
   display: flex;
   justify-content: space-between;
 }
 
 .pay-now-btn{
-  /* font-weight: bold;
-  font-size: 0.75rem;
-  background-color: #FF7900;
-  border-radius: 4px;
-  padding: 3px 10px; */
-
-  
   width: 163px;
   height: 39px;
   color: white;
   background: #FF7900;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  margin: -12px 12px 0px 0px;
+  margin-top: -12px;
 }
 
 .fund-wallet-container { 
   margin: 2rem 4rem 1rem;
+}
+
+.wallet-balance-box{
+  border: 2px solid #CFCFCF;
+  background: #fff;
+  width: 435px;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.fund-wallet-box {
+  border: 2px solid #CFCFCF;
+  background: #fff;
+  width: 617px;
+  height: 350px;
+  border-radius: 10px;
 }
 
 .fund-wallet-div {
@@ -105,6 +119,37 @@ table th {
 /* End of Transaction Table Styles */
 
 @media screen and (max-width: 600px) {
+  .wallets-container{
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin: 2rem 2rem 0rem;
+  }
+
+  .wallet-balance-box{
+    width: 420px;
+  }
+
+  .fund-wallet-header{
+    margin-top: 2.5rem;
+  }
+
+  .fund-wallet-box {
+    width: 420px;
+    height: 580px;
+  }
+
+  
+
+  .fund-wallet-img-div{
+    display:block;
+    text-align: center;
+  }
+
+  .hello {
+    text-align: center;
+  }
+
   table {
     border: 0;
   }
