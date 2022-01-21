@@ -1,0 +1,209 @@
+.emailSignatureDesignsContainer {
+  padding: 32px 20px 128px 20px;
+}
+
+.emailSignatureDesignsh3 {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  letter-spacing: 0.03em;
+}
+
+.emailSignatureDesignsh4 {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+}
+
+.emailSignatureDesignsIconGreen {
+  width: 11px;
+  height: 11px;
+  background: #00cca7;
+  border-radius: 50px;
+}
+
+.emailSignatureDesignsIconOrange {
+  width: 11px;
+  height: 11px;
+  background: #ff7900;
+  border-radius: 50px;
+}
+
+textarea {
+  background: #efeaea;
+  width: 187px;
+  padding: 8px 10px 8px 16px;
+  height: 48px;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 6px;
+  color: #918d8d;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+select {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  width: 192px;
+  height: 27px;
+  width: 243px;
+  height: 48px;
+  border: 1px solid #00cca7;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+select:focus {
+  outline: none;
+}
+
+.emailSignatureDesignsLabel {
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.emailSignatureDesignsRadioInput {
+  display: none;
+}
+
+.emailSignatureDesignsPseudoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  border: 1px solid #8b8b8b;
+}
+
+.emailSignatureDesignsLabel
+  input:checked
+  ~ .emailSignatureDesignsPseudoContainer {
+  background-color: #00cca7;
+  color: #ffffff;
+}
+
+.emailSignatureDesignsPseudoContainer > svg > circle {
+  stroke: #585858;
+  stroke-width: 1;
+  fill: transparent;
+}
+
+.emailSignatureDesignsLabel
+  input:checked
+  ~ .emailSignatureDesignsPseudoContainer
+  > svg
+  > circle {
+  stroke: #fff;
+}
+.emailSignatureDesignsPseudoContainer > svg > rect {
+  stroke: #585858;
+  stroke-width: 1;
+  fill: transparent;
+}
+
+.emailSignatureDesignsLabel
+  input:checked
+  ~ .emailSignatureDesignsPseudoContainer
+  > svg
+  > rect {
+  stroke: #fff;
+}
+.emailSignatureDesignsPseudoContainer > svg > polygon {
+  stroke: #585858;
+  stroke-width: 1;
+  fill: transparent;
+}
+
+.emailSignatureDesignsLabel
+  input:checked
+  ~ .emailSignatureDesignsPseudoContainer
+  > svg
+  > path {
+  fill: #ffffff;
+}
+
+.emailSignatureDesignsLabel
+  input:checked
+  ~ .emailSignatureDesignsPseudoContainer
+  > svg
+  > polygon {
+  stroke: #fff;
+}
+
+input[type='range'] {
+  overflow: hidden;
+  -webkit-appearance: none;
+  background-color: #ff7900;
+  border-radius: 10px;
+  width: 215px;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 10px;
+  -webkit-appearance: none;
+  color: #00cca7;
+  margin-top: -1px;
+  border-radius: 10px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  margin-top: 0.4px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: #ffffff;
+  box-shadow: -100px 0 0 100px #00cca7;
+}
+
+.emailSignatureDesignsColorButton {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  margin-left: 9px;
+}
+
+.emailSignatureDesignsLabelIconsText {
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 13px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.emailSignatureDesignsLabelIconsContainer {
+  width: 49px;
+  height: 26px;
+  border: 1px solid #838383;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
