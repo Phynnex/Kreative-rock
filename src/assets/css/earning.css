@@ -146,9 +146,6 @@ table th {
     text-align: center;
   }
 
-  .hello {
-    text-align: center;
-  }
 
   table {
     border: 0;
@@ -191,7 +188,7 @@ table th {
     float: left;
     font-weight: bold;
     text-transform: uppercase;
-    margin-top: -12px;
+    margin-top: 12px;
   }
   
   table td:last-child {

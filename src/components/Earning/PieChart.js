@@ -2,8 +2,14 @@ import React, { PureComponent } from "react";
 import { ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
 const data = [
-  { name: "Group A", value: 800 },
-  { name: "Group B", value: 1400 },
+  {
+    name: "Available",
+    value: 800 
+  },
+  {
+   name: "Total",
+   value: 1400
+  },
 ];
 
 const COLORS = ["#FF7900","#00CCA7"];
@@ -21,6 +27,7 @@ export default class Example extends PureComponent {
               innerRadius={60}
               outerRadius={80}
               fill="#8884d8"
+              
               dataKey="value"
             >
               {data.map((entry, index) => (
@@ -28,7 +35,7 @@ export default class Example extends PureComponent {
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
                 />
-              ))}
+              ))}              
             </Pie>
           </PieChart>
         </ResponsiveContainer>

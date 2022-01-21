@@ -1,5 +1,6 @@
 import FundWallet from "../components/Earning/FundWallet/FundWallet";
-import PieChart from "../components/Earning/PieChart";
+import 
+PieChart from "../components/Earning/PieChart";
 import TransactionTable from "../components/Earning/TransactionTable";
 
 const Earning = () => {

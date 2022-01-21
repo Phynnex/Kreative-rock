@@ -22,154 +22,163 @@ import ViewPlaceOrder from "./pages/ViewPlaceOrder"
 import Notification from "./pages/Notification"
 import EmailTemplates from "./pages/EmailTemplates"
 import EmailSignatureDetails from "./pages/EmailSignatureDetails"
+import Earning from "pages/Earning"
 
 function App() {
 	return (
-		<Router>
-			<Routes>
-				<Route
-					path="/"
-					exact
-					element={
-						<Mainlayout>
-							<Home />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/mobile-texting"
-					exact
-					element={
-						<Mainlayout>
-							<MobileTexting />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/digital-marketing"
-					element={
-						<Mainlayout>
-							<DigitalMarketing />{" "}
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/email-templates"
-					exact
-					element={
-						<Mainlayout>
-							<EmailTemplates />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/brand-management"
-					element={
-						<Mainlayout>
-							<BrandManagement />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/email-signature"
-					element={
-						<Mainlayout>
-							<EmailSignature />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/email-signature-details"
-					element={
-						<Mainlayout>
-							<EmailSignatureDetails />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/terms"
-					element={
-						<Mainlayout>
-							<TermsOfUse />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/contact-us"
-					element={
-						<Mainlayout>
-							<ContactUs />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/pricing"
-					element={
-						<Mainlayout>
-							<Pricing />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/sign-in"
-					element={
-						<Mainlayout>
-							<SignIn />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/policy"
-					element={
-						<Mainlayout>
-							<Policy />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/register"
-					element={
-						<Mainlayout>
-							<Register />
-						</Mainlayout>
-					}
-				/>
+    <Router>
+      <Routes>
+        <Route
+          path="/"
+          exact
+          element={
+            <Mainlayout>
+              <Home />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/mobile-texting"
+          exact
+          element={
+            <Mainlayout>
+              <MobileTexting />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/digital-marketing"
+          element={
+            <Mainlayout>
+              <DigitalMarketing />{" "}
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/email-templates"
+          exact
+          element={
+            <Mainlayout>
+              <EmailTemplates />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/brand-management"
+          element={
+            <Mainlayout>
+              <BrandManagement />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/email-signature"
+          element={
+            <Mainlayout>
+              <EmailSignature />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/email-signature-details"
+          element={
+            <Mainlayout>
+              <EmailSignatureDetails />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/terms"
+          element={
+            <Mainlayout>
+              <TermsOfUse />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/contact-us"
+          element={
+            <Mainlayout>
+              <ContactUs />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/pricing"
+          element={
+            <Mainlayout>
+              <Pricing />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/sign-in"
+          element={
+            <Mainlayout>
+              <SignIn />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/policy"
+          element={
+            <Mainlayout>
+              <Policy />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <Mainlayout>
+              <Register />
+            </Mainlayout>
+          }
+        />
 
-				<Route
-					path="/referral-code"
-					element={
-						<Mainlayout>
-							<ReferralCode />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/place-order"
-					element={
-						<Mainlayout>
-							<PlaceOrder />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/view-place-order"
-					element={
-						<Mainlayout>
-							<ViewPlaceOrder />
-						</Mainlayout>
-					}
-				/>
-				<Route
-					path="/notification"
-					element={
-						<Mainlayout>
-							<Notification />
-						</Mainlayout>
-					}
-				/>
-			</Routes>
-		</Router>
-	)
+        <Route
+          path="/referral-code"
+          element={
+            <Mainlayout>
+              <ReferralCode />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/place-order"
+          element={
+            <Mainlayout>
+              <PlaceOrder />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/view-place-order"
+          element={
+            <Mainlayout>
+              <ViewPlaceOrder />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/notification"
+          element={
+            <Mainlayout>
+              <Notification />
+            </Mainlayout>
+          }
+        />
+        <Route
+          path="/earning"
+          element={
+            <Mainlayout>
+              <Earning />
+            </Mainlayout>
+          }
+        />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App

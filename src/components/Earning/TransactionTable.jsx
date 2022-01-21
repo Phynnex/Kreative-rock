@@ -60,17 +60,18 @@ const TransactionTable = () => {
             <tr>
               <td data-label="Name">{row.name}</td>
               <td
-                data-label="Status"
+                data-label="status"
                 className="status"
                 style={{
                   backgroundColor:
-                    (row.status === "Successful" && "#44BBA5") ||
-                    (row.status === "Pending" && "#FF7900") ||
-                    (row.status === "Cancelled" && "#E94F37"),
+                  (row.status === "Successful" && "#44BBA5") ||
+                  (row.status === "Pending" && "#FF7900") ||
+                  (row.status === "Cancelled" && "#E94F37"),
                 }}
               >
                 {row.status}
               </td>
+
               <td data-label="Inflow">{row.inflow}</td>
               <td data-label="Outflow">{row.outflow}</td>
               <td data-label="Date">{row.date}</td>
