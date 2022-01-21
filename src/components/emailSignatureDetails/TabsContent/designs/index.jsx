@@ -37,6 +37,7 @@ function EmailSignatureDesigns() {
                   type='radio'
                   id='normal'
                   name='spacing'
+				  checked
                   className={styles.emailSignatureDesignsRadioInput}
                 />
                 <span
