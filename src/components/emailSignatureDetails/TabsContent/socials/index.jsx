@@ -1,4 +1,4 @@
-import { Div, Img, KreativeP } from "globalStyles/style"
+import {Img, KreativeP } from "globalStyles/style"
 import fb from "assets/images/facebook.png"
 import twitter from "assets/images/twitter.png"
 import linkedin from "assets/images/linkedin1.png"

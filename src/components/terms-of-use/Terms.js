@@ -92,7 +92,7 @@ const TermsOfUse = () => {
               LAST UPDATED: 1st February 2022{" "}
             </Typography>
             <Typography className={classes.content}>
-              you’re welcome to{" "}
+              you&#8217;re welcome to{" "}
               <a href="www.kreativerock.com">www.kreativerock.com</a> website
               (the "Site") of KreativeRock Digital Limited.
             </Typography>
@@ -128,13 +128,13 @@ const TermsOfUse = () => {
               Important notice
             </Typography>
             <Typography className={classes.content}>
-              If you are not yet 18 years old, you must obtain your parents’ or
-              legal guardians’ consent and permission to be bound by the terms
-              of our Site prior to you using any aspect of our services listed
-              on the Site. To use our texting system, you must be duly
-              registered organization operating your business from the counties
-              that our texting system covers to have access to local rates in
-              those countries.
+              If you are not yet 18 years old, you must obtain your
+              parents&#8217; or legal guardians&#8217; consent and permission to
+              be bound by the terms of our Site prior to you using any aspect of
+              our services listed on the Site. To use our texting system, you
+              must be duly registered organization operating your business from
+              the counties that our texting system covers to have access to
+              local rates in those countries.
             </Typography>
           </Grid>
           <Grid item>
@@ -371,10 +371,10 @@ const TermsOfUse = () => {
                   our website and the material on our website are reserved.
                 </li>
                 <li>
-                  KreativeRock’s logos and our other registered and unregistered
-                  trademarks are trademarks belonging to us; we give no
-                  permission for the use of these trademarks, and such use may
-                  constitute an infringement of our rights.
+                  KreativeRock&#8217;s logos and our other registered and
+                  unregistered trademarks are trademarks belonging to us; we
+                  give no permission for the use of these trademarks, and such
+                  use may constitute an infringement of our rights.
                 </li>
                 <li>
                   The third party registered and unregistered trademarks or

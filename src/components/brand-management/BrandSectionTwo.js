@@ -1,6 +1,5 @@
-import { Grid, Typography, Box, useTheme } from "@material-ui/core";
+import { Grid, Typography, Box } from "@material-ui/core";
 import React from "react";
-import group from "../../assets/images/Group.png";
 import group1 from "../../assets/images/Groupicon1.png";
 import group2 from "../../assets/images/Groupicon2.png";
 import group3 from "../../assets/images/Groupicon3.png";
@@ -23,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
-    justifyContent: "center",
     padding: "2em",
     borderRadius: "33px",
     border: "2px solid #CFCFCF",
@@ -98,7 +96,7 @@ const BrandSectionTwo = () => {
       <Grid container className={classes.container}>
         <Grid item container sm={12} md={10} className={classes.items}>
           <Grid item xs={6} sm={5} md={5} className={classes.box}>
-            <img src={group2} className={classes.image} />
+            <img src={group2} className={classes.image} alt=''/>
             <Typography variant="h2" className={classes.headerText1}>
               Social Media & Digital Identity Management
             </Typography>
@@ -111,7 +109,7 @@ const BrandSectionTwo = () => {
             </Typography>
           </Grid>
           <Grid item xs={6} sm={5} md={5} className={classes.box}>
-            <img src={group1} className={classes.image} />
+            <img src={group1} className={classes.image} alt=''/>
             <Typography variant="h2" className={classes.headerText1}>
               Corporate Identity Designs & Management
             </Typography>
@@ -123,7 +121,7 @@ const BrandSectionTwo = () => {
             </Typography>
           </Grid>
           <Grid item xs={6} sm={5} md={5} className={classes.box}>
-            <img src={group3} className={classes.image} />
+            <img src={group3} className={classes.image} alt='' />
             <Typography variant="h2" className={classes.headerText1}>
               Modern Business & Marketing Strategy
             </Typography>
@@ -136,7 +134,7 @@ const BrandSectionTwo = () => {
             </Typography>
           </Grid>
           <Grid item xs={6} sm={5} md={5} className={classes.box}>
-            <img src={group4} className={classes.image} />
+            <img src={group4} className={classes.image} alt='' />
             <Typography variant="h2" className={classes.headerText1}>
               Content Marketing & Management Strategy
             </Typography>
@@ -144,7 +142,7 @@ const BrandSectionTwo = () => {
               A good content strategy should bridge the gap between the content
               you produce and what your consumers want. Content is the life
               blood of your business as it attracts tones of qualified leads and
-              sales to your business when it’s done right. If you want to create
+              sales to your business when it&#8217;s done right. If you want to create
               the right type of prioritized content at the right time, then you
               need a winning content marketing strategy & management. We'll
               evaluate your brand and create a winning strategy that works.

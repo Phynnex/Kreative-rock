@@ -9,11 +9,12 @@ const Policy6 = () => {
       <p>
         • Our service providers: Sometimes, we share your information with our
         third-party service providers working on our behalf for the purposes
-        described in this privacy policy. For example, companies we’ve hired to
-        help us provide and support our Service or assist in protecting and
-        securing our systems and services and other business-related functions.
-        Other examples include analyzing data, hosting data, engaging technical
-        support for our Service, processing payments, and delivering content.
+        described in this privacy policy. For example, companies we&#8217;ve
+        hired to help us provide and support our Service or assist in protecting
+        and securing our systems and services and other business-related
+        functions. Other examples include analyzing data, hosting data, engaging
+        technical support for our Service, processing payments, and delivering
+        content.
       </p>{" "}
       <p>
         {" "}
@@ -96,15 +97,15 @@ const Policy6 = () => {
         {" "}
         KreativeRock accounts require a username and password to log in.
         Subscribers must keep their username and password secure, and never
-        disclose it to a third party. Because the information in a Subscriber’s
-        KreativeRock account is private, account passwords are hashed, which
-        means we cannot see a Subscriber’s password. We cannot resend forgotten
-        passwords either. We will only provide Subscribers with instructions on
-        how to reset them.
+        disclose it to a third party. Because the information in a
+        Subscriber&#8217;s KreativeRock account is private, account passwords
+        are hashed, which means we cannot see a Subscriber&#8217;s password. We
+        cannot resend forgotten passwords either. We will only provide
+        Subscribers with instructions on how to reset them.
       </p>
       <h2>6.3. COOKIES</h2>
       <p>
-        Cookies are small files placed on your computer’s hard drive that
+        Cookies are small files placed on your computer&#8217;s hard drive that
         enables the website to identify your computer as you view different
         pages. Cookies allow websites and applications to store your preferences
         in order to present contents, options or functions that are specific to
@@ -112,9 +113,9 @@ const Policy6 = () => {
         the tracking of your activity for the duration of a session. Our website
         uses only encrypted session cookies which will be erased after a
         predefined period or once the user logs out of the platform and closes
-        the browser. Session cookies do not collect information from the user’s
-        computer. They will typically store information in the form of a session
-        identification that does not personally identify the user.
+        the browser. Session cookies do not collect information from the
+        user&#8217;s computer. They will typically store information in the form
+        of a session identification that does not personally identify the user.
       </p>
       <h2>6.4. RETENTION OF DATA</h2>
       <p>

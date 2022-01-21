@@ -24,8 +24,8 @@ const ReferralDetails = () => {
               Refer Friends & Earn Credit
             </div>
             <div className={styles.referralDetailsText}>
-              Introduce a friend to fintech and you’ll be credited $100 to your
-              account
+              Introduce a friend to fintech and you&#8217;ll be credited $100 to
+              your account
             </div>
           </div>
         </div>

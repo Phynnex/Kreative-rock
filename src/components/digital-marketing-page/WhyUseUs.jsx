@@ -31,7 +31,8 @@ const WhyUseUs = () => {
                 <div className={styles.whyUseUsCardText}>
                   We will help you reach your exact customers and prospective
                   customers anywhere they are in the world with less resources
-                  through targeted marketing. You don’t have to break the bank.
+                  through targeted marketing. You don&#8217;t have to break the
+                  bank.
                 </div>
               </div>
             </div>
