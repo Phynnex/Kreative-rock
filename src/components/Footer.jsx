@@ -71,7 +71,7 @@ const Footer = () => {
                     </li>
 
                     <li>
-                      Help improve company’s chances of success through
+                      Help improve company&#8217;s chances of success through
                       results-oriented strategies
                     </li>
 
@@ -156,19 +156,19 @@ const Footer = () => {
                   </div>
 
                   <div className='d-flex gap-3 mt-3'>
-                    <a target='_blank' href='#'>
+                    <a target='_blank' href='/'>
                       <img src={Facebook} alt='facebook-icon' />
                     </a>
 
-                    <a target='_blank' href='#'>
+                    <a target='_blank' href='/'>
                       <img src={Instagram} alt='instagram-icon' />
                     </a>
 
-                    <a target='_blank' href='#'>
+                    <a target='_blank' href='/'>
                       <img src={Linkedin} alt='Linkedin-icon' />
                     </a>
 
-                    <a target='_blank' href='#'>
+                    <a target='_blank' href='/'>
                       <img src={Twitter} alt='Twitter-icon' />
                     </a>
                   </div>

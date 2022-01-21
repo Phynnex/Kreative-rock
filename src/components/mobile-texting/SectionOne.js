@@ -1,7 +1,5 @@
 import { Grid, Typography } from "@material-ui/core";
 import React from "react";
-import vector from "../../assets/images/Vector3.png";
-import ellipse from "../../assets/images/ellipse.png";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({

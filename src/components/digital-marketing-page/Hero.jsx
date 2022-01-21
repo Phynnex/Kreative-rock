@@ -28,7 +28,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="col-lg-5">
-            <img className="img-fluid" src={HeroImg} alt="hero-image" />
+            <img className="img-fluid" src={HeroImg} alt='hero' />
           </div>
         </div>
       </div>

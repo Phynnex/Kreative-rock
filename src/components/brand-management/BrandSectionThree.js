@@ -1,6 +1,5 @@
 import { Box, Grid, Typography } from "@material-ui/core";
 import React from "react";
-import vector from "../../assets/images/Vector3.png";
 import rafiki from "../../assets/images/pana1.png";
 import { makeStyles } from "@material-ui/core";
 

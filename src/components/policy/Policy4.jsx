@@ -7,14 +7,15 @@ const Policy4 = () => {
       <h2>4. PRIVACY FOR CONTACTS</h2>
       <p>
         This section applies to the information we process about our
-        Subscribers’ Contacts as a data controller. Our Service is intended for
-        use by our Subscribers. As a result, for much of the Personal
-        Information we collect and process about Contacts through the Service,
-        we act as a processor on behalf of our Subscribers. KreativeRock is not
-        responsible for the privacy or security practices of our Subscribers,
-        which may differ from those set forth in this privacy policy. Please
-        check with individual Subscribers about the policies they have in place.
-        For purposes of this section, "you" and "your" refer to Contacts.
+        Subscribers&#8217; Contacts as a data controller. Our Service is
+        intended for use by our Subscribers. As a result, for much of the
+        Personal Information we collect and process about Contacts through the
+        Service, we act as a processor on behalf of our Subscribers.
+        KreativeRock is not responsible for the privacy or security practices of
+        our Subscribers, which may differ from those set forth in this privacy
+        policy. Please check with individual Subscribers about the policies they
+        have in place. For purposes of this section, "you" and "your" refer to
+        Contacts.
       </p>
       <h2>
         a) Information We Collect: The Personal Information that we may collect
@@ -28,22 +29,23 @@ const Policy4 = () => {
         the Service. When a Subscriber uploads their Distribution List or
         integrates the Service with another website or service (for example,
         when a Subscriber chooses to connect their e-commerce account with
-        KreativeRock), or when you sign up for a Subscriber’s Distribution List
-        on a KreativeRock or other signup form, the Subscriber may provide us
-        with certain contact information or other Personal Information about you
-        such as your name, email address, address, or telephone number. You may
-        have the opportunity to update some of this information by electing to
-        update or manage your preferences via an email you receive from a
+        KreativeRock), or when you sign up for a Subscriber&#8217;s Distribution
+        List on a KreativeRock or other signup form, the Subscriber may provide
+        us with certain contact information or other Personal Information about
+        you such as your name, email address, address, or telephone number. You
+        may have the opportunity to update some of this information by electing
+        to update or manage your preferences via an email you receive from a
         Subscriber.
       </p>
       <h2>• Information we collect automatically: </h2>
       <p>
         When you interact with an email campaign that you receive from a
-        Subscriber, browse or purchase from a Subscriber’s connected store,
-        respond to a Subscriber's survey, or otherwise directly interact with a
-        Subscriber's use of the Service, we may collect information about your
-        device and interaction with the Subscriber's content. We use cookies and
-        other tracking technologies to collect some of this information.{" "}
+        Subscriber, browse or purchase from a Subscriber&#8217;s connected
+        store, respond to a Subscriber's survey, or otherwise directly interact
+        with a Subscriber's use of the Service, we may collect information about
+        your device and interaction with the Subscriber's content. We use
+        cookies and other tracking technologies to collect some of this
+        information.{" "}
       </p>
       <h2>• Device Information: </h2>
       <p>
@@ -79,8 +81,8 @@ const Policy4 = () => {
       <h2>b) Use of Personal Information</h2>
       <p>
         We may use the Personal Information we collect or receive about you in
-        reliance on our (and where applicable, our Subscribers’) legitimate
-        interests for the following purposes:
+        reliance on our (and where applicable, our Subscribers&#8217;)
+        legitimate interests for the following purposes:
       </p>
       <p>
         • To enforce compliance with our Standard Terms of Use and applicable
@@ -91,13 +93,13 @@ const Policy4 = () => {
         {" "}
         • To protect the rights and safety of Subscribers, third parties, or
         KreativeRock. For example, sometimes we review the content of our
-        Subscribers’ email campaigns to make sure they comply with our Standard
-        Terms of Use. To improve that process, we have software that helps us
-        find email campaigns that may violate our Standard Terms of Use. We, or
-        our third-party service provider, may review those particular email
-        campaigns, which may include your contact information. This reduces the
-        amount of spam being sent through our servers and helps us maintain high
-        deliverability.
+        Subscribers&#8217; email campaigns to make sure they comply with our
+        Standard Terms of Use. To improve that process, we have software that
+        helps us find email campaigns that may violate our Standard Terms of
+        Use. We, or our third-party service provider, may review those
+        particular email campaigns, which may include your contact information.
+        This reduces the amount of spam being sent through our servers and helps
+        us maintain high deliverability.
       </p>
       <p>
         {" "}

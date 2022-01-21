@@ -23,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
-    justifyContent: "center",
     padding: "2em",
     // margin: "1em",
     borderRadius: "33px",
@@ -99,7 +98,7 @@ const SectionThree = () => {
       <Grid container className={classes.container}>
         <Grid item container sm={12} md={10} className={classes.items}>
           <Grid item xs={6} sm={5} md={4} className={classes.box}>
-            <img src={group2} className={classes.image} />
+            <img src={group2} className={classes.image} alt=''/>
             <Typography variant="h2" className={classes.headerText1}>
               Interactive Texting Solutions <br /> (2-Way SMS)
             </Typography>
@@ -110,7 +109,7 @@ const SectionThree = () => {
             </Typography>
           </Grid>
           <Grid item xs={6} sm={5} md={4} className={classes.box}>
-            <img src={group1} className={classes.image} />
+            <img src={group1} className={classes.image} alt=''/>
             <Typography variant="h2" className={classes.headerText1}>
               Simple Texting Solutions <br /> (1-Way SMS)
             </Typography>
@@ -121,7 +120,7 @@ const SectionThree = () => {
             </Typography>
           </Grid>
           <Grid item xs={6} sm={5} md={4} className={classes.box}>
-            <img src={group} className={classes.image} />
+            <img src={group} className={classes.image} alt=''/>
             <Typography variant="h2" className={classes.headerText1}>
               Enterprise Texting Solutions <br /> (Bulk SMS)
             </Typography>

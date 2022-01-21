@@ -134,14 +134,14 @@ const Pricing = () => {
               >
                 Simple Texting Pricing
               </Typography>
-              <Table bordered className='table' responsive='md'>
+              <Table bordered className="table" responsive="md">
                 <thead className={classes.tableHead}>
                   <tr>
                     <td colSpan={3} className={classes.tableData}></td>
                   </tr>
                   <tr>
                     <th>STANDARD</th>
-                    <th style={{ background: '#FF7900', color: '#fff' }}>
+                    <th style={{ background: "#FF7900", color: "#fff" }}>
                       PREMIUM
                     </th>
                     <th>BUSINESS</th>
@@ -151,7 +151,7 @@ const Pricing = () => {
                   <tr>
                     <td>Description</td>
                     <td>COST</td>
-                    <td rowSpan='3'></td>
+                    <td rowSpan="3"></td>
                   </tr>
                   <tr>
                     <td>Senders ID</td>
@@ -162,13 +162,13 @@ const Pricing = () => {
                     <td>Free</td>
                   </tr>
                   <tr>
-                    <td colSpan='3' className={classes.tableData}>
+                    <td colSpan="3" className={classes.tableData}>
                       SIMPLE SMS SENDING COST
                     </td>
                   </tr>
                 </tbody>
               </Table>
-              <Table bordered responsive='md'>
+              <Table bordered responsive="md">
                 <thead className={classes.tableHead}>
                   <tr>
                     <th>CONTACTS</th>
@@ -180,14 +180,14 @@ const Pricing = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td>500 Contacts - 9,999 Contacts</td>
+                    <td>500 Contacts &#8208; 9,999 Contacts</td>
                     <td>NGN2.95</td>
                     <td>GHS0.043</td>
                     <td>KES0.080</td>
                     <td>SOU.80</td>
                   </tr>
                   <tr>
-                    <td>10,000 Contacts – 49,999 Contacts</td>
+                    <td>10,000 Contacts &#8208; 49,999 Contacts</td>
                     <td>NGN2.95</td>
                     <td>GHS0.043</td>
                     <td>KES0.080</td>
@@ -208,8 +208,8 @@ const Pricing = () => {
                 </li>
               </ul>
               <Button
-                variant='contained'
-                color='secondary'
+                variant="contained"
+                color="secondary"
                 disableElevation
                 className={classes.btn}
               >
@@ -224,7 +224,7 @@ const Pricing = () => {
               >
                 Interactive Texting Pricing
               </Typography>
-              <Table bordered className='table' responsive='md'>
+              <Table bordered className="table" responsive="md">
                 <thead className={classes.tableHead}>
                   <tr>
                     <td colSpan={5} className={classes.tableData}>
@@ -232,7 +232,7 @@ const Pricing = () => {
                     </td>
                   </tr>
                   <tr>
-                    <th colSpan='2'>DESCRIPTION</th>
+                    <th colSpan="2">DESCRIPTION</th>
                     <th colSpan={3}>COST</th>
                   </tr>
                 </thead>
@@ -271,15 +271,15 @@ const Pricing = () => {
                     <td>Free</td>
                     <td>Free</td>
                     <td>Free</td>
-                  </tr>{' '}
+                  </tr>{" "}
                   <tr>
-                    <td colSpan='5' className={classes.tableData}>
+                    <td colSpan="5" className={classes.tableData}>
                       INTERACTIVE SMS SENDING COST
                     </td>
                   </tr>
                 </tbody>
               </Table>
-              <Table bordered responsive='md'>
+              <Table bordered responsive="md">
                 <thead className={classes.tableHead}>
                   <tr>
                     <th>CONTACTS</th>
@@ -296,7 +296,7 @@ const Pricing = () => {
                     <td>KES0.080</td>
                   </tr>
                   <tr>
-                    <td>10,000 Contacts – 49,999 Contacts</td>
+                    <td>10,000 Contacts &#8208; 49,999 Contacts</td>
                     <td>NGN2.95</td>
                     <td>GHS0.043</td>
                     <td>KES0.080</td>
@@ -308,13 +308,13 @@ const Pricing = () => {
                     <td>KES0.080</td>
                   </tr>
                   <tr>
-                    <td colSpan='4' className={classes.tableData}>
+                    <td colSpan="4" className={classes.tableData}>
                       INTERACTIVE SMS RECIEVING COST
                     </td>
                   </tr>
                 </tbody>
               </Table>
-              <Table bordered responsive='md'>
+              <Table bordered responsive="md">
                 <thead className={classes.tableHead}>
                   <tr>
                     <th>RESPONSE</th>
@@ -346,8 +346,8 @@ const Pricing = () => {
               </ul>
 
               <Button
-                variant='contained'
-                color='secondary'
+                variant="contained"
+                color="secondary"
                 disableElevation
                 className={classes.btn}
               >
@@ -363,7 +363,7 @@ const Pricing = () => {
               >
                 Email Signature Pricing
               </Typography>
-              <Table bordered className='table' responsive='md'>
+              <Table bordered className="table" responsive="md">
                 <thead className={classes.tableHead}>
                   <tr>
                     <th>DESCRIPTION</th>
@@ -449,8 +449,8 @@ const Pricing = () => {
               </Table>
 
               <Button
-                variant='contained'
-                color='secondary'
+                variant="contained"
+                color="secondary"
                 disableElevation
                 className={classes.btn}
               >
@@ -463,12 +463,12 @@ const Pricing = () => {
               <Typography className={classes.headerText}>
                 DIGITAL MARKETING PRICING
               </Typography>
-              <Typography variant='h2' className={classes.content1}>
+              <Typography variant="h2" className={classes.content1}>
                 Contact Sales For Pricing
               </Typography>
               <Button
-                variant='contained'
-                color='secondary'
+                variant="contained"
+                color="secondary"
                 disableElevation
                 className={classes.btn}
               >
@@ -481,12 +481,12 @@ const Pricing = () => {
               <Typography className={classes.headerText}>
                 BRAND MARKETING PRICING
               </Typography>
-              <Typography variant='h2' className={classes.content1}>
+              <Typography variant="h2" className={classes.content1}>
                 Contact Sales For Pricing
               </Typography>
               <Button
-                variant='contained'
-                color='secondary'
+                variant="contained"
+                color="secondary"
                 disableElevation
                 className={classes.btn}
               >
@@ -497,7 +497,7 @@ const Pricing = () => {
         </Grid>
       </Box>
     </>
-  )
+  );
 }
 
 export default Pricing

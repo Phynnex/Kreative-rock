@@ -1,8 +1,5 @@
 import { Grid, Typography, Box, makeStyles } from "@material-ui/core";
 import React from "react";
-import group from "../../assets/images/Group.png";
-import group1 from "../../assets/images/group1.png";
-import group2 from "../../assets/images/group2.png";
 
 const useStyles = makeStyles((theme) => ({
   image: {
@@ -23,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "start",
     flexDirection: "column",
-    justifyContent: "center",
     padding: "2em",
     marginBottom: "2em",
     borderRadius: "10px",

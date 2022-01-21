@@ -44,8 +44,8 @@ const Policy5 = () => {
       <p>c) Nature of your communication;</p>
       <p>d) Marketing information (such as your contact preferences); and</p>
       <p>
-        e) Any information you choose to provide to us when completing any ‘free
-        text’ boxes in our forms.
+        e) Any information you choose to provide to us when completing any
+        &#8216;free text&#8217; boxes in our forms.
       </p>
       <h2>
         • Information we collect automatically through the KreativeRock Sites
@@ -212,11 +212,12 @@ const Policy5 = () => {
         include Personal Information such as your name, address, date of birth,
         phone number, email address, username, and similar details. We use the
         information you provide to administer our Promotions. We may also,
-        unless prohibited by the Promotion’s rules or law, use the information
-        provided to communicate with you, or other people you select, about our
-        Service. We may share this information with our subsidiaries or
-        Affiliates and other organizations or service providers in line with
-        this privacy policy and the rules posted for our Promotions.
+        unless prohibited by the Promotion&#8217;s rules or law, use the
+        information provided to communicate with you, or other people you
+        select, about our Service. We may share this information with our
+        subsidiaries or Affiliates and other organizations or service providers
+        in line with this privacy policy and the rules posted for our
+        Promotions.
       </p>
     </div>
   );
