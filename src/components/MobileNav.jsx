@@ -1,14 +1,14 @@
 import React from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import "bootstrap/dist/js/bootstrap.bundle.min"
 
 const MobileNav = ({ onDropDownItem }) => {
-	const location = useLocation()
-	const { pathname } = location
+	const history = useHistory()
+	const { pathname } = history.location
 	const splitLocation = pathname.split("/")
 	return (
-		<div className="container">
+		<div className="container carp-fix">
 			<ul className="list-unstyled">
 				<li className="pt-5" onClick={onDropDownItem}>
 					<Link className={splitLocation[1] === "" ? "activeNavMenu" : ""} to="/">

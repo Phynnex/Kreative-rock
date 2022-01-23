@@ -1,13 +1,15 @@
 import React, { useState } from "react"
 import Logo from "../assets/images/logo.png"
-import { Link, useLocation } from "react-router-dom"
+
+import { Link, useHistory } from "react-router-dom"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import MenuIcon from "@material-ui/icons/Menu"
 import MobileNav from "./MobileNav"
 
 const Navbar = () => {
-	const location = useLocation()
-	const { pathname } = location
+	const history = useHistory()
+	// console.log(history, "Hidiidfjjfjf")
+	const { pathname } = history.location
 	const splitLocation = pathname.split("/")
 	const [mobileNav, setMobileNav] = useState(true)
 

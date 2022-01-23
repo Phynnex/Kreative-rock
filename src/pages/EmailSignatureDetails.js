@@ -1,3 +1,4 @@
+import SelectedTemplate from "components/emailSignatureDetails/selectedTemplate"
 import EmailSignatureTabsArea from "../components/emailSignatureDetails"
 
 const EmailSignatureDetails = () => {
@@ -8,6 +9,7 @@ const EmailSignatureDetails = () => {
 			<br />
 			<br />
 			<br />
+
 			<EmailSignatureTabsArea />
 		</>
 	)

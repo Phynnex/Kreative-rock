@@ -1,10 +1,16 @@
+import styled from "styled-components/macro"
+import SelectedTemplate from "./selectedTemplate"
 import EmailSigTabs from "./Tabs"
 
+const EPageContainer = styled.div`
+	display: flex;
+`
 function EmailSignatureTabsArea() {
 	return (
-		<div>
+		<EPageContainer>
 			<EmailSigTabs />
-		</div>
+			<SelectedTemplate />
+		</EPageContainer>
 	)
 }
 
