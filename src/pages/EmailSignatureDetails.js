@@ -8,6 +8,7 @@ const EmailSignatureDetails = () => {
 			<br />
 			<br />
 			<br />
+
 			<EmailSignatureTabsArea />
 		</>
 	)

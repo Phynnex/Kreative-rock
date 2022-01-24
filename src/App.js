@@ -1,6 +1,6 @@
 import "./App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
 import Mainlayout from "./layout/Mainlayout"
 
@@ -23,162 +23,39 @@ import Notification from "./pages/Notification"
 import EmailTemplates from "./pages/EmailTemplates"
 import EmailSignatureDetails from "./pages/EmailSignatureDetails"
 import Earning from "pages/Earning"
+import { DASHBOARDHOME } from "pages/dashboard/ROUTESCONTS"
+import Dashboard from "pages/dashboard"
 
 function App() {
 	return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          exact
-          element={
-            <Mainlayout>
-              <Home />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/mobile-texting"
-          exact
-          element={
-            <Mainlayout>
-              <MobileTexting />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/digital-marketing"
-          element={
-            <Mainlayout>
-              <DigitalMarketing />{" "}
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/email-templates"
-          exact
-          element={
-            <Mainlayout>
-              <EmailTemplates />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/brand-management"
-          element={
-            <Mainlayout>
-              <BrandManagement />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/email-signature"
-          element={
-            <Mainlayout>
-              <EmailSignature />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/email-signature-details"
-          element={
-            <Mainlayout>
-              <EmailSignatureDetails />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/terms"
-          element={
-            <Mainlayout>
-              <TermsOfUse />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/contact-us"
-          element={
-            <Mainlayout>
-              <ContactUs />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/pricing"
-          element={
-            <Mainlayout>
-              <Pricing />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/sign-in"
-          element={
-            <Mainlayout>
-              <SignIn />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/policy"
-          element={
-            <Mainlayout>
-              <Policy />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/register"
-          element={
-            <Mainlayout>
-              <Register />
-            </Mainlayout>
-          }
-        />
-
-        <Route
-          path="/referral-code"
-          element={
-            <Mainlayout>
-              <ReferralCode />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/place-order"
-          element={
-            <Mainlayout>
-              <PlaceOrder />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/view-place-order"
-          element={
-            <Mainlayout>
-              <ViewPlaceOrder />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/notification"
-          element={
-            <Mainlayout>
-              <Notification />
-            </Mainlayout>
-          }
-        />
-        <Route
-          path="/earning"
-          element={
-            <Mainlayout>
-              <Earning />
-            </Mainlayout>
-          }
-        />
-      </Routes>
-    </Router>
-  );
+		<>
+			<Router>
+				<Mainlayout>
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route path="/mobile-texting" exact component={MobileTexting} />
+						<Route path="/digital-marketing" component={DigitalMarketing} />
+						<Route path="/email-templates" exact component={EmailTemplates} />
+						<Route path="/brand-management" component={BrandManagement} />
+						<Route path="/email-signature" component={EmailSignature} />
+						<Route path="/email-signature-details" component={EmailSignatureDetails} />
+						<Route path="/terms" component={TermsOfUse} />
+						<Route path="/contact-us" component={ContactUs} />
+						<Route path="/pricing" component={Pricing} />
+						<Route path="/sign-in" component={SignIn} />
+						<Route path="/policy" component={Policy} />
+						<Route path="/register" component={Register} />
+						<Route path="/referral-code" component={ReferralCode} />
+						<Route path="/place-order" component={PlaceOrder} />
+						<Route path="/view-place-order" component={ViewPlaceOrder} />
+						<Route path="/notification" component={Notification} />
+						<Route path={DASHBOARDHOME} component={Dashboard} />
+						<Route path="/earning" component={Earning} />
+					</Switch>
+				</Mainlayout>
+			</Router>
+		</>
+	)
 }
 
 export default App

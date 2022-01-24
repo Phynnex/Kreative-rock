@@ -2,10 +2,16 @@ import styled from "styled-components/macro"
 import { Link } from "react-router-dom"
 import AppColors from "../utils/colors"
 
-export const ALink = styled(Link)`
+export const KLink = styled(Link)`
 	text-decoration: none;
 	text-align: center;
 	width: 100%;
+`
+
+export const KNavLink = styled(Link)`
+	text-decoration: none;
+	text-align: center;
+	color: ${color => (color ? color : null)};
 `
 export const KDiv = styled.div`
 	width: ${({ width }) => (width ? width : null)};
