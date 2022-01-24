@@ -32,7 +32,7 @@ const Hero = () => {
 										</div>
 									</div>
 									<div className="col-lg">
-										<img className={`img-fluid ${styles.heroImg} d-none d-lg-inline-block`} src={HeroImg} alt="home hero image" />
+										<img className={`img-fluid ${styles.heroImg} d-none d-lg-inline-block`} src={HeroImg} alt="home hero" />
 									</div>
 								</div>
 							</div>
@@ -61,7 +61,7 @@ const Hero = () => {
 										</div>
 									</div>
 									<div className="col-lg-5">
-										<img className={`img-fluid pt-3 d-none d-lg-inline-block`} src={HeroImg2} alt="home hero image" />
+										<img className={`img-fluid pt-3 d-none d-lg-inline-block`} src={HeroImg2} alt="home hero" />
 									</div>
 								</div>
 							</div>
@@ -83,7 +83,7 @@ const Hero = () => {
 										</div>
 									</div>
 									<div className="col-lg-5">
-										<img width="450" className="d-none d-lg-inline-block" src={HeroImg3} alt="home hero image" />
+										<img width="450" className="d-none d-lg-inline-block" src={HeroImg3} alt="home hero" />
 									</div>
 								</div>
 							</div>
@@ -106,7 +106,7 @@ const Hero = () => {
 										</div>
 									</div>
 									<div className="col-lg-5">
-										<img className="d-none img-fluid d-lg-inline-block" src={HeroImg4} alt="home hero image" />
+										<img className="d-none img-fluid d-lg-inline-block" src={HeroImg4} alt="home hero" />
 									</div>
 								</div>
 							</div>

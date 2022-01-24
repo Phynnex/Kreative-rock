@@ -1,8 +1,6 @@
-import { KreativeP } from "globalStyles/style"
 import React from "react"
-import AppColors from "utils/colors"
 import FreeTemp1 from "./free/one"
-import { SBody, Shead, Span } from "./style"
+import { Previewtext, SBody, Shead } from "./style"
 
 function SelectedTemplate() {
 	return (
@@ -10,6 +8,11 @@ function SelectedTemplate() {
 			<Shead>
 				You are using <span className="sec-color">Free templet</span>, thats Good
 			</Shead>
+			<Previewtext>Preview your details</Previewtext>
+			<FreeTemp1 />
+			<br />
+			<br />
+			<br />
 			<FreeTemp1 />
 		</SBody>
 	)

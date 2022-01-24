@@ -6,7 +6,7 @@ import Icon3 from "../../assets/images/gc3.png";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const SectionTwo = () => {
-  const [inviteLink, setInviteLink] = useState(
+  const [inviteLink] = useState(
     "www.67svbn/jjbjjsjkdhaudiwdjdj"
   );
   return (
@@ -66,7 +66,7 @@ const SectionTwo = () => {
       <div className="mt-5">
         <p className={`text-center ${styles.shareText}`}>Share With</p>
         <div className="d-flex justify-content-center gap-3 flex-wrap">
-          <a className={`${styles.shareBtn} ${styles.fbBtn}`} href="#">
+          <a className={`${styles.shareBtn} ${styles.fbBtn}`} href="/">
             <svg
               width="22"
               height="20"
@@ -82,7 +82,7 @@ const SectionTwo = () => {
             Facebook
           </a>
 
-          <a className={`${styles.shareBtn} ${styles.instaBtn}`} href="#">
+          <a className={`${styles.shareBtn} ${styles.instaBtn}`} href="/">
             <svg
               width="22"
               height="20"
@@ -98,7 +98,7 @@ const SectionTwo = () => {
             Instagram
           </a>
 
-          <a className={`${styles.shareBtn} ${styles.twitterBtn}`} href="#">
+          <a className={`${styles.shareBtn} ${styles.twitterBtn}`} href="/">
             <svg
               width="22"
               height="20"
@@ -114,7 +114,7 @@ const SectionTwo = () => {
             Twitter
           </a>
 
-          <a className={`${styles.shareBtn} ${styles.linkedinBtn}`} href="#">
+          <a className={`${styles.shareBtn} ${styles.linkedinBtn}`} href="/">
             <svg
               width="22"
               height="20"
@@ -133,7 +133,7 @@ const SectionTwo = () => {
       </div>
 
       <div className="mt-5">
-        <p className={styles.getStartedText}>It’s easy to get started</p>
+        <p className={styles.getStartedText}>It&#8217;s easy to get started</p>
 
         <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 gy-lg-0 gy-4">
           <div className="col">

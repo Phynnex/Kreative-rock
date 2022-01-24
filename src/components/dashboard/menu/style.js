@@ -19,7 +19,11 @@ export const MenuContainer = styled.div`
 	transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
 	/* overflow: auto; */
 	${media.smallDesktopMinimum`
-        display: none;
+        display: flex;
+		top:0px;
+		background: rgba(255, 255, 255, 1);
+		position:fixed;
+		z-index:400;
     `}
 `
 
@@ -181,4 +185,26 @@ export const ProfileIconMobile = styled.div`
 	border-radius: 24.5px;
 	cursor: pointer;
 	margin-right: 10px;
+`
+export const ToggleBtnContainer = styled.div`
+	height: 32px;
+	width: 90%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	img {
+		width: 15px;
+		height: 15px;
+	}
+`
+export const MobileMenBody = styled.div`
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 999999999;
+	background: rgba(255, 255, 255, 0.22);
+	transition: all 0.5s ease-in-out;
+	transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
 `

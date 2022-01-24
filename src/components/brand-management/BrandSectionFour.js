@@ -1,7 +1,5 @@
 import { Grid, Typography } from "@material-ui/core";
 import React from "react";
-import vector from "../../assets/images/Vector3.png";
-import ellipse from "../../assets/images/ellipse.png";
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -52,9 +50,9 @@ const BrandSectionFour = () => {
           ></div>
           <Typography variant="body1" className={classes.content}>
             There is more than one approach to help you identify the ideal brand
-            management technique that suites your brand. Fill thisform and let’s
-            learn how you want us to serve you.ith KreativeRock Mobile Texting
-            Solutions.
+            management technique that suites your brand. Fill thisform and
+            let&#8217;s learn how you want us to serve you.ith KreativeRock
+            Mobile Texting Solutions.
           </Typography>
         </Grid>
       </Grid>

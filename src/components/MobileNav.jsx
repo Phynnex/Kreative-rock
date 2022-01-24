@@ -8,7 +8,7 @@ const MobileNav = ({ onDropDownItem }) => {
 	const { pathname } = history.location
 	const splitLocation = pathname.split("/")
 	return (
-		<div className="container carp-fix">
+		<div className="container" style={{ zIndex: "10000px", position: "fixed" }}>
 			<ul className="list-unstyled">
 				<li className="pt-5" onClick={onDropDownItem}>
 					<Link className={splitLocation[1] === "" ? "activeNavMenu" : ""} to="/">
@@ -64,7 +64,7 @@ const MobileNav = ({ onDropDownItem }) => {
 					</Link>
 				</li>
 				<li className="pt-5 pb-5" onClick={onDropDownItem}>
-					<Link className={splitLocation[1] === "login" ? "activeNavMenu" : ""} to="/login">
+					<Link className={splitLocation[1] === "sign-in" ? "activeNavMenu" : ""} to="/sign-in">
 						Login
 					</Link>
 				</li>

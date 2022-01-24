@@ -1,7 +1,12 @@
 import DashboardMenu from "./DashboardMenu.jsx"
+import ToggleMenu from "./toggleMenuContext.jsx"
 
 function Store({ children }) {
-	return <DashboardMenu>{children}</DashboardMenu>
+	return (
+		<DashboardMenu>
+			<ToggleMenu>{children}</ToggleMenu>
+		</DashboardMenu>
+	)
 }
 
 export default Store

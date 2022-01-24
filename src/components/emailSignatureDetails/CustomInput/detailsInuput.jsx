@@ -1,5 +1,4 @@
 import styled from "styled-components/macro"
-import AppColors from "utils/colors"
 
 const UserInput = styled.input`
 	width: 100%;

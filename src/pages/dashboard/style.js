@@ -18,6 +18,7 @@ export const DashboardContainer = styled.div`
         flex-direction: column;
         overflow: hidden;
         height: 100%;
+       
     `}
 `
 
@@ -35,7 +36,7 @@ export const DashboardBody = styled.div`
         width: 100%;
         height:100%;
         padding: 10px;
-        margin-top: 50px;
+        margin-top: 130px;
         margin-left: 0;
         margin-right:0;
     `}
@@ -43,7 +44,7 @@ export const DashboardBody = styled.div`
         width: 100%;
         height:100%;
         padding: 10px;
-        margin-top: 50px;
+        margin-top: 150px;
         margin-left: 0;
         margin-right:0;
     `}
@@ -51,6 +52,7 @@ export const DashboardBody = styled.div`
         width: 100%;
         height:100%;
         overflow-y: scroll;
+        margin-top:115px;
     `} 
 	${media.smallMobile`
         width: 100%;

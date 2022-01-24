@@ -72,10 +72,10 @@ const Policy3 = () => {
         your operating system, your browser ID, viewfinder size, and other
         information about your system and connection. If you use our Mobile App,
         we may also collect information about the cellular network associated
-        with your mobile device, your mobile device’s operating system or
-        platform, the type of mobile device you use, your mobile device’s name
-        and unique device ID, and information about the features of our Mobile
-        App that you accessed.
+        with your mobile device, your mobile device&#8217;s operating system or
+        platform, the type of mobile device you use, your mobile device&#8217;s
+        name and unique device ID, and information about the features of our
+        Mobile App that you accessed.
       </p>
 
       <p>
@@ -218,10 +218,10 @@ const Policy3 = () => {
           within our Service that optimize and personalize your experience in
           reliance on our legitimate interests in administering the Service and
           providing certain features. This includes adding features that compare
-          Subscribers’ email campaigns, using data to suggest other marketers
-          your Contacts may be interested in, or using data to recommend
-          products or services that you may be interested in or that may be
-          relevant to you or your Contacts. Some of these suggestions are
+          Subscribers&#8217; email campaigns, using data to suggest other
+          marketers your Contacts may be interested in, or using data to
+          recommend products or services that you may be interested in or that
+          may be relevant to you or your Contacts. Some of these suggestions are
           generated through analysis of the data used in our data analytics
           projects, as described below.
         </p>
@@ -232,8 +232,8 @@ const Policy3 = () => {
           services for our Subscribers. Our data analytics projects use data
           from KreativeRock accounts, including Personal Information of
           Contacts, to provide and improve the Service. We use information like
-          your sending habits and your Contacts’ purchase history, so we can
-          make more informed predictions, decisions, and products for our
+          your sending habits and your Contacts&#8217; purchase history, so we
+          can make more informed predictions, decisions, and products for our
           Subscribers. For example, we use data from KreativeRock accounts to
           enable product recommendation, audience segmentation, and predicted
           demographics features for our Subscribers. If you or your Contact
@@ -293,7 +293,7 @@ const Policy3 = () => {
       </div>
 
       <div>
-        <h2>3.5. SUBSCRIBER’S DISTRIBUTION LISTS</h2>
+        <h2>3.5. SUBSCRIBER&#8217;S DISTRIBUTION LISTS</h2>
         <p>
           • In order to send an email campaign or use certain features in your
           account, you need to upload a Distribution List that provides us
@@ -320,14 +320,15 @@ const Policy3 = () => {
           {" "}
           • If a Contact chooses to use the Forward to a Friend (FTF) link in an
           email campaign a Subscriber sends, it will allow the Contact to share
-          the Subscriber’s email content with individuals not on the
-          Subscriber’s Distribution List. When a Contact forwards an email to a
-          friend, we do not store the Contact’s email address or their friend’s
-          email address, and no one is added to any Distribution List as a
-          result of the FTF link. The Subscriber who created the email campaign
-          only sees an aggregate number of times their email campaign was
-          forwarded by a Contact and does not have access to the email addresses
-          used to share or receive that forwarded content.
+          the Subscriber&#8217;s email content with individuals not on the
+          Subscriber&#8217;s Distribution List. When a Contact forwards an email
+          to a friend, we do not store the Contact&#8217;s email address or
+          their friend&#8217;s email address, and no one is added to any
+          Distribution List as a result of the FTF link. The Subscriber who
+          created the email campaign only sees an aggregate number of times
+          their email campaign was forwarded by a Contact and does not have
+          access to the email addresses used to share or receive that forwarded
+          content.
         </p>
       </div>
 

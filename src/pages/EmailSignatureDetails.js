@@ -1,4 +1,3 @@
-import SelectedTemplate from "components/emailSignatureDetails/selectedTemplate"
 import EmailSignatureTabsArea from "../components/emailSignatureDetails"
 
 const EmailSignatureDetails = () => {

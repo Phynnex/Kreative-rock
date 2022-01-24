@@ -22,9 +22,9 @@ import ViewPlaceOrder from "./pages/ViewPlaceOrder"
 import Notification from "./pages/Notification"
 import EmailTemplates from "./pages/EmailTemplates"
 import EmailSignatureDetails from "./pages/EmailSignatureDetails"
+import Earning from "pages/Earning"
 import { DASHBOARDHOME } from "pages/dashboard/ROUTESCONTS"
 import Dashboard from "pages/dashboard"
-import DashboardPage from "pages/dashboard/home"
 
 function App() {
 	return (
@@ -35,7 +35,6 @@ function App() {
 						<Route path="/" exact component={Home} />
 						<Route path="/mobile-texting" exact component={MobileTexting} />
 						<Route path="/digital-marketing" component={DigitalMarketing} />
-
 						<Route path="/email-templates" exact component={EmailTemplates} />
 						<Route path="/brand-management" component={BrandManagement} />
 						<Route path="/email-signature" component={EmailSignature} />
@@ -51,6 +50,7 @@ function App() {
 						<Route path="/view-place-order" component={ViewPlaceOrder} />
 						<Route path="/notification" component={Notification} />
 						<Route path={DASHBOARDHOME} component={Dashboard} />
+						<Route path="/earning" component={Earning} />
 					</Switch>
 				</Mainlayout>
 			</Router>

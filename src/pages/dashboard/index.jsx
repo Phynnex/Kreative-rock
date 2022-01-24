@@ -4,23 +4,25 @@ import AdminMenu from "context/adminMenu"
 import { dashboardRoutes } from "./routes"
 import { Switch } from "react-router-dom"
 import ProtectedRoute from "Utilities/ProtectedRoutes"
-import InboxPage from "./inbox"
-
-// import MobileMenu from '../main/menu/mobileMenu';
+import { ToggleMobileDashboardBtn } from "components/dashboard/actionbuttons"
+import { useToggleMenu } from "context/toggleMenuContext"
 
 function Dashboard() {
-	// const [open, setOpen] = useState(false)
+	const { toggleMenu, setToggleMenu } = useToggleMenu()
+
+	const handleOpenNav = event => {
+		setToggleMenu(!toggleMenu)
+	}
+
 	return (
 		<div>
-			<br />
-			<br />
-			<br />
-			<br />
 			<DashboardContainer>
 				<AdminMenu>
 					<Menu />
 				</AdminMenu>
 				<DashboardBody>
+					{!toggleMenu && <ToggleMobileDashboardBtn onClick={handleOpenNav} />}
+
 					<Switch>
 						{dashboardRoutes.map((route, i) => (
 							<ProtectedRoute key={i} exact={route.exact} path={route.path} component={route.component} />
