@@ -25,31 +25,35 @@ const AButtonContainer = styled.div`
 	height: 50px;
 	top: -50px;
 	left: -220px;
+	margin-bottom: -50px;
 	${media.smallDesktopMinimum`
 	width: 100%;
 	overflow-x:hidden;
 	left: 10px;
 	top: 0px;
+	margin-bottom: 20px;
 	`}
 	${media.tablet`
 	width: 100%;
 	overflow-x:hidden;
 	left: 10px;
 	top: 0px;
+	margin-bottom: 15px;
 	`}
 	${media.mobile`
+	margin-bottom: 15px;
 	width: 100%;
 
 	overflow:hidden;
 	left: 0px;
-	top: 10px;
+	top: 1px;
 	`}
 `
 const ScrollDiv = styled.div`
 	width: 100%;
 	height: 100%;
 	display: flex;
-	box-sizing: content-box;
+	/* box-sizing: content-box; */
 	overflow-x: auto;
 	-ms-overflow-style: none;
 	-web-overflow-style: none;
@@ -59,6 +63,7 @@ const ToggleBtn = styled.div`
 	height: 40px;
 	background: #ffffff;
 	display: flex;
+	display: none;
 	justify-content: center;
 	align-items: center;
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
@@ -71,6 +76,9 @@ const ToggleBtn = styled.div`
 		width: 50%;
 		height: 50%;
 	}
+	${media.smallDesktopMinimum`
+	display: flex;
+	`}
 `
 
 export function ToggleMobileDashboardBtn({ onClick }) {

@@ -23,14 +23,14 @@ export const DashboardContainer = styled.div`
 `
 
 export const DashboardBody = styled.div`
-	height: 100vh;
-	/* width: calc(100% - 260px); */
+	height: 100%;
+	width: calc(100% - 230px);
 	display: flex;
 	flex-direction: column;
 	border-radius: 8px;
 	padding-top: 0;
-	/* background: red; */
-	/* margin-top: 15px; */
+	margin-top: 140px;
+	margin-top: 150px;
 
 	${media.smallDesktopMinimum`
         width: 100%;

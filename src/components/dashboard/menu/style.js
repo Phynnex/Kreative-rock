@@ -11,6 +11,22 @@ export const MenuContainer = styled.div`
 	border-radius: 5px;
 	background: rgba(255, 255, 255, 0.5);
 	border: 1px solid #e4e7eb;
+	margin-top: 150px;
+	transition: all 0.5s ease-in-out;
+	${media.smallDesktopMinimum`
+        display: none;
+	
+    `}
+`
+export const MenuContainerMobile = styled.div`
+	width: 230px;
+	border-radius: 1.93988px;
+	display: none;
+	flex-direction: column;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.5);
+	border: 1px solid #e4e7eb;
 	/* display:none; */
 	padding-top: 5px;
 	/* padding-left: 15px;
@@ -189,16 +205,20 @@ export const ProfileIconMobile = styled.div`
 export const ToggleBtnContainer = styled.div`
 	height: 32px;
 	width: 90%;
-	display: flex;
+	display: none;
 	justify-content: flex-end;
 	align-items: center;
 	img {
 		width: 15px;
 		height: 15px;
 	}
+	${media.smallDesktopMinimum`
+	display: flex;
+	`}
 `
 export const MobileMenBody = styled.div`
 	position: fixed;
+	display: none;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -207,4 +227,8 @@ export const MobileMenBody = styled.div`
 	background: rgba(0, 0, 0, 0.22);
 	transition: all 0.2s ease-in-out;
 	transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+	${media.smallDesktopMinimum`
+	display:flex;
+	
+	`}
 `

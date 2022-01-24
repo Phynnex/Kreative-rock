@@ -5,7 +5,6 @@ import { KNavLink, Div } from "globalStyles/style"
 
 export default function BigMenu({ icon, text, isActive, link, active }) {
 	const location = useLocation()
-	console.log(location)
 	return (
 		<KNavLink to={link}>
 			<MenuItem active={location?.pathname === link ? true : false}>
