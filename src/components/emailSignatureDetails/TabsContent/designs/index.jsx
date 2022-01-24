@@ -15,20 +15,20 @@ function EmailSignatureDesigns() {
       <KreativeP>
         <div className={styles.emailSignatureDesignsContainer}>
           <h3 className={styles.emailSignatureDesignsh3}>Font and color</h3>
-          <div className='mt-4 d-flex align-items-center'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>
-              Font family
-            </h4>
-            <select className='col-5' name='add-above' id=''>
+          <div className='mt-4 d-flex flex-wrap align-items-center'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Font family</h4>
+            <select
+              className=''
+              name='add-above'
+              id=''
+            >
               <option value=''>Lora</option>
               <option value=''>Sans-serif</option>
             </select>
           </div>
-          <div className='mt-4 d-flex align-items-center'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>
-              Spacing
-            </h4>
-            <div className='col-5 d-flex'>
+          <div className='mt-4 d-flex flex-wrap align-items-center'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Spacing</h4>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='normal'
@@ -37,7 +37,7 @@ function EmailSignatureDesigns() {
                   type='radio'
                   id='normal'
                   name='spacing'
-				  checked
+                  checked
                   className={styles.emailSignatureDesignsRadioInput}
                 />
                 <span
@@ -88,17 +88,13 @@ function EmailSignatureDesigns() {
               </label>
             </div>
           </div>
-          <div className='mt-4 d-flex align-items-center'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>
-              Font size
-            </h4>
+          <div className='mt-4 d-flex flex-wrap align-items-center'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Font size</h4>
             <input type='range' name='fontSize' id='fontSize' />
           </div>
-          <div className='mt-4 d-flex align-items-center mb-3'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>
-              Font color
-            </h4>
-            <div className='d-flex col-5 align-items-center'>
+          <div className='mt-4 d-flex flex-wrap align-items-center mb-3'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Font color</h4>
+            <div className='d-flex align-items-center'>
               <div
                 className='d-flex align-items-center justify-content-center'
                 style={{
@@ -142,9 +138,9 @@ function EmailSignatureDesigns() {
             </div>
           </div>
           <h3 className={styles.emailSignatureDesignsh3}>Images</h3>
-          <div className='mt-4 d-flex align-items-center'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>Shape</h4>
-            <div className='col-5 d-flex'>
+          <div className='mt-4 d-flex flex-wrap align-items-center'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Shape</h4>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='square'
@@ -153,7 +149,7 @@ function EmailSignatureDesigns() {
                   type='radio'
                   id='square'
                   name='shape'
-				  checked
+                  checked
                   className={styles.emailSignatureDesignsRadioInput}
                 />
                 <span
@@ -220,14 +216,14 @@ function EmailSignatureDesigns() {
               </label>
             </div>
           </div>
-          <div className='mt-4 d-flex align-items-center mb-4'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>Size</h4>
+          <div className='mt-4 d-flex flex-wrap align-items-center mb-4'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Size</h4>
             <input type='range' name='sizeOne' id='sizeOne' />
           </div>
           <h3 className={styles.emailSignatureDesignsh3}>Details</h3>
-          <div className='mt-4 d-flex align-items-center'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>Label</h4>
-            <div className='col-5 d-flex'>
+          <div className='mt-4 d-flex flex-wrap align-items-center'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Label</h4>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='phone'
@@ -240,7 +236,7 @@ function EmailSignatureDesigns() {
                 />
                 <span
                   className={styles.emailSignatureDesignsPseudoContainer}
-                  style={{ width: '82px', height: '26px' }}
+                  style={{ width: '72px', height: '26px' }}
                 >
                   Phone
                 </span>
@@ -260,7 +256,7 @@ function EmailSignatureDesigns() {
                   style={{
                     borderLeft: 'none',
                     borderRight: 'none',
-                    width: '82px',
+                    width: '72px',
                     height: '26px',
                   }}
                 >
@@ -275,14 +271,14 @@ function EmailSignatureDesigns() {
                   type='radio'
                   name='label'
                   id='phoneIcon'
-				  checked
+                  checked
                   className={styles.emailSignatureDesignsRadioInput}
                 />
                 <span
                   className={styles.emailSignatureDesignsPseudoContainer}
                   style={{
                     borderRight: 'none',
-                    width: '82px',
+                    width: '72px',
                     height: '26px',
                   }}
                 >
@@ -308,23 +304,21 @@ function EmailSignatureDesigns() {
                   type='radio'
                   name='label'
                   id='none'
-				  checked
+                  checked
                   className={styles.emailSignatureDesignsRadioInput}
                 />
                 <span
                   className={styles.emailSignatureDesignsPseudoContainer}
-                  style={{ width: '82px', height: '26px' }}
+                  style={{ width: '72px', height: '26px' }}
                 >
                   None
                 </span>
               </label>
             </div>
           </div>
-          <div className='mt-4 d-flex'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>
-              Label Icons
-            </h4>
-            <div className='col-3 d-block'>
+          <div className='mt-4 d-flex flex-wrap'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Label Icons</h4>
+            <div className='d-block'>
               <div className='d-flex align-items-center justify-content-between'>
                 <p className={styles.emailSignatureDesignsLabelIconsText}>
                   Phone
@@ -388,11 +382,9 @@ function EmailSignatureDesigns() {
               </div>
             </div>
           </div>
-          <div className='mt-4 d-flex mb-5'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>
-              Seperator
-            </h4>
-            <div className='col-5 d-flex'>
+          <div className='mt-4 d-flex flex-wrap mb-5'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Seperator</h4>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='line'
@@ -405,7 +397,7 @@ function EmailSignatureDesigns() {
                 />
                 <span
                   className={styles.emailSignatureDesignsPseudoContainer}
-                  style={{ width: '82px', height: '26px' }}
+                  style={{ width: '72px', height: '26px' }}
                 >
                   <svg
                     width='2'
@@ -440,7 +432,7 @@ function EmailSignatureDesigns() {
                   style={{
                     borderLeft: 'none',
                     borderRight: 'none',
-                    width: '82px',
+                    width: '72px',
                     height: '26px',
                   }}
                 >
@@ -474,7 +466,7 @@ function EmailSignatureDesigns() {
                   className={styles.emailSignatureDesignsPseudoContainer}
                   style={{
                     borderRight: 'none',
-                    width: '82px',
+                    width: '72px',
                     height: '26px',
                   }}
                 >
@@ -503,12 +495,12 @@ function EmailSignatureDesigns() {
                   type='radio'
                   name='seperator'
                   id='none2'
-				  checked
+                  checked
                   className={styles.emailSignatureDesignsRadioInput}
                 />
                 <span
                   className={styles.emailSignatureDesignsPseudoContainer}
-                  style={{ width: '82px', height: '26px' }}
+                  style={{ width: '72px', height: '26px' }}
                 >
                   None
                 </span>
@@ -516,9 +508,9 @@ function EmailSignatureDesigns() {
             </div>
           </div>
           <h3 className={styles.emailSignatureDesignsh3}>Social Icons</h3>
-          <div className='mt-4 d-flex align-items-center'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>Style</h4>
-            <div className='col-5 d-flex'>
+          <div className='mt-4 d-flex flex-wrap align-items-center'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Style</h4>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='fbtransparent'
@@ -527,7 +519,7 @@ function EmailSignatureDesigns() {
                   type='radio'
                   id='fbtransparent'
                   name='style'
-				  checked
+                  checked
                   className={styles.emailSignatureDesignsRadioInput}
                 />
                 <span
@@ -578,9 +570,9 @@ function EmailSignatureDesigns() {
               </label>
             </div>
           </div>
-          <div className='mt-4 d-flex align-items-center'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>Shape</h4>
-            <div className='col-5 d-flex'>
+          <div className='mt-4 d-flex flex-wrap align-items-center'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Shape</h4>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='square2'
@@ -589,7 +581,7 @@ function EmailSignatureDesigns() {
                   type='radio'
                   id='square2'
                   name='shape2'
-				  checked
+                  checked
                   className={styles.emailSignatureDesignsRadioInput}
                 />
                 <span
@@ -656,16 +648,14 @@ function EmailSignatureDesigns() {
               </label>
             </div>
           </div>
-          <div className='mt-4 d-flex align-items-center mb-4'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>Size</h4>
+          <div className='mt-4 d-flex flex-wrap align-items-center mb-4'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Size</h4>
             <input type='range' name='sizeTwo' id='sizeTwo' />
           </div>
 
-          <div className='mt-4 d-flex align-items-center mb-3'>
-            <h4 className={`${styles.emailSignatureDesignsh4} col-4`}>
-              Icon color
-            </h4>
-            <div className='d-flex col-5 align-items-center'>
+          <div className='mt-4 d-flex flex-wrap align-items-center mb-3'>
+            <h4 className={`${styles.emailSignatureDesignsh4}`}>Icon color</h4>
+            <div className='d-flex align-items-center'>
               <div
                 className='d-flex align-items-center justify-content-center'
                 style={{
@@ -709,7 +699,7 @@ function EmailSignatureDesigns() {
             </div>
           </div>
           <div className='mt-5'>
-            <h3 className={styles.emailSignatureDesignsh3}>
+            <h3 className={`${styles.emailSignatureDesignsResetText} w-100`} >
               Reset Template Design
             </h3>
           </div>

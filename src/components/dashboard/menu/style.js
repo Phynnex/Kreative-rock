@@ -204,7 +204,7 @@ export const MobileMenBody = styled.div`
 	bottom: 0;
 	right: 0;
 	z-index: 999999999;
-	background: rgba(255, 255, 255, 0.22);
-	transition: all 0.5s ease-in-out;
+	background: rgba(0, 0, 0, 0.22);
+	transition: all 0.2s ease-in-out;
 	transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
 `

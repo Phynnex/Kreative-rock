@@ -11,7 +11,7 @@ const EmailSignatureApp = () => {
 			<h3 className={`${styles.emailSignatureh3} mt-4`}>Disclaimer</h3>
 			<h4 className={`${styles.emailSignatureh4}`}>Choose your disclaimer</h4>
 			<div className="mt-1">
-				<div className="d-flex">
+				<div className="d-flex flex-wrap gap-3">
 					<div className={`${styles.emailSignature} d-flex align-items-center me-5`}>
 						<span className={styles.emailSignatureIconGreen}></span>
 						<label htmlFor="" className="ms-2 me-4">
@@ -27,7 +27,7 @@ const EmailSignatureApp = () => {
 						<input type="text" placeholder="Lorem Ipsum is simply dummy" />
 					</div>
 				</div>
-				<div className="d-flex mt-4">
+				<div className="d-flex flex-wrap gap-3 mt-4">
 					<div className="d-flex me-5">
 						<span className={`${styles.emailSignatureIconOrange} mt-2`}></span>
 						<label htmlFor="" className="ms-2 me-4">
@@ -46,7 +46,7 @@ const EmailSignatureApp = () => {
 			</div>
 			<h3 className={`${styles.emailSignatureh3} mt-4`}>Quote</h3>
 			<div className="mt-3">
-				<div className="d-flex">
+				<div className="d-flex flex-wrap gap-3">
 					<div className={`${styles.emailSignature} d-flex align-items-center me-5`}>
 						<span className={styles.emailSignatureIconGreen}></span>
 						<label htmlFor="" className="ms-2 me-4">
@@ -62,7 +62,7 @@ const EmailSignatureApp = () => {
 						<input type="text" placeholder="Lorem Ipsum is simply dummy" />
 					</div>
 				</div>
-				<div className="d-flex mt-4">
+				<div className="d-flex flex-wrap gap-3 mt-4">
 					<div className="d-flex align-items-center me-5">
 						<span className={`${styles.emailSignatureIconOrange} mt-2`}></span>
 						<label htmlFor="" className="ms-2 me-4">
@@ -97,7 +97,7 @@ const EmailSignatureApp = () => {
 					<span className={styles.emailSignatureSignOffCheckedIcon}></span>
 				</label>
 			</div>
-			<div className="mt-5 d-flex">
+			<div className="mt-5 d-flex flex-wrap gap-2">
 				<label htmlFor="" className="me-4">
 					Add above
 				</label>
@@ -106,7 +106,7 @@ const EmailSignatureApp = () => {
 					<option value="">Custom</option>
 				</select>
 			</div>
-			<div className="mt-3 d-flex">
+			<div className="mt-3 d-flex flex-wrap gap-2">
 				<label htmlFor="" className="me-2">
 					Create a custom signature
 				</label>
@@ -114,7 +114,7 @@ const EmailSignatureApp = () => {
 			</div>
 			<h3 className={`${styles.emailSignatureh3} mt-4`}>Designed banners</h3>
 			<h4 className={`${styles.emailSignatureh4} mt-2`}>Choose your banner</h4>
-			<div className="d-flex">
+			<div className="d-flex flex-wrap gap-3">
 				<div className="d-flex align-items-center mt-2 me-5">
 					<span className={`${styles.emailSignatureIconGreen} me-3`}></span>
 					<div className={`${styles.emailSignatureBannerCard}`} style={{ background: "#f7a9a0" }}>
@@ -128,7 +128,7 @@ const EmailSignatureApp = () => {
 					</div>
 				</div>
 			</div>
-			<div className="d-flex mt-1">
+			<div className="d-flex flex-wrap gap-3 mt-1">
 				<div className="d-flex align-items-center mt-2 me-5">
 					<span className={`${styles.emailSignatureIconOrange} me-3`}></span>
 					<div className={`${styles.emailSignatureBannerCard} d-flex`} style={{ background: "#00cca7" }}>
@@ -145,7 +145,7 @@ const EmailSignatureApp = () => {
 			</div>
 			<h3 className={`${styles.emailSignatureh3} mt-5`}>Color footer</h3>
 			<div className="mt-3">
-				<div className="d-flex">
+				<div className="d-flex flex-wrap gap-3">
 					<div className={`${styles.emailSignature} d-flex align-items-center me-5`}>
 						<span className={styles.emailSignatureIconGreen}></span>
 						<label htmlFor="" className="ms-2 me-4">
@@ -161,7 +161,7 @@ const EmailSignatureApp = () => {
 						<input type="text" placeholder="Lorem Ipsum is simply dummy" />
 					</div>
 				</div>
-				<div className="d-flex mt-3">
+				<div className="d-flex flex-wrap gap-3 mt-3">
 					<div className="d-flex align-items-center me-5">
 						<span className={styles.emailSignatureIconOrange}></span>
 						<label htmlFor="" className="ms-2 me-4">
