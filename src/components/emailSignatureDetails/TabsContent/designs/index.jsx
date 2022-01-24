@@ -17,14 +17,18 @@ function EmailSignatureDesigns() {
           <h3 className={styles.emailSignatureDesignsh3}>Font and color</h3>
           <div className='mt-4 d-flex flex-wrap align-items-center'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Font family</h4>
-            <select className='col-6' name='add-above' id=''>
+            <select
+              className=''
+              name='add-above'
+              id=''
+            >
               <option value=''>Lora</option>
               <option value=''>Sans-serif</option>
             </select>
           </div>
           <div className='mt-4 d-flex flex-wrap align-items-center'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Spacing</h4>
-            <div className='col-5 d-flex'>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='normal'
@@ -136,7 +140,7 @@ function EmailSignatureDesigns() {
           <h3 className={styles.emailSignatureDesignsh3}>Images</h3>
           <div className='mt-4 d-flex flex-wrap align-items-center'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Shape</h4>
-            <div className='col-5 d-flex'>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='square'
@@ -219,7 +223,7 @@ function EmailSignatureDesigns() {
           <h3 className={styles.emailSignatureDesignsh3}>Details</h3>
           <div className='mt-4 d-flex flex-wrap align-items-center'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Label</h4>
-            <div className='col-5 d-flex'>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='phone'
@@ -380,7 +384,7 @@ function EmailSignatureDesigns() {
           </div>
           <div className='mt-4 d-flex flex-wrap mb-5'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Seperator</h4>
-            <div className='col-5 d-flex'>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='line'
@@ -506,7 +510,7 @@ function EmailSignatureDesigns() {
           <h3 className={styles.emailSignatureDesignsh3}>Social Icons</h3>
           <div className='mt-4 d-flex flex-wrap align-items-center'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Style</h4>
-            <div className='col-5 d-flex'>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='fbtransparent'
@@ -568,7 +572,7 @@ function EmailSignatureDesigns() {
           </div>
           <div className='mt-4 d-flex flex-wrap align-items-center'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Shape</h4>
-            <div className='col-5 d-flex'>
+            <div className='d-flex'>
               <label
                 className={`${styles.emailSignatureDesignsLabel}`}
                 htmlFor='square2'
@@ -651,7 +655,7 @@ function EmailSignatureDesigns() {
 
           <div className='mt-4 d-flex flex-wrap align-items-center mb-3'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Icon color</h4>
-            <div className='d-flex col-5 align-items-center'>
+            <div className='d-flex align-items-center'>
               <div
                 className='d-flex align-items-center justify-content-center'
                 style={{
@@ -695,7 +699,7 @@ function EmailSignatureDesigns() {
             </div>
           </div>
           <div className='mt-5'>
-            <h3 className={styles.emailSignatureDesignsh3}>
+            <h3 className={`${styles.emailSignatureDesignsResetText} w-100`} >
               Reset Template Design
             </h3>
           </div>
