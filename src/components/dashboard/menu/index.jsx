@@ -17,11 +17,14 @@ export default function Menu() {
 	const handleOpenBigSideNav = event => {
 		setToggleMenu(!toggleMenu)
 	}
+	const handleOpenBigSideNav2 = event => {
+		event.stopPropagation()
+	}
 
 	return (
 		<Div>
 			<MobileMenBody open={toggleMenu} onClick={handleOpenBigSideNav}>
-				<MenuContainer open={toggleMenu}>
+				<MenuContainer open={toggleMenu} onClick={handleOpenBigSideNav2}>
 					<UserInfoMenuContainer>
 						<ToggleBtnContainer>
 							<Img src={cancelBtn} alt="Close Dashboard" onClick={handleOpenBigSideNav} />

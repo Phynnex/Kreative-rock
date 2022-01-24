@@ -23,27 +23,36 @@ const AButtonContainer = styled.div`
 	display: flex;
 	position: relative;
 	height: 50px;
-	/* background: red; */
 	top: -50px;
 	left: -220px;
 	${media.smallDesktopMinimum`
 	width: 100%;
-	overflow-x:scroll;
+	overflow-x:hidden;
 	left: 10px;
 	top: 0px;
 	`}
 	${media.tablet`
 	width: 100%;
-	overflow-x:scroll;
+	overflow-x:hidden;
 	left: 10px;
 	top: 0px;
 	`}
 	${media.mobile`
 	width: 100%;
-	overflow-x:scroll;
+
+	overflow:hidden;
 	left: 0px;
 	top: 10px;
 	`}
+`
+const ScrollDiv = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	box-sizing: content-box;
+	overflow-x: auto;
+	-ms-overflow-style: none;
+	-web-overflow-style: none;
 `
 const ToggleBtn = styled.div`
 	width: 40px;
@@ -75,11 +84,13 @@ export function ToggleMobileDashboardBtn({ onClick }) {
 function ActionBtnDashboard() {
 	return (
 		<AButtonContainer>
-			{btnActionData.map(action => (
-				<AButton key={action.id}>
-					{action.title} <Img src={action.icon} alt="action icon" />
-				</AButton>
-			))}
+			<ScrollDiv>
+				{btnActionData.map(action => (
+					<AButton key={action.id}>
+						{action.title} <Img src={action.icon} alt="action icon" />
+					</AButton>
+				))}
+			</ScrollDiv>
 		</AButtonContainer>
 	)
 }
