@@ -17,7 +17,7 @@ function EmailSignatureDesigns() {
           <h3 className={styles.emailSignatureDesignsh3}>Font and color</h3>
           <div className='mt-4 d-flex flex-wrap align-items-center'>
             <h4 className={`${styles.emailSignatureDesignsh4}`}>Font family</h4>
-            <select className='col-5' name='add-above' id=''>
+            <select className='col-6' name='add-above' id=''>
               <option value=''>Lora</option>
               <option value=''>Sans-serif</option>
             </select>
