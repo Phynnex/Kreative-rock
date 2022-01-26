@@ -62,6 +62,9 @@ function KeywordsPage() {
 				<UserCreatedResponse text="I am busy I will talk later" />
 				<UserCreatedResponse text="I am busy I will talk later" />
 			</KeywordContainer>
+			<br />
+			<br />
+			<br />
 		</div>
 	)
 }

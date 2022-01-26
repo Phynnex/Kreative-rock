@@ -43,6 +43,7 @@ export const CreatedBody = styled.div`
 	}
     `}
 	${media.mobile`
+	width: 98%;
     padding: 0px 0px;
     flex-direction: column;
 	align-items: flex-start;
