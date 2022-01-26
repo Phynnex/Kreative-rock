@@ -50,7 +50,7 @@ export const KeywordBody = styled.div`
 	align-items: flex-start;
 
     button {
-		width: 90.5px;
+		width: 80.5px;
 		height: 35px;
 		border-radius: 30px;
 		margin-right: 10px;

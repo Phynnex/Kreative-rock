@@ -20,6 +20,7 @@ export const CamPaignCardCon = styled.div`
 	height: 100%;;
     margin-bottom: 30px;
     border-radius: 25px;
+	border: none;
     `}
 `
 export const CamPaignBtn = styled.div`
@@ -34,7 +35,6 @@ export const CamPaignBtn = styled.div`
 	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 30px;
 	cursor: pointer;
-	margin-top: 30px;
 `
 export const CTopSection = styled.div`
 	width: 100%;
