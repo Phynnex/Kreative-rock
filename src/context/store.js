@@ -1,10 +1,13 @@
+import ToggleCreateKeyword from "./createKewordContext.jsx"
 import DashboardMenu from "./DashboardMenu.jsx"
 import ToggleMenu from "./toggleMenuContext.jsx"
 
 function Store({ children }) {
 	return (
 		<DashboardMenu>
-			<ToggleMenu>{children}</ToggleMenu>
+			<ToggleCreateKeyword>
+				<ToggleMenu>{children}</ToggleMenu>
+			</ToggleCreateKeyword>
 		</DashboardMenu>
 	)
 }
