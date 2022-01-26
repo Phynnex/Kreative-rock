@@ -11,11 +11,11 @@ const AButton = styled.button`
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 	border-radius: 3px;
 	margin-right: 15px;
+	margin-top: -7px;
 	${media.mobile`
 	width: 100px;
 	flex: 0 0 auto;
 	margin-left: 5px;
-
 	`}
 `
 
@@ -28,14 +28,12 @@ const AButtonContainer = styled.div`
 	margin-bottom: -50px;
 	${media.smallDesktopMinimum`
 	width: 100%;
-	overflow-x:hidden;
 	left: 10px;
 	top: 0px;
 	margin-bottom: 20px;
 	`}
 	${media.tablet`
 	width: 100%;
-	overflow-x:hidden;
 	left: 10px;
 	top: 0px;
 	margin-bottom: 15px;
@@ -43,8 +41,6 @@ const AButtonContainer = styled.div`
 	${media.mobile`
 	margin-bottom: 15px;
 	width: 100%;
-
-	overflow:hidden;
 	left: 0px;
 	top: 1px;
 	`}
@@ -54,9 +50,16 @@ const ScrollDiv = styled.div`
 	height: 100%;
 	display: flex;
 	/* box-sizing: content-box; */
-	overflow-x: auto;
-	-ms-overflow-style: none;
-	-web-overflow-style: none;
+	overflow: hidden;
+	overflow-x: scroll;
+	/* z-index: 300; */
+	::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: transparent;
+	}
 `
 const ToggleBtn = styled.div`
 	width: 40px;
