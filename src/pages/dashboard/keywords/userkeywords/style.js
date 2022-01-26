@@ -44,6 +44,8 @@ export const KeywordBody = styled.div`
     `}
 	${media.mobile`
     padding: 0px 0px;
+	width: 98%;
+	/* background:red; */
     flex-direction: column;
 	align-items: flex-start;
 
@@ -72,6 +74,10 @@ export const CheckBoxDiv = styled.div`
 export const KeywordActionArea = styled.div`
 	display: flex;
 	align-items: center;
+	background-color: #fff;
+	${media.mobile`
+	 width: 99.5%;
+	`}
 `
 
 export const CustomCheckWrapper = styled.p`

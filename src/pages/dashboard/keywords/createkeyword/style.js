@@ -80,4 +80,19 @@ export const KreateFormBody = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	${media.smallDesktopMinimum`
+    width: 90%;
+    padding: 15px 10px;
+    
+    `}
+	${media.tablet`
+    width: 90%;
+	
+    
+    `}
+	${media.mobile`
+    width: 100%;
+
+    
+    `}
 `
