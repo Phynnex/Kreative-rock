@@ -1,4 +1,5 @@
 import CampaignPage from "./campaign"
+import CreateCampainForm from "./campaign/createcampaign"
 import ContactsPage from "./contacts"
 import DeliveryReportsPage from "./deliveryreports"
 import HelpPage from "./help"
@@ -6,7 +7,7 @@ import DashboardPage from "./home"
 import InboxPage from "./inbox"
 import KeywordsPage from "./keywords"
 
-import { CAMPAIGN, CONTACTS, DASHBOARDHOME, DELIVERY_REPORS, HELP, INBOX, KEYWORDS, WALLET } from "./ROUTESCONTS"
+import { CAMPAIGN, CONTACTS, CREATCAMPAIGN, DASHBOARDHOME, DELIVERY_REPORS, HELP, INBOX, KEYWORDS, WALLET } from "./ROUTESCONTS"
 import WalletPage from "./wallet"
 
 export const dashboardRoutes = [
@@ -55,6 +56,12 @@ export const dashboardRoutes = [
 	{
 		path: HELP,
 		component: HelpPage,
+		exact: true,
+		protected: true
+	},
+	{
+		path: CREATCAMPAIGN,
+		component: CreateCampainForm,
 		exact: true,
 		protected: true
 	}

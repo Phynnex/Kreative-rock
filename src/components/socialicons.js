@@ -1,2 +1,4 @@
-import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded"
-import TwitterIcon from "@mui/icons-material/Twitter"
+import checkedIcon from "assets/images/checked.svg"
+import uncheckedIcon from "assets/images/unchecked.svg"
+
+export { checkedIcon, uncheckedIcon }
