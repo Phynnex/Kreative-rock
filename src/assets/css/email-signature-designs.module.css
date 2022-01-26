@@ -37,7 +37,7 @@
   border-radius: 50px;
 }
 
-textarea {
+.emailSignatureDesignsContainer textarea {
   background: #efeaea;
   width: 187px;
   padding: 8px 10px 8px 16px;
@@ -50,11 +50,11 @@ textarea {
   color: #918d8d;
 }
 
-textarea:focus {
+.emailSignatureDesignsContainer textarea:focus {
   outline: none;
 }
 
-select {
+.emailSignatureDesignsContainer select {
   font-family: Lora;
   font-style: normal;
   font-weight: normal;
@@ -71,7 +71,7 @@ select {
   border-radius: 5px;
 }
 
-select:focus {
+.emailSignatureDesignsContainer select:focus {
   outline: none;
 }
 
@@ -155,7 +155,7 @@ select:focus {
   stroke: #fff;
 }
 
-input[type='range'] {
+.emailSignatureDesignsContainer input[type='range'] {
   overflow: hidden;
   -webkit-appearance: none;
   background-color: #ff7900;
@@ -163,7 +163,7 @@ input[type='range'] {
   width: 215px;
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+.emailSignatureDesignsContainer input[type='range']::-webkit-slider-runnable-track {
   height: 10px;
   -webkit-appearance: none;
   color: #00cca7;
@@ -171,7 +171,7 @@ input[type='range']::-webkit-slider-runnable-track {
   border-radius: 10px;
 }
 
-input[type='range']::-webkit-slider-thumb {
+.emailSignatureDesignsContainer input[type='range']::-webkit-slider-thumb {
   width: 10px;
   -webkit-appearance: none;
   height: 10px;

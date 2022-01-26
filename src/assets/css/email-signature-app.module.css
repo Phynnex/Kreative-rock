@@ -44,7 +44,7 @@
 	border-radius: 50px;
 }
 
-input[type="text"] {
+.emailSignatureContainer input[type="text"] {
 	background: #efeaea;
 	/* width: 187px; */
 	padding: 8px 16px 8px 16px;
@@ -57,12 +57,12 @@ input[type="text"] {
 	color: #918d8d;
 }
 
-input[type="text"]:focus {
+.emailSignatureContainer input[type="text"]:focus {
 	border-color: transparent;
 	outline: none;
 }
 
-textarea {
+.emailSignatureContainer textarea {
 	background: #efeaea;
 	width: 187px;
 	padding: 8px 10px 8px 16px;
@@ -75,11 +75,11 @@ textarea {
 	color: #918d8d;
 }
 
-textarea:focus {
+.emailSignatureContainer textarea:focus {
 	outline: none;
 }
 
-select {
+.emailSignatureContainer select {
 	background: #efeaea;
 	width: 192px;
 	height: 27px;
@@ -93,7 +93,7 @@ select {
 	color: #000000;
 }
 
-option {
+.emailSignatureContainer option {
 	font-family: Lucida Calligraphy;
 	font-style: italic;
 	font-weight: normal;
@@ -102,7 +102,7 @@ option {
 	color: #000000;
 }
 
-select:focus {
+.emailSignatureContainer select:focus {
 	outline: none;
 }
 
