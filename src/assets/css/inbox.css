@@ -1,0 +1,99 @@
+.inbox-header-wrapper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background: white;
+  margin: 0 20px 0 11px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inbox-header-h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.inbox-header-notification-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.inbox-main-layout {
+  display: flex;
+  height: 821px;
+  background: white;
+  margin: 6px 20px 0 11px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inbox-layout-divider {
+  border: 1px solid #888888;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inbox-sidebar-wrapper {
+  width: 301px;
+  padding: 11px 15px 0 17px;
+}
+
+.inbox-sidebar-search-wrapper {
+  width: 268px;
+  height: 60px;
+  background: #ededed;
+  border-radius: 25px;
+  padding: 18px 14px;
+  margin-bottom: 15px;
+}
+
+.inbox-sidebar-search-wrapper input {
+  background: #ededed;
+  width: 200px;
+  margin-left: 20px;
+}
+.inbox-sidebar-search-wrapper input:focus {
+  outline: none;
+}
+
+.inbox-sidebar-h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 16px;
+  color: #000000;
+}
+.inbox-sidebar-h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+.inbox-sidebar-h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.inbox-content-new-conversation--h2 {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.inbox-content-new-conversation--btn {
+  width: 194px;
+  height: 39px;
+  background: #ff7900;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  color: #ffffff;
+  margin-top: 44px;
+}
