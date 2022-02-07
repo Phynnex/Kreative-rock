@@ -1,13 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
 import InboxContent from './InboxContent/InboxContent';
 import InboxSideBar from './InboxSideBar/InboxSideBar';
 
 const InboxLayout = () => {
+  const [inboxId, setInboxId] = useState(0);
   return (
     <div className='inbox-main-layout'>
-      <InboxSideBar />
+      <InboxSideBar setInboxId={setInboxId} inboxId={inboxId} />
       <div className='inbox-layout-divider'></div>
-      <InboxContent />
+      <InboxContent inboxId={inboxId} />
     </div>
   );
 };
