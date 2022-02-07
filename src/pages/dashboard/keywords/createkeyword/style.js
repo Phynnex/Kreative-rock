@@ -62,7 +62,7 @@ export const CampaignInputLabel = styled.label`
 	font-family: Lora;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 10px;
+	font-size: 12px;
 	line-height: 13px;
 	color: #000000;
 `

@@ -20,7 +20,7 @@ function CampaignPage() {
 				</CampaignTextContainer>
 				<CampaignCardSection>
 					{campaignInfoData.map(info => (
-						<CampainCard key={info.id} image={info.imgUrl} title={info.title} text={info.text} />
+						<CampainCard key={info.id} image={info.imgUrl} title={info.title} text={info.text} link={info.link} />
 					))}
 				</CampaignCardSection>
 			</CampaignMain>

@@ -1,6 +1,6 @@
 const AppColors = {
-	brandColor: "##FF7900",
-	footerBlue: "##00A386",
+	brandColor: "#FF7900",
+	footerBlue: "#00A386",
 	newsLetterBg: "#00CCA7",
 	lightBlack: "#263238",
 	darkBrandColor2: "#154DAF",
