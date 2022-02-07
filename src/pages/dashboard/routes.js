@@ -1,13 +1,15 @@
 import CampaignPage from "./campaign"
 import CreateCampainForm from "./campaign/createcampaign"
+import OnewayCampainPage from "./campaign/createcampaign/onewayform"
 import ContactsPage from "./contacts"
 import DeliveryReportsPage from "./deliveryreports"
 import HelpPage from "./help"
 import DashboardPage from "./home"
 import InboxPage from "./inbox"
 import KeywordsPage from "./keywords"
+import UserCreatedResponses from "./keywords/created-responses"
 
-import { CAMPAIGN, CONTACTS, CREATCAMPAIGN, DASHBOARDHOME, DELIVERY_REPORS, HELP, INBOX, KEYWORDS, WALLET } from "./ROUTESCONTS"
+import { CAMPAIGN, CONTACTS, CREATCAMPAIGN_ONE, CREATCAMPAIGN_TWO, DASHBOARDHOME, DELIVERY_REPORS, HELP, INBOX, KEYWORDS, USERCREATED_RESPONSES, WALLET } from "./ROUTESCONTS"
 import WalletPage from "./wallet"
 
 export const dashboardRoutes = [
@@ -60,8 +62,20 @@ export const dashboardRoutes = [
 		protected: true
 	},
 	{
-		path: CREATCAMPAIGN,
+		path: CREATCAMPAIGN_TWO,
 		component: CreateCampainForm,
+		exact: true,
+		protected: true
+	},
+	{
+		path: USERCREATED_RESPONSES,
+		component: UserCreatedResponses,
+		exact: true,
+		protected: true
+	},
+	{
+		path: CREATCAMPAIGN_ONE,
+		component: OnewayCampainPage,
 		exact: true,
 		protected: true
 	}

@@ -74,7 +74,7 @@ export const CheckBoxDiv = styled.div`
 export const KeywordActionArea = styled.div`
 	display: flex;
 	align-items: center;
-	background-color: #fff;
+	/* background-color: #fff; */
 	${media.mobile`
 	 width: 99.5%;
 	`}

@@ -29,12 +29,31 @@ export const KreateContent = styled.div`
 		justify-content: center;
 		align-items: center;
 	}
-	p {
+	h6 {
+		font-size: 20px;
 		margin-right: 15px;
-		margin-top: 15px;
+		cursor: pointer;
 	}
 	${media.mobile`
 	padding: 0px 0px;
 	margin-top: 25px;
 	`}
+`
+
+export const LinkBtn = styled.button`
+	width: 249px;
+	height: 48px;
+	background: #ff7900;
+	border-radius: 30px;
+	color: #ffffff;
+	margin-top: 80px;
+`
+export const Underline = styled.div`
+	width: 249px;
+	height: 3px;
+	max-width: 90px;
+	border-radius: 6px;
+	margin-top: -5px;
+	margin: auto;
+	background: #ff7900;
 `

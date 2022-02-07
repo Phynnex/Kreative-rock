@@ -2,10 +2,9 @@ import React from "react"
 
 import { Img } from "globalStyles/style"
 import { CamPaignBtn, CamPaignCardCon, CTopSection, CenterDiv, CardP } from "./style"
-// import { Link } from "react-router-dom"
-// import { CREATCAMPAIGN } from "pages/dashboard/ROUTESCONTS"
+import { Link } from "react-router-dom"
 
-function CampainCard({ title, text, image }) {
+function CampainCard({ title, text, image, link }) {
 	return (
 		<CamPaignCardCon>
 			<CTopSection>
@@ -16,9 +15,9 @@ function CampainCard({ title, text, image }) {
 			</CTopSection>
 			<CardP>{text}</CardP>
 			<CenterDiv>
-				{/* <Link to={CREATCAMPAIGN}> */}
-				<CamPaignBtn>Create Campaign</CamPaignBtn>
-				{/* </Link> */}
+				<Link to={link}>
+					<CamPaignBtn>Create Campaign</CamPaignBtn>
+				</Link>
 			</CenterDiv>
 		</CamPaignCardCon>
 	)

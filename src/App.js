@@ -22,7 +22,6 @@ import ViewPlaceOrder from "./pages/ViewPlaceOrder"
 import Notification from "./pages/Notification"
 import EmailTemplates from "./pages/EmailTemplates"
 import EmailSignatureDetails from "./pages/EmailSignatureDetails"
-import Earning from "pages/Earning"
 import { DASHBOARDHOME } from "pages/dashboard/ROUTESCONTS"
 import Dashboard from "pages/dashboard"
 
@@ -50,7 +49,6 @@ function App() {
 						<Route path="/view-place-order" component={ViewPlaceOrder} />
 						<Route path="/notification" component={Notification} />
 						<Route path={DASHBOARDHOME} component={Dashboard} />
-						<Route path="/earning" component={Earning} />
 					</Switch>
 				</Mainlayout>
 			</Router>

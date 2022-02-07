@@ -88,6 +88,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	content: {
 		fontSize: 18,
+		color: "#373737",
 		fontWeight: 300,
 		lineHeight: "30px",
 		margin: ".4em 0 ",
@@ -123,6 +124,13 @@ const useStyles = makeStyles(theme => ({
 		height: "30px",
 		[theme.breakpoints.down("sm")]: {
 			textAlign: "center"
+		}
+	},
+	link: {
+		color: "#373737",
+		marginLeft: "5px",
+		"&:hover": {
+			color: "#00CCA7"
 		}
 	}
 }))
@@ -177,9 +185,12 @@ const Register = () => {
 						<Button variant="contained" color="secondary" disableElevation className={classes.btn}>
 							Sign Up
 						</Button>
-						<Link to="/sign-in">
-							<Typography className={classes.content}>Already have an account Sign In</Typography>
-						</Link>
+						<Box display="flex" gap="10px" className={classes.content}>
+							<Typography>Already have an account?</Typography>
+							<Link to="/sign-in">
+								<Typography className={classes.link}>Sign In</Typography>
+							</Link>
+						</Box>
 					</Grid>
 					<Grid item xs={11} sm={11} md={5} className={classes.box1}>
 						<img src={logo} alt="logo" className={classes.image1} />

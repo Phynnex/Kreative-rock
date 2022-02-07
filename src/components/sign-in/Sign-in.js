@@ -10,10 +10,10 @@ import { Link } from "react-router-dom"
 const useStyles = makeStyles(theme => ({
 	items: {
 		paddingTop: "4em",
-		marginBottom: "4em"
+		marginBottom: "1em"
 	},
 	box: {
-		paddingTop: "4em",
+		paddingTop: "2em",
 		paddingLeft: "4em",
 		display: "flex",
 		// alignItems: 'center',
@@ -102,16 +102,16 @@ const useStyles = makeStyles(theme => ({
 		borderRadius: "10px",
 		fontWeight: 600,
 		fontSize: 18,
+		marginBottom: "-2rem",
 		padding: "10px 25px",
 		[theme.breakpoints.down("sm")]: {
 			width: "100%"
 		}
 	},
 	formControl: {
-		marginBottom: "2em"
+		marginBottom: "-2rem"
 	},
 	label: {
-		paddingBottom: "5px",
 		fontSize: 20,
 		[theme.breakpoints.down("sm")]: {
 			fontSize: 16
@@ -124,6 +124,21 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down("sm")]: {
 			textAlign: "center"
 		}
+	},
+	link: {
+		color: "#373737",
+		"&:hover": {
+			color: "#00CCA7"
+		}
+	},
+	LinkArea: {
+		display: "flex",
+		gap: "10px",
+		color: "#373737",
+		marginTop: "-80px"
+	},
+	textfield: {
+		marginTop: "-70px"
 	}
 }))
 const SignIn = () => {
@@ -146,25 +161,21 @@ const SignIn = () => {
 						</Box>
 
 						<FormControl variant="standard" className={classes.formControl}>
-							<label className={classes.label}>Super admin email</label>
-							<TextField variant="outlined" color="secondary" fullWidth id="fullWidth" className={classes.textfield} placeholder="Email" />
-						</FormControl>
-
-						<FormControl variant="standard" className={classes.formControl}>
-							<label className={classes.label}>Admin email</label>
 							<TextField color="secondary" variant="outlined" fullWidth id="fullWidth" className={classes.textfield} placeholder="Email" />
 						</FormControl>
 						<FormControl variant="standard" className={classes.formControl}>
-							<label className={classes.label}> Super admin password</label>
 							<TextField variant="outlined" color="secondary" fullWidth id="fullWidth" className={classes.textfield} placeholder="Password" />
 						</FormControl>
 
 						<Button variant="contained" color="secondary" disableElevation className={classes.btn}>
 							Sign In
 						</Button>
-						<Link to="/register">
-							<Typography className={classes.content}>Dont have an account Sign Up</Typography>
-						</Link>
+						<Box className={classes.LinkArea}>
+							<Typography>Dont have an account?</Typography>
+							<Link to="/register">
+								<Typography className={classes.link}>Sign Up</Typography>
+							</Link>
+						</Box>
 					</Grid>
 					<Grid item xs={11} sm={11} md={5} className={classes.box1}>
 						<img src={logo} alt="logo" className={classes.image1} />

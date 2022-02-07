@@ -5,9 +5,10 @@ import { KNavLink, Div } from "globalStyles/style"
 
 export default function BigMenu({ icon, text, isActive, link, active }) {
 	const location = useLocation()
+
 	return (
 		<KNavLink to={link}>
-			<MenuItem active={location?.pathname === link ? true : false}>
+			<MenuItem active={location?.pathname === link ? true : link.includes(location.pathname.split("/")[2]) ? true : false}>
 				<MenuIconContainer>
 					<MenuIcon src={icon} />
 				</MenuIconContainer>
