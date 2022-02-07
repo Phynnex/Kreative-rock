@@ -1,14 +1,16 @@
 import ActionBtnDashboard from "components/dashboard/actionbuttons"
-import { Img } from "globalStyles/style"
-import { KeywordContainer, KHeaderText, KreateContent } from "./style"
+import { Div, Img } from "globalStyles/style"
+import { KeywordContainer, KHeaderText, KreateContent, LinkBtn, Underline } from "./style"
 import AddBtn from "assets/images/addIcon.svg"
+import linkBtn from "assets/images/linkIcon.svg"
 import UserKeyword from "./userkeywords"
-import UserCreatedResponse from "./createdresponses"
 import CreateKeyword from "./createkeyword"
 import { useCreateKeyword } from "context/createKewordContext"
 import { useEffect } from "react"
 import { useState } from "react"
 import keywordData from "./userkeywords/keywordData"
+import { Link } from "react-router-dom"
+import { USERCREATED_RESPONSES } from "../ROUTESCONTS"
 
 function KeywordsPage() {
 	const { createkeyword, setCreateKeyword } = useCreateKeyword()
@@ -37,8 +39,10 @@ function KeywordsPage() {
 			<CreateKeyword open={createkeyword} close={toggleCreateKeyword} />
 			<KeywordContainer>
 				<KHeaderText>Keywords </KHeaderText>
+				<Underline></Underline>
+				<br />
 				<KreateContent>
-					<p>Create Keywords</p>{" "}
+					<h6 onClick={toggleCreateKeyword}>Create Keyword</h6>{" "}
 					<button onClick={toggleCreateKeyword}>
 						<Img src={AddBtn} alt="Create Keyword" />
 					</button>
@@ -51,17 +55,15 @@ function KeywordsPage() {
 				{keywords?.map(keyword => (
 					<UserKeyword key={keyword.id} text={keyword.keyword} auto={keyword.autoreply} handleChange={() => handleAutoreply(keyword.id)} />
 				))}
-				<br />
-				<br />
-				<br />
-				<KreateContent>
-					<h5>Your Responses</h5>
-				</KreateContent>
-				<UserCreatedResponse text="I am busy I will talk later" />
-				<UserCreatedResponse text="I am busy I will talk later" />
-				<UserCreatedResponse text="I am busy I will talk later" />
-				<UserCreatedResponse text="I am busy I will talk later" />
 			</KeywordContainer>
+			<Div width="100%" display="flex" justify="center">
+				<Link to={USERCREATED_RESPONSES}>
+					<LinkBtn>
+						Created Responses
+						<Img ml="10px" src={linkBtn} alt="Link to Responses" />
+					</LinkBtn>
+				</Link>
+			</Div>
 			<br />
 			<br />
 			<br />

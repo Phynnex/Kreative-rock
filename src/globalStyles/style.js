@@ -66,6 +66,7 @@ export const Img = styled.img`
 	width: ${({ w }) => (w ? w : null)};
 	height: ${({ h }) => (h ? h : null)};
 	margin: ${({ m }) => (m ? m : null)};
+	margin-left: ${({ ml }) => (ml ? ml : null)};
 	padding: ${({ p }) => (p ? p : null)};
 	border-radius: ${({ br }) => (br ? br : null)};
 	align-self: ${({ align }) => (align ? align : null)};

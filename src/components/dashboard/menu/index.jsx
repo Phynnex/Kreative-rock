@@ -40,7 +40,12 @@ export default function Menu() {
 				</UserInfoMenuContainer>
 				<BigMenuItemsContainer>
 					{adminMenu?.map((menu, i) => (
-						<BigMenu link={menu.link} text={menu.text} key={i} icon={location?.pathname === menu.link ? menu.activeIcon : menu.icon} />
+						<BigMenu
+							link={menu.link}
+							text={menu.text}
+							key={i}
+							icon={location?.pathname === menu.link ? menu.activeIcon : menu.link.includes(location.pathname.split("/")[2]) ? menu.activeIcon : menu.icon}
+						/>
 					))}
 				</BigMenuItemsContainer>
 			</MenuContainer>
@@ -66,7 +71,12 @@ export default function Menu() {
 					</UserInfoMenuContainer>
 					<BigMenuItemsContainer>
 						{adminMenu?.map((menu, i) => (
-							<BigMenu link={menu.link} text={menu.text} key={i} icon={location?.pathname === menu.link ? menu.activeIcon : menu.icon} />
+							<BigMenu
+								link={menu.link}
+								text={menu.text}
+								key={i}
+								icon={location?.pathname === menu.link ? menu.activeIcon : menu.link.includes(location.pathname.split("/")[2]) ? menu.activeIcon : menu.icon}
+							/>
 						))}
 					</BigMenuItemsContainer>
 				</MenuContainerMobile>
