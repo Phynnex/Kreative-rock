@@ -1,5 +1,5 @@
 import React, { PureComponent } from "react"
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts"
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts"
 import AppColors from "utils/colors"
 
 const data = [
@@ -41,7 +41,7 @@ const data = [
 ]
 
 const CustomizedDot = props => {
-	const { cx, cy, stroke, payload, value } = props
+	const { cx, cy } = props
 
 	return (
 		// <svg x={cx - 10} y={cy - 10} width={20} height={20} fill="none" xmlns="http://www.w3.org/2000/svg">

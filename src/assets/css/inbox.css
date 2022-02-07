@@ -1,0 +1,221 @@
+.inbox-header-wrapper {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  background: white;
+  margin: 0 20px 0 11px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inbox-header-h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
+  color: #000000;
+}
+
+.inbox-header-notification-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.inbox-main-layout {
+  display: flex;
+  height: 821px;
+  background: white;
+  margin: 6px 20px 0 11px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inbox-layout-divider {
+  border: 1px solid #888888;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inbox-sidebar-wrapper {
+  width: 301px;
+  padding-top: 11px;
+}
+
+.inbox-sidebar-search-wrapper {
+  width: 268px;
+  height: 60px;
+  background: #ededed;
+  border-radius: 25px;
+  padding: 18px 14px;
+  margin: 0 15px 15px 17px;
+}
+
+.inbox-sidebar-search-wrapper input {
+  background: #ededed;
+  width: 200px;
+  margin-left: 20px;
+}
+.inbox-sidebar-search-wrapper input:focus {
+  outline: none;
+}
+
+.inbox-overview-list {
+  padding: 11px 15px 0 17px;
+}
+
+.inbox-sidebar-h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 16px;
+  color: #000000;
+}
+.inbox-sidebar-h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+.inbox-sidebar-h4 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.inbox-content-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.inbox-content-new-conversation--h2 {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.inbox-content-new-conversation--btn {
+  width: 194px;
+  height: 39px;
+  background: #ff7900;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  color: #ffffff;
+  margin-top: 44px;
+}
+
+/* inbox details styles */
+.inbox-details-header {
+  height: 70px;
+  background: #f1f1f1;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 31.4px 0 35px;
+  width: 100%;
+}
+
+.inbox-details-h2 {
+  font-size: 18px;
+  line-height: 16px;
+}
+
+.inbox-details-h3 {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.inbox-details-h4 {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.inbox-content-paragraph {
+  font-size: 14px;
+  line-height: 18px;
+  margin-left: 20px;
+}
+
+.inbox-details-new-message-vertical-divider {
+  border: 1px solid #888888;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: rotate(180deg);
+  margin: 0 14px;
+  width: 100%;
+}
+
+.inbox-details-new-message-h2 {
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 2px;
+}
+
+.inbox-details-chat-wrapper {
+  height: 590px;
+  overflow: auto;
+  border-bottom: 2px solid #888888;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 51px 28px 61px 36px;
+}
+
+.inbox-details-chat-received {
+  max-width: 447px;
+  padding: 10px 10px 30px 20px;
+  background: #ededed;
+  border-radius: 25px;
+  margin-bottom: 40px;
+}
+
+.inbox-details-chat-sent {
+  max-width: 447px;
+  padding: 10px 10px 30px 20px;
+  background: #00cca7;
+  border-radius: 25px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.inbox-details-response-wrapper {
+  padding: 5px 20px 7px 17px;
+}
+
+.inbox-details-response-h3 {
+  font-size: 16px;
+  line-height: 20px;
+  border-bottom: 3px solid #00cca7;
+  padding-bottom: 4px;
+  width: 70px;
+}
+
+.inbox-details-response-wrapper input[type='text']:focus {
+  outline: none;
+}
+
+.inbox-details-response--btn {
+  text-align: center;
+  width: 110px;
+  height: 44px;
+  background: #ff7900;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  color: #fff;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+  .inbox-content-wrapper {
+    display: none;
+  }
+
+  .inbox-layout-divider {
+    display: none;
+  }
+
+  .inbox-main-layout {
+    margin: 0;
+  }
+}

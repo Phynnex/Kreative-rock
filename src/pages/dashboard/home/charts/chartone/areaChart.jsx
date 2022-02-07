@@ -4,44 +4,69 @@ import AppColors from "utils/colors"
 
 const data = [
 	{
-		name: "Page A",
+		name: "Jan",
 		pv: 2400,
 		amt: 2400
 	},
 	{
-		name: "Page B",
+		name: "Feb",
 		pv: 1398,
 		amt: 2210
 	},
 	{
-		name: "Page C",
+		name: "Mar",
 		pv: 3800,
 		amt: 2290
 	},
 	{
-		name: "Page D",
+		name: "Apr",
 		pv: 3908,
 		amt: 2000
 	},
 	{
-		name: "Page E",
+		name: "May",
 		pv: 4800,
 		amt: 2181
 	},
 	{
-		name: "Page F",
+		name: "Jun",
 		pv: 3800,
 		amt: 2500
 	},
 	{
-		name: "Page G",
+		name: "Jul",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Aug",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Sep",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Oct",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Nov",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Dec",
 		pv: 4300,
 		amt: 2100
 	}
 ]
 
 const CustomizedDot = props => {
-	const { cx, cy, stroke, payload, value } = props
+	const { cx, cy } = props
 
 	return (
 		<svg x={cx - 10} y={cy - 10} width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
