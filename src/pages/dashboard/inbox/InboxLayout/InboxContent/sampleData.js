@@ -1,6 +1,8 @@
 export const inboxDetailsData = [
   {
     name: 'Guy Hawkins',
+    email_address: 'guyhawk@gmail.com',
+    birthday: 'Feb 29, 2021',
     phone_number: '+5713477147',
     details: [
       {
@@ -32,6 +34,8 @@ export const inboxDetailsData = [
   },
   {
     name: 'Jack',
+    email_address: 'jack@gmail.com',
+    birthday: 'Feb 21, 2021',
     phone_number: '+5713477147',
     details: [
       {
@@ -63,6 +67,8 @@ export const inboxDetailsData = [
   },
   {
     name: 'Jack',
+    email_address: 'jack@gmail.com',
+    birthday: 'Feb 1, 2021',
     phone_number: '+5713477147',
     details: [
       {
@@ -94,6 +100,8 @@ export const inboxDetailsData = [
   },
   {
     name: 'Jack',
+    email_address: 'jack@gmail.com',
+    birthday: 'Feb 15, 2021',
     phone_number: '+5713477147',
     details: [
       {
