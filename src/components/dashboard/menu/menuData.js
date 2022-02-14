@@ -1,28 +1,40 @@
-import dashboardIcon from "assets/images/menu/dashboard.svg"
-import dashboardActive from "assets/images/menu/dashboardActive.svg"
+import dashboardIcon from "assets/images/icons/dashboard.svg"
+import dashboardActive from "assets/images/icons/dashboardActive.svg"
 
-import inboxIcon from "assets/images/menu/inbox.svg"
-import inboxActive from "assets/images/menu/inboxActive.svg"
+import inboxIcon from "assets/images/icons/inbox.svg"
+import inboxActive from "assets/images/icons/inboxActive.svg"
 
-import contactsIcon from "assets/images/menu/contacts.svg"
-import contactsActive from "assets/images/menu/contactsActive.svg"
+import contactsIcon from "assets/images/icons/contacts.svg"
+import contactsActive from "assets/images/icons/contactsActive.svg"
 
-import keywordsIcon from "assets/images/menu/keywords.svg"
-import keywordsActive from "assets/images/menu/keywordsActive.svg"
+import senderidIcon from "assets/images/icons/sender_id.svg"
+import senderidActive from "assets/images/icons/sender_idActive.svg"
 
-import campaignIcon from "assets/images/menu/campaign.svg"
-import campaignIconActive from "assets/images/menu/campaignActive.svg"
+import keywordsIcon from "assets/images/icons/keywords.svg"
+import keywordsActive from "assets/images/icons/keywordsActive.svg"
 
-import walletIcon from "assets/images/menu/wallet.svg"
-import walletActive from "assets/images/menu/walletActive.svg"
+import autoresponseIcon from "assets/images/icons/autoresponse.svg"
+import autoresponseActive from "assets/images/icons/autoresponseActive.svg"
 
-import delivery_reportIcon from "assets/images/menu/delivery_reports.svg"
-import delivery_reportActive from "assets/images/menu/delivery_reportsActive.svg"
+import campaignIcon from "assets/images/icons/compaign.svg"
+import campaignIconActive from "assets/images/icons/compaignActive.svg"
 
-import helpIcon from "assets/images/menu/help.svg"
-import helpActive from "assets/images/menu/helpActive.svg"
+import viewallcampaignsIcon from "assets/images/icons/view_all_compaign.svg"
+import viewallcampaignsActive from "assets/images/icons/view_all_compaignActive.svg"
 
-import { CAMPAIGN, CONTACTS, DASHBOARDHOME, DELIVERY_REPORS, HELP, INBOX, KEYWORDS, WALLET } from "pages/dashboard/ROUTESCONTS"
+import walletIcon from "assets/images/icons/wallet.svg"
+import walletActive from "assets/images/icons/walletActive.svg"
+
+import delivery_reportIcon from "assets/images/icons/delivery_reports.svg"
+import delivery_reportActive from "assets/images/icons/delivery_reportsActive.svg"
+
+import helpIcon from "assets/images/icons/help.svg"
+import helpActive from "assets/images/icons/helpActive.svg"
+
+import logoutIcon from "assets/images/icons/logout.svg"
+import logoutActive from "assets/images/icons/logoutActive.svg"
+
+import { ALL_CAMPAIGNS, AUTO_RESPONSES, CAMPAIGN, CONTACTS, DASHBOARDHOME, DELIVERY_REPORS, HELP, INBOX, KEYWORDS, SENDER_ID, WALLET } from "pages/dashboard/ROUTESCONTS"
 
 export const menuData = [
 	{
@@ -47,6 +59,13 @@ export const menuData = [
 		link: CONTACTS
 	},
 	{
+		icon: senderidIcon,
+		activeIcon: senderidActive,
+		text: "Sender Id",
+		isActive: false,
+		link: SENDER_ID
+	},
+	{
 		icon: keywordsIcon,
 		activeIcon: keywordsActive,
 		text: "Keywords",
@@ -54,11 +73,25 @@ export const menuData = [
 		link: KEYWORDS
 	},
 	{
+		icon: autoresponseIcon,
+		activeIcon: autoresponseActive,
+		text: "Auto Response",
+		isActive: false,
+		link: AUTO_RESPONSES
+	},
+	{
 		icon: campaignIcon,
 		activeIcon: campaignIconActive,
 		text: "Campaign",
 		isActive: false,
 		link: CAMPAIGN
+	},
+	{
+		icon: viewallcampaignsIcon,
+		activeIcon: viewallcampaignsActive,
+		text: "View All Campaigns",
+		isActive: false,
+		link: ALL_CAMPAIGNS
 	},
 
 	{
@@ -79,6 +112,13 @@ export const menuData = [
 		icon: helpIcon,
 		activeIcon: helpActive,
 		text: "Help",
+		isActive: false,
+		link: HELP
+	},
+	{
+		icon: logoutIcon,
+		activeIcon: logoutActive,
+		text: "Log Out",
 		isActive: false,
 		link: HELP
 	}

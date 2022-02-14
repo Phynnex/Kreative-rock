@@ -1,4 +1,3 @@
-import ActionBtnDashboard from "components/dashboard/actionbuttons"
 import { KreativeP } from "globalStyles/style"
 import CampainCard from "./cards"
 import campaignInfoData from "./cards/infoData"
@@ -7,7 +6,6 @@ import { CampaignCardSection, CampaignMain, CampaignTextContainer, CampaignTextS
 function CampaignPage() {
 	return (
 		<div>
-			<ActionBtnDashboard />
 			<CampaignMain>
 				<CampaignTextContainer>
 					<CampaignTextSection>

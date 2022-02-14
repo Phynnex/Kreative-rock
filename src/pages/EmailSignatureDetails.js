@@ -1,3 +1,4 @@
+import ScrollToTop from "components/ScrollToTop"
 import EmailSignatureTabsArea from "../components/emailSignatureDetails"
 
 const EmailSignatureDetails = () => {
@@ -8,7 +9,7 @@ const EmailSignatureDetails = () => {
 			<br />
 			<br />
 			<br />
-
+			<ScrollToTop />
 			<EmailSignatureTabsArea />
 		</>
 	)

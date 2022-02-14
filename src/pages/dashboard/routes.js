@@ -1,3 +1,5 @@
+import AllCampaignsPage from "./allcampaigns"
+import AutoresponsePage from "./autoresponse"
 import CampaignPage from "./campaign"
 import CreateCampainForm from "./campaign/createcampaign"
 import OnewayCampainPage from "./campaign/createcampaign/onewayform"
@@ -8,8 +10,26 @@ import DashboardPage from "./home"
 import InboxPage from "./inbox"
 import KeywordsPage from "./keywords"
 import UserCreatedResponses from "./keywords/created-responses"
+import LogoutPage from "./logout"
 
-import { CAMPAIGN, CONTACTS, CREATCAMPAIGN_ONE, CREATCAMPAIGN_TWO, DASHBOARDHOME, DELIVERY_REPORS, HELP, INBOX, KEYWORDS, USERCREATED_RESPONSES, WALLET } from "./ROUTESCONTS"
+import {
+	ALL_CAMPAIGNS,
+	AUTO_RESPONSES,
+	CAMPAIGN,
+	CONTACTS,
+	CREATCAMPAIGN_ONE,
+	CREATCAMPAIGN_TWO,
+	DASHBOARDHOME,
+	DELIVERY_REPORS,
+	D_LOGOUT,
+	HELP,
+	INBOX,
+	KEYWORDS,
+	SENDER_ID,
+	USERCREATED_RESPONSES,
+	WALLET
+} from "./ROUTESCONTS"
+import SenderIdPage from "./sendId"
 import WalletPage from "./wallet"
 
 export const dashboardRoutes = [
@@ -32,14 +52,32 @@ export const dashboardRoutes = [
 		protected: true
 	},
 	{
+		path: SENDER_ID,
+		component: SenderIdPage,
+		exact: true,
+		protected: true
+	},
+	{
 		path: KEYWORDS,
 		component: KeywordsPage,
 		exact: true,
 		protected: true
 	},
 	{
+		path: AUTO_RESPONSES,
+		component: AutoresponsePage,
+		exact: true,
+		protected: true
+	},
+	{
 		path: CAMPAIGN,
 		component: CampaignPage,
+		exact: true,
+		protected: true
+	},
+	{
+		path: ALL_CAMPAIGNS,
+		component: AllCampaignsPage,
 		exact: true,
 		protected: true
 	},
@@ -58,6 +96,12 @@ export const dashboardRoutes = [
 	{
 		path: HELP,
 		component: HelpPage,
+		exact: true,
+		protected: true
+	},
+	{
+		path: D_LOGOUT,
+		component: LogoutPage,
 		exact: true,
 		protected: true
 	},
