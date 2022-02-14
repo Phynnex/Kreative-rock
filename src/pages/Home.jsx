@@ -1,3 +1,4 @@
+import ScrollToTop from "components/ScrollToTop"
 import React from "react"
 // import "../assets/css/home.css";
 import Clients from "../components/home/Clients"
@@ -9,6 +10,7 @@ import WhySection from "../components/home/WhySection"
 const Home = () => {
 	return (
 		<div>
+			<ScrollToTop />
 			<Hero />
 			<WhySection />
 			<ServicesSection />

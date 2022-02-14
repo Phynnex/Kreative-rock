@@ -1,4 +1,3 @@
-import ActionBtnDashboard from "components/dashboard/actionbuttons"
 // import { Img } from "globalStyles/style"
 import React from "react"
 import UserCreatedResponse from "./createdresponses"
@@ -8,7 +7,6 @@ import { KeywordContainer, KHeaderText, KreateContent, Underline } from "./style
 function UserCreatedResponses() {
 	return (
 		<div>
-			<ActionBtnDashboard />
 			{/* <CreateKeyword open={createkeyword} close={toggleCreateKeyword} /> */}
 			<KeywordContainer>
 				<KHeaderText>Responses </KHeaderText>

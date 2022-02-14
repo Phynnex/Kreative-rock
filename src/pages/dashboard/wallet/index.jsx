@@ -1,10 +1,9 @@
-import ActionBtnDashboard from "components/dashboard/actionbuttons"
+import React from "react"
 import Earning from "pages/Earning"
 
 function WalletPage() {
 	return (
 		<div>
-			<ActionBtnDashboard />
 			<Earning />
 		</div>
 	)

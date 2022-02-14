@@ -1,33 +1,34 @@
-import React from "react";
-import FreeCards from "../components/email-templates/FreeCards/FreeCards";
-import HeroBanner from "../components/email-templates/HeroBanner";
-import Container from "@material-ui/core/Container";
-import { createTheme } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import ProCards from "../components/email-templates/proCards";
+import React from "react"
+import FreeCards from "../components/email-templates/FreeCards/FreeCards"
+import HeroBanner from "../components/email-templates/HeroBanner"
+import Container from "@material-ui/core/Container"
+import { createTheme } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import ProCards from "../components/email-templates/proCards"
+import ScrollToTop from "components/ScrollToTop"
 
-
-const theme = createTheme();
+const theme = createTheme()
 
 theme.typography.h3 = {
-  marginTop: "4rem",
-};
+	marginTop: "4rem"
+}
 
 const EmailTemplates = () => {
-  return (
-    <>
-      <HeroBanner />
+	return (
+		<>
+			<ScrollToTop />
+			<HeroBanner />
 
-      <div>
-        <Container>
-          <Typography variant="h5">Free</Typography>
-          <FreeCards />
-          <Typography variant="h5">Pro</Typography>
-          <ProCards />
-        </Container>
-      </div>
-    </>
-  );
-};
+			<div>
+				<Container>
+					<Typography variant="h5">Free</Typography>
+					<FreeCards />
+					<Typography variant="h5">Pro</Typography>
+					<ProCards />
+				</Container>
+			</div>
+		</>
+	)
+}
 
-export default EmailTemplates;
+export default EmailTemplates

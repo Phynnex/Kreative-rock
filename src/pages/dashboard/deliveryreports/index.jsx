@@ -1,9 +1,8 @@
-import ActionBtnDashboard from "components/dashboard/actionbuttons"
+import React from "react"
 
 function DeliveryReportsPage() {
 	return (
 		<div>
-			<ActionBtnDashboard />
 			<h2>DeliveryReports Page</h2>
 		</div>
 	)

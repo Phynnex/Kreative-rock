@@ -1,10 +1,11 @@
-import { Grid, Box, Typography, Button, TextField, FormControl } from "@material-ui/core"
-import React from "react"
+import { Grid, Box, Typography } from "@material-ui/core"
+import React, { useEffect } from "react"
 import logo from "../../assets/images/logoimg.png"
 import signin from "../../assets/images/signin.png"
 import facebook from "../../assets/images/facebook2.png"
 import google from "../../assets/images/google.png"
 import { makeStyles } from "@material-ui/core"
+import { LoginBtn, LoginContDiv, LoginTextField } from "./style"
 import { Link } from "react-router-dom"
 
 const useStyles = makeStyles(theme => ({
@@ -24,13 +25,14 @@ const useStyles = makeStyles(theme => ({
 			alignItems: "center",
 			justifyContent: "center",
 			padding: "0 2em",
-			paddingTop: "4em",
-			height: "100%"
+			paddingTop: "-4em"
+			// paddingTop: "2em"
+			// height: "100%",
 		}
 	},
 	box1: {
 		display: "flex",
-		justifyContent: "center",
+		// justifyContent: "center",
 		flexDirection: "column",
 		[theme.breakpoints.down("sm")]: {
 			display: "none"
@@ -40,11 +42,14 @@ const useStyles = makeStyles(theme => ({
 		boxShadow: "2px 7px 10px 2px rgba(168,161,161,0.75)",
 		padding: "3em",
 		display: "flex",
+		gap: "30px",
 		flexDirection: "column",
-		justifyContent: "space-between",
+		// justifyContent: "space-between",
 		[theme.breakpoints.down("sm")]: {
 			display: "flex",
 			justifyContent: "center",
+			height: "60vh",
+			gap: "30px",
 			flexDirection: "column",
 			padding: "1.5em"
 		}
@@ -102,14 +107,15 @@ const useStyles = makeStyles(theme => ({
 		borderRadius: "10px",
 		fontWeight: 600,
 		fontSize: 18,
-		marginBottom: "-2rem",
-		padding: "10px 25px",
+		marginBottom: "-3rem",
+		// marginTop: "-7rem",
+		// padding: "10px 25px",
 		[theme.breakpoints.down("sm")]: {
 			width: "100%"
 		}
 	},
 	formControl: {
-		marginBottom: "-2rem"
+		// marginBottom: "-3rem"
 	},
 	label: {
 		fontSize: 20,
@@ -134,8 +140,7 @@ const useStyles = makeStyles(theme => ({
 	LinkArea: {
 		display: "flex",
 		gap: "10px",
-		color: "#373737",
-		marginTop: "-80px"
+		color: "#373737"
 	},
 	textfield: {
 		marginTop: "-70px"
@@ -143,14 +148,18 @@ const useStyles = makeStyles(theme => ({
 }))
 const SignIn = () => {
 	const classes = useStyles()
-
+	useEffect(() => {
+		window.scrollTo(0, 0)
+	}, [])
 	return (
 		<>
 			<Box className={classes.items}>
 				<Grid container className={classes.box}>
 					<Grid item xs={12} sm={12} md={5} className={classes.box2}>
-						<Box style={{ marginBottom: "2em" }}>
-							<Typography className={classes.headerText}>SIGN IN</Typography>
+						<Box style={{ marginBottom: "-1em" }}>
+							<Typography className s={classes.headerText}>
+								SIGN IN
+							</Typography>
 							<Typography variant="h2" className={classes.content}>
 								Sign in with your Social Networks
 							</Typography>
@@ -158,24 +167,21 @@ const SignIn = () => {
 								<img src={google} alt="google" className={classes.icons} />
 								<img src={facebook} alt="facebook" className={classes.icons} />
 							</div>
+							<Typography variant="h2" className={classes.content}>
+								Or the from below
+							</Typography>
 						</Box>
-
-						<FormControl variant="standard" className={classes.formControl}>
-							<TextField color="secondary" variant="outlined" fullWidth id="fullWidth" className={classes.textfield} placeholder="Email" />
-						</FormControl>
-						<FormControl variant="standard" className={classes.formControl}>
-							<TextField variant="outlined" color="secondary" fullWidth id="fullWidth" className={classes.textfield} placeholder="Password" />
-						</FormControl>
-
-						<Button variant="contained" color="secondary" disableElevation className={classes.btn}>
-							Sign In
-						</Button>
-						<Box className={classes.LinkArea}>
-							<Typography>Dont have an account?</Typography>
-							<Link to="/register">
-								<Typography className={classes.link}>Sign Up</Typography>
-							</Link>
-						</Box>
+						<LoginContDiv>
+							<LoginTextField type="email" placeholder="Email" />
+							<LoginTextField type="password" placeholder="Password" />
+							<LoginBtn>Sign In</LoginBtn>
+							<Box className={classes.LinkArea}>
+								<Typography>Don't have an account?</Typography>
+								<Link to="/register">
+									<Typography className={classes.link}>Sign Up</Typography>
+								</Link>
+							</Box>
+						</LoginContDiv>
 					</Grid>
 					<Grid item xs={11} sm={11} md={5} className={classes.box1}>
 						<img src={logo} alt="logo" className={classes.image1} />

@@ -6,6 +6,7 @@ import facebook from "../../assets/images/facebook2.png"
 import google from "../../assets/images/google.png"
 import { makeStyles } from "@material-ui/core"
 import { Link } from "react-router-dom"
+import ScrollToTop from "components/ScrollToTop"
 
 const useStyles = makeStyles(theme => ({
 	items: {
@@ -139,6 +140,7 @@ const Register = () => {
 
 	return (
 		<>
+			<ScrollToTop />
 			<Box className={classes.items}>
 				<Grid container className={classes.box}>
 					<Grid item xs={12} sm={12} md={5} className={classes.box2}>

@@ -29,8 +29,7 @@ export const DashboardBody = styled.div`
 	flex-direction: column;
 	border-radius: 8px;
 	padding-top: 0;
-	margin-top: 140px;
-	margin-top: 150px;
+	margin-top: 100px;
 
 	${media.smallDesktopMinimum`
         width: 100%;

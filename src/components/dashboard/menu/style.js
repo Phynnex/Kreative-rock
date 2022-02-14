@@ -11,7 +11,7 @@ export const MenuContainer = styled.div`
 	border-radius: 5px;
 	background: rgba(255, 255, 255, 0.5);
 	border: 1px solid #e4e7eb;
-	margin-top: 150px;
+	margin-top: 84px;
 	transition: all 0.5s ease-in-out;
 	${media.smallDesktopMinimum`
         display: none;

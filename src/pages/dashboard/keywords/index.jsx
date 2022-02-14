@@ -1,4 +1,3 @@
-import ActionBtnDashboard from "components/dashboard/actionbuttons"
 import { Div, Img } from "globalStyles/style"
 import { KeywordContainer, KHeaderText, KreateContent, LinkBtn, Underline } from "./style"
 import AddBtn from "assets/images/addIcon.svg"
@@ -35,7 +34,6 @@ function KeywordsPage() {
 	}, [])
 	return (
 		<div>
-			<ActionBtnDashboard />
 			<CreateKeyword open={createkeyword} close={toggleCreateKeyword} />
 			<KeywordContainer>
 				<KHeaderText>Keywords </KHeaderText>
