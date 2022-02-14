@@ -1,4 +1,5 @@
 import styled from "styled-components/macro"
+import media from "utils/media"
 
 export const LoginTextField = styled.input`
 	width: 100%;
@@ -36,4 +37,7 @@ export const LoginContDiv = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+	${media.mobile`
+	gap: 30px;
+    `}
 `

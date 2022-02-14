@@ -52,6 +52,14 @@ const useStyles = makeStyles(theme => ({
 			gap: "30px",
 			flexDirection: "column",
 			padding: "1.5em"
+		},
+		[theme.breakpoints.down("xs")]: {
+			display: "flex",
+			justifyContent: "center",
+			height: "70vh",
+			gap: "40px",
+			flexDirection: "column",
+			padding: "1.5em"
 		}
 	},
 	image: {

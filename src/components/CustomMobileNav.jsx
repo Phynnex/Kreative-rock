@@ -69,6 +69,10 @@ const MobileNavLinksDiv = styled.div`
 	${media.tablet`
     top: 83px;
     `}
+	${media.mobile`
+    top: 83px;
+	gap: 45px;
+    `}
 `
 const ToggleHamburger = styled.div`
 	display: flex;
@@ -113,7 +117,8 @@ const MCustomNavLinkSignup = styled(Link)`
 	margin-left:25px;
 	`}
 	${media.mobile`
-	padding: 5px 40px;
+	padding: 5px 0px;
+	width: 87%;
 	margin-left:25px;
 	`}
 `
@@ -142,7 +147,6 @@ const MServicesLinkBtn = styled.button`
 	margin-left:25px;
 	`}
 `
-/* display: ${({ open }) => (open ? "flex" : "none")}; */
 
 const MDropDownContainer = styled.div`
 	position: fixed;
@@ -152,6 +156,7 @@ const MDropDownContainer = styled.div`
 	right: 0;
 	background-color: rgba(255, 255, 255, 0.1);
 	z-index: 999900;
+	display: ${({ open }) => (open ? "flex" : "none")};
 	transition: all 0.5s ease-out;
 	animation-name: ${SlideInPopUp};
 	animation-duration: 0.5s;
@@ -174,6 +179,14 @@ const DropDownDiv = styled.div`
 	${media.smallDesktopMinimum`
 	left: 3%;
 	top: 200px;
+	`}
+	${media.tablet`
+	left: 3%;
+	top: 200px;
+	`}
+	${media.mobile`
+	left: 3%;
+	top: 220px;
 	`}
 `
 const CustomDrpdownLinkLink = styled(Link)`
