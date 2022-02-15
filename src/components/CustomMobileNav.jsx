@@ -73,6 +73,10 @@ const MobileNavLinksDiv = styled.div`
     top: 83px;
 	gap: 45px;
     `}
+	${media.smallMobile`
+    top: 83px;
+	gap: 65px;
+    `}
 `
 const ToggleHamburger = styled.div`
 	display: flex;
@@ -215,7 +219,7 @@ const LinkConst = ["/digital-marketing", "/email-signature", "/mobile-texting", 
 
 function CustomMobileNav() {
 	const { toggleNav, setToggleNav } = useToggleNav()
-	const [mobilemenu, setMobileMenu] = useState(true)
+	const [mobilemenu, setMobileMenu] = useState(false)
 	const location = useLocation()
 
 	const handleMobilesDropService = () => {
