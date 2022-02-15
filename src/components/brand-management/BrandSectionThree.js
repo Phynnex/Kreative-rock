@@ -56,7 +56,7 @@ const BrandSectionThree = () => {
     <>
       <Box className={classes.item}>
         <Typography variant="h2" className={classes.headerText}>
-          Why Branding?
+          Why ?
         </Typography>
         <div
           style={{
