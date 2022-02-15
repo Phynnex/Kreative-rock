@@ -1,7 +1,12 @@
 import React from "react"
+import { SenderDiv, SenderIDContainer } from "./style"
 
 function SenderIdPage() {
-	return <div>SenderIdPage</div>
+	return (
+		<SenderIDContainer>
+			<SenderDiv>SenderIdPage</SenderDiv>
+		</SenderIDContainer>
+	)
 }
 
 export default SenderIdPage

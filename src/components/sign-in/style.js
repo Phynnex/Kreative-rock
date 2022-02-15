@@ -40,4 +40,7 @@ export const LoginContDiv = styled.div`
 	${media.mobile`
 	gap: 30px;
     `}
+	${media.smallMobile`
+	gap: 60px;
+    `}
 `

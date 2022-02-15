@@ -72,6 +72,7 @@ export default function Menu() {
 					<BigMenuItemsContainer>
 						{adminMenu?.map((menu, i) => (
 							<BigMenu
+								onToggleNa={handleOpenBigSideNav}
 								link={menu.link}
 								text={menu.text}
 								key={i}

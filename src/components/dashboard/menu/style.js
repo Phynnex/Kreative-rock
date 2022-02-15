@@ -31,6 +31,7 @@ export const MenuContainerMobile = styled.div`
 	padding-top: 5px;
 	/* padding-left: 15px;
 	padding-right: 10px; */
+	/* overflow-y: scroll; */
 	transition: all 0.5s ease-in-out;
 	transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
 	/* overflow: auto; */
@@ -90,7 +91,26 @@ export const BigMenuItemsContainer = styled.div`
 	flex-direction: column;
 	height: 100vh;
 	max-height: 100vh;
-	overflow-y: auto;
+	${media.smallDesktopMinimum`
+	height: 66vh;
+	max-height: 66vh;
+
+	`}
+	${media.tablet`
+	height: 66vh;
+	
+	overflow-y:scroll;
+	`}
+	${media.mobile`
+	height: 0%;
+	/* max-height: 75vh; */
+	overflow-y:scroll;
+	`}
+	${media.smallMobile`
+	overflow-y:scroll;
+	height: 66vh;
+	
+	`}
 `
 
 export const MenuDropdownIcon = styled.img`
@@ -222,6 +242,7 @@ export const MobileMenBody = styled.div`
 	top: 0;
 	left: 0;
 	bottom: 0;
+	/* overflow-y: scroll; */
 	right: 0;
 	z-index: 999999999;
 	background: rgba(0, 0, 0, 0.22);
