@@ -1,32 +1,30 @@
-// import { Img } from "globalStyles/style"
 import React from "react"
+import AddAutoResponse from "../autoresponse/addform"
+import { LineDiv } from "../sendId/style"
 import UserCreatedResponse from "./createdresponses"
-import { KeywordContainer, KHeaderText, KreateContent, Underline } from "./style"
-// import AddBtn from "assets/images/addIcon.svg"
+import { ARHeadDiv, KeywordContainer } from "./style"
 
 function UserCreatedResponses() {
 	return (
 		<div>
-			{/* <CreateKeyword open={createkeyword} close={toggleCreateKeyword} /> */}
 			<KeywordContainer>
-				<KHeaderText>Responses </KHeaderText>
-				<Underline />
-				{/* <KreateContent>
-					<h6>Create Response</h6>{" "}
-					<button>
-						<Img src={AddBtn} alt="Create Response" />
-					</button>
-				</KreateContent> */}
+				<ARHeadDiv>
+					<h4>Auto Response</h4>
+					<LineDiv />
+				</ARHeadDiv>
+				<UserCreatedResponse text="I am busy I will talk later" />
+				<UserCreatedResponse text="I am busy I will talk later" />
+				<UserCreatedResponse text="I am busy I will talk later" />
+				<UserCreatedResponse text="I am busy I will talk later" />
+				<UserCreatedResponse text="I am busy I will talk later" />
 
 				<br />
-				<KreateContent>
-					<h5>Your Created Responses</h5>
-				</KreateContent>
-				<UserCreatedResponse text="I am busy I will talk later" />
-				<UserCreatedResponse text="I am busy I will talk later" />
-				<UserCreatedResponse text="I am busy I will talk later" />
-				<UserCreatedResponse text="I am busy I will talk later" />
-				<UserCreatedResponse text="I am busy I will talk later" />
+				<br />
+				<br />
+				<ARHeadDiv>
+					<h4>Auto Response</h4>
+				</ARHeadDiv>
+				<AddAutoResponse />
 			</KeywordContainer>
 			<br />
 			<br />

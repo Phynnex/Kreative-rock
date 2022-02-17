@@ -4,6 +4,7 @@ import styled from "styled-components/macro"
 import media from "utils/media"
 import btnActionData from "./actionbtnData"
 import greaterThan from "assets/images/forwarrownotif.svg"
+
 const AButton = styled.button`
 	width: 85px;
 	height: 39px;
@@ -23,26 +24,17 @@ const AButtonContainer = styled.div`
 	display: flex;
 	position: relative;
 	height: 50px;
-	top: -50px;
-	left: -220px;
-	margin-bottom: -50px;
 	${media.smallDesktopMinimum`
-	width: 100%;
-	left: 10px;
-	top: 0px;
-	margin-bottom: 20px;
+	width: 50%;
+	
 	`}
 	${media.tablet`
-	width: 100%;
-	left: 10px;
-	top: 0px;
-	margin-bottom: 15px;
+	width: 60%;
+	
 	`}
 	${media.mobile`
-	margin-bottom: 15px;
 	width: 100%;
-	left: 0px;
-	top: 1px;
+	
 	`}
 `
 const ScrollDiv = styled.div`
@@ -72,8 +64,6 @@ const ToggleBtn = styled.div`
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 	border-radius: 50%;
 	position: fixed;
-	top: 90px;
-	left: 5px;
 	z-index: 300;
 	img {
 		width: 50%;
@@ -81,6 +71,11 @@ const ToggleBtn = styled.div`
 	}
 	${media.smallDesktopMinimum`
 	display: flex;
+	top:90px;
+	`}
+	${media.tablet`
+	display: flex;
+	top:90px;
 	`}
 `
 
