@@ -7,8 +7,8 @@ function CreateKeyword({ close, open }) {
 	const [keyword, setKeyword] = useState("")
 
 	const handleChange = e => {
-		if (keyword.length >= 300) {
-			alert("Name must be between 20 - 300 characters")
+		if (keyword.length >= 100) {
+			alert("Name must be between 20 - 100 characters")
 			return
 		}
 
@@ -29,9 +29,12 @@ function CreateKeyword({ close, open }) {
 					<div>
 						<Div width="100%" display="flex" mb="2px" justify="space-between">
 							<CampaignInputLabel>Keyword Name</CampaignInputLabel>
-							<CampaignInputLabel>{300 - keyword.length}</CampaignInputLabel>
+							<CampaignInputLabel>{100 - keyword.length}</CampaignInputLabel>
 						</Div>
 						<CampaignInput name="title" onChange={handleChange} />
+						<Div width="100%" display="flex" justify="flex-end" mt="10px" mb="10px">
+							<CampaignInputLabel fs="10px">Mixture of Alphanumeric characters ranging from 20 to 100</CampaignInputLabel>
+						</Div>
 					</div>
 					{/* <div>
 						<CampaignInputLabel>Auto Response</CampaignInputLabel>
@@ -41,7 +44,11 @@ function CreateKeyword({ close, open }) {
 						<CampaignInputLabel>Auto Confirmation Message </CampaignInputLabel>
 					</Div> */}
 					{/* <ToggleSwitch /> */}
-					<KreativeP mt="5px">Your keyword is avilabe for 30 days</KreativeP>
+					<Div width="100%" display="flex" justify="center" mt="10px" mb="10px">
+						<KreativeP mt="5px" textAlign="center">
+							Your keyword is avilabe for 30 days
+						</KreativeP>
+					</Div>
 					<Div width="100%" display="flex" mb="20px" justify="flex-end">
 						<KreateButton>Create</KreateButton>
 					</Div>

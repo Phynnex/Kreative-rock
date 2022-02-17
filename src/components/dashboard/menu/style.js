@@ -195,7 +195,7 @@ export const UserInfoMenuContainer = styled.div`
 export const UserDP = styled.div`
 	width: 6.5rem;
 	height: 6.5rem;
-	background: green;
+	background: grey;
 	border-radius: 50%;
 	margin-top: 40px;
 `

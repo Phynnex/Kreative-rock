@@ -34,7 +34,7 @@ import helpActive from "assets/images/icons/helpActive.svg"
 import logoutIcon from "assets/images/icons/logout.svg"
 import logoutActive from "assets/images/icons/logoutActive.svg"
 
-import { ALL_CAMPAIGNS, AUTO_RESPONSES, CAMPAIGN, CONTACTS, DASHBOARDHOME, DELIVERY_REPORS, HELP, INBOX, KEYWORDS, SENDER_ID, WALLET } from "pages/dashboard/ROUTESCONTS"
+import { ALL_CAMPAIGNS, AUTO_RESPONSES, CAMPAIGN, CONTACTS, DASHBOARDHOME, DELIVERY_REPORS, D_LOGOUT, HELP, INBOX, KEYWORDS, SENDER_ID, WALLET } from "pages/dashboard/ROUTESCONTS"
 
 export const menuData = [
 	{
@@ -120,6 +120,6 @@ export const menuData = [
 		activeIcon: logoutActive,
 		text: "Log Out",
 		isActive: false,
-		link: HELP
+		link: D_LOGOUT
 	}
 ]
