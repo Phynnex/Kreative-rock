@@ -8,6 +8,7 @@ import userDp from "assets/images/userdp.png"
 import cancelBtn from "assets/images/cancel.svg"
 import PhoneInput from "react-phone-input-2"
 import { useToggleMenu } from "context/toggleMenuContext"
+import ScrollToTop from "components/ScrollToTop"
 
 export default function Menu() {
 	const { adminMenu } = useAdminMenu()
@@ -51,6 +52,7 @@ export default function Menu() {
 			</MenuContainer>
 
 			<MobileMenBody open={toggleMenu} onClick={handleOpenBigSideNav}>
+				<ScrollToTop />
 				<MenuContainerMobile open={toggleMenu} onClick={handleOpenBigSideNav2}>
 					<UserInfoMenuContainer>
 						<ToggleBtnContainer>
