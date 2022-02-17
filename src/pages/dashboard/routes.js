@@ -9,7 +9,7 @@ import HelpPage from "./help"
 import DashboardPage from "./home"
 import InboxPage from "./inbox"
 import KeywordsPage from "./keywords"
-import UserCreatedResponses from "./keywords/created-responses"
+import KreatedKeywordsMain from "./keywords/maincreatedKeywords"
 import LogoutPage from "./logout"
 
 import {
@@ -113,7 +113,7 @@ export const dashboardRoutes = [
 	},
 	{
 		path: USERCREATED_RESPONSES,
-		component: UserCreatedResponses,
+		component: KreatedKeywordsMain,
 		exact: true,
 		protected: true
 	},
