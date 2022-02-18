@@ -1,6 +1,7 @@
 import Faqs from "components/help/FAQs/Faq's"
 import Guides from "components/help/Guides/Guides"
 import HelpHeader from "components/help/HelpHeader/HelpHeader"
+import Support from "components/help/SupportTicket/Support"
 
 function HelpPage() {
 	return (
@@ -8,6 +9,7 @@ function HelpPage() {
 			<HelpHeader/>
 			<Guides />
 			<Faqs/>
+			<Support/>
 		</div>
 	)
 }

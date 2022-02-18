@@ -1,10 +1,17 @@
 import styled from "styled-components";
+import media from "utils/media";
+
 
 export const GuidesContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin-top: 1rem;
-`
+  ${media.mobile`
+    flex-direction:column;
+    align-items:center;
+  `}
+  
+`;
 export const GuidesButton = styled.button`
   width: 321px;
   height: 306.07px;

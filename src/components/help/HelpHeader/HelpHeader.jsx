@@ -1,19 +1,21 @@
 import React from 'react';
-import {Header, HeaderText, Hr, InputContainer} from './style'
+import {Header, HeaderImg, HeaderText, HelpSearch, Hr, InputContainer} from './style'
+import search from 'assets/images/searchIcon.svg'
 
 const HelpHeader = () => {
   return (
     <>
       <Header>
         <HeaderText>How Can We Help ?</HeaderText>
-        <div>
-          <InputContainer
+        <InputContainer>
+          <HeaderImg src={search} alt="search" />
+          <HelpSearch
             type="text"
             id="fname"
             name="fname"
-            placeholder="Search Contact">
-          </InputContainer>
-        </div>
+            placeholder="Search Contact"
+          ></HelpSearch>
+        </InputContainer>
       </Header>
       <Hr />
     </>
