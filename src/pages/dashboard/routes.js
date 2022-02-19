@@ -1,4 +1,5 @@
 import AllCampaignsPage from "./allcampaigns"
+import CampaignDetails from "./allcampaigns/details-table"
 import AutoresponsePage from "./autoresponse"
 import CampaignPage from "./campaign"
 import CreateCampainForm from "./campaign/createcampaign"
@@ -16,6 +17,7 @@ import {
 	ALL_CAMPAIGNS,
 	AUTO_RESPONSES,
 	CAMPAIGN,
+	CAMPAIGN_DETAILS,
 	CONTACTS,
 	CREATCAMPAIGN_ONE,
 	CREATCAMPAIGN_TWO,
@@ -78,6 +80,12 @@ export const dashboardRoutes = [
 	{
 		path: ALL_CAMPAIGNS,
 		component: AllCampaignsPage,
+		exact: true,
+		protected: true
+	},
+	{
+		path: CAMPAIGN_DETAILS,
+		component: CampaignDetails,
 		exact: true,
 		protected: true
 	},

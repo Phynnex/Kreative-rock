@@ -1,25 +1,21 @@
-import React from 'react';
-import {Header, HeaderImg, HeaderText, HelpSearch, Hr, InputContainer} from './style'
-import search from 'assets/images/searchIcon.svg'
+import React from "react"
+import { Header, HeaderContent, HeaderText } from "./style"
+import SearchContacts from "pages/dashboard/contacts/search"
+import { LineDiv } from "pages/dashboard/sendId/style"
 
 const HelpHeader = () => {
-  return (
-    <>
-      <Header>
-        <HeaderText>How Can We Help ?</HeaderText>
-        <InputContainer>
-          <HeaderImg src={search} alt="search" />
-          <HelpSearch
-            type="text"
-            id="fname"
-            name="fname"
-            placeholder="Search Contact"
-          ></HelpSearch>
-        </InputContainer>
-      </Header>
-      <Hr />
-    </>
-  );
+	return (
+		<>
+			<HeaderContent>
+				<Header>
+					<HeaderText>How Can We Help ?</HeaderText>
+					<SearchContacts />
+				</Header>
+				<LineDiv />
+			</HeaderContent>
+			<br />
+		</>
+	)
 }
 
-export default HelpHeader;
+export default HelpHeader

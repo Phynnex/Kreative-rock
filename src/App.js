@@ -22,8 +22,10 @@ import ViewPlaceOrder from "./pages/ViewPlaceOrder"
 import Notification from "./pages/Notification"
 import EmailTemplates from "./pages/EmailTemplates"
 import EmailSignatureDetails from "./pages/EmailSignatureDetails"
-import { DASHBOARDHOME } from "pages/dashboard/ROUTESCONTS"
+import { DASHBOARDHOME, PAYMENT } from "pages/dashboard/ROUTESCONTS"
 import Dashboard from "pages/dashboard"
+import ProtectedRoute from "Utilities/ProtectedRoutes"
+import PaymentPage from "pages/dashboard/payment"
 
 function App() {
 	return (
@@ -49,6 +51,7 @@ function App() {
 						<Route path="/view-place-order" component={ViewPlaceOrder} />
 						<Route path="/notification" component={Notification} />
 						<Route path={DASHBOARDHOME} component={Dashboard} />
+						<ProtectedRoute path={PAYMENT} component={PaymentPage} />
 					</Switch>
 				</Mainlayout>
 			</Router>

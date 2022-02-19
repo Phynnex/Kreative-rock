@@ -1,3 +1,4 @@
+import { EarningHeader, FundwalletHeader, PaynowBtn, WalletBalanceBox, WalletsContainer } from "components/Earning/style"
 import FundWallet from "../components/Earning/FundWallet/FundWallet"
 import PieChart from "../components/Earning/PieChart"
 import TransactionTable from "../components/Earning/TransactionTable"
@@ -8,28 +9,28 @@ const Earning = () => {
 			<div style={{ textAlign: "center" }}>
 				<h2>Wallet</h2>
 			</div>
-			<div className="earning-header"></div>
+			<EarningHeader></EarningHeader>
 			<br />
 			<br />
 			<br />
 
-			<div className="wallets-container">
+			<WalletsContainer>
 				<div>
 					<h4>Wallet Balance</h4>
-					<div className="wallet-balance-box">
+					<WalletBalanceBox>
 						<PieChart />
-					</div>
+					</WalletBalanceBox>
 				</div>
 				<div>
-					<div className="fund-wallet-header">
+					<FundwalletHeader>
 						<h4>Fund Wallet</h4>
-						<button className="pay-now-btn">PAY NOW</button>
-					</div>
+						<PaynowBtn>PAY NOW</PaynowBtn>
+					</FundwalletHeader>
 					<div className="fund-wallet-box">
 						<FundWallet />
 					</div>
 				</div>
-			</div>
+			</WalletsContainer>
 
 			<div style={{ margin: "4rem 4rem 1rem" }}>
 				<TransactionTable />
