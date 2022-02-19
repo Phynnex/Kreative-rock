@@ -1,10 +1,17 @@
 import React from "react"
-import Earning from "pages/Earning"
+import WallBalance from "./ballance"
+import PieCard from "./chart"
+import { WCardContainer } from "./style"
+import TransactionTable from "./table"
 
 function WalletPage() {
 	return (
 		<div>
-			<Earning />
+			<WCardContainer>
+				<PieCard />
+				<WallBalance />
+			</WCardContainer>
+			<TransactionTable />
 		</div>
 	)
 }

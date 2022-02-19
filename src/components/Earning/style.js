@@ -18,7 +18,7 @@ export const FundwalletHeader = styled.div`
 	justify-content: space-around;
 `
 
-export const PaynowBtn = styled.div`
+export const PaynowBtn = styled.button`
 	width: 163px;
 	height: 39px;
 	color: white;
@@ -49,10 +49,13 @@ export const FundWalletDiv = styled.div`
 	justify-content: space-between;
 	margin-bottom: 2rem;
 `
+export const FundWalletImgDiv = styled.div`
+	display: flex;
+`
 export const FundWalletTextDiv = styled.div`
 	margin-left: 0.5rem;
 `
-export const FundWalletTextText = styled.div`
+export const FundWalletTextText = styled.p`
 	margin-bottom: -0.2rem;
 `
 

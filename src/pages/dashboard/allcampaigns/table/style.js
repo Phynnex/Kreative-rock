@@ -31,6 +31,12 @@ export const TransTableBody = styled.table`
 		/* border-bottom: 1px solid #e4e7eb; */
 		background: #ecf4f7;
 	}
+	${media.mobile`
+  /* width: 150vw; */
+  td, th {
+      white-space: nowrap;
+    }
+    `}
 `
 
 export const TransTextHeader = styled.th`

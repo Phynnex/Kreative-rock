@@ -3,8 +3,8 @@ import AppColors from "utils/colors"
 import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts"
 
 const data = [
-	{ name: "Group A", value: 400 },
-	{ name: "Group B", value: 100 }
+	{ name: "Available", value: 209 },
+	{ name: "Total", value: 100 }
 ]
 
 const renderActiveShape = props => {
@@ -12,8 +12,8 @@ const renderActiveShape = props => {
 
 	return (
 		<g>
-			<text x={cx} y={cy} dy={8} textAnchor="middle" fill={AppColors.grey}>
-				{payload.value}%
+			<text x={cx} y={cy} dy={8} textAnchor="middle" fill={AppColors.black2}>
+				${payload.value}
 			</text>
 			<Sector cx={cx} cy={cy} innerRadius={innerRadius} outerRadius={outerRadius} startAngle={startAngle} endAngle={endAngle} fill={fill} />
 			<Sector cx={cx} cy={cy} innerRadius={innerRadius} outerRadius={outerRadius} startAngle={startAngle} endAngle={endAngle} fill={color} />
@@ -21,7 +21,7 @@ const renderActiveShape = props => {
 	)
 }
 
-export default class PieChat extends PureComponent {
+export default class WalletPieChat extends PureComponent {
 	state = {
 		activeIndex: 0
 	}
@@ -40,11 +40,11 @@ export default class PieChat extends PureComponent {
 						activeIndex={this.state.activeIndex}
 						activeShape={renderActiveShape}
 						data={data}
-						cx="40%"
+						cx="50%"
 						cy="50%"
-						paddingAngle={12}
+						paddingAngle={0}
 						innerRadius={"60%"}
-						outerRadius={"80px"}
+						outerRadius={"90px"}
 						fill={AppColors.footerBlue}
 						color={AppColors.brandColor}
 						dataKey="value"

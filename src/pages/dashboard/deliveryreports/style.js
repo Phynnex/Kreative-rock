@@ -1,5 +1,5 @@
 import styled from "styled-components/macro"
-import AppColors from "utils/colors"
+// import AppColors from "utils/colors"
 import media from "utils/media"
 
 export const DReportContainer = styled.div`

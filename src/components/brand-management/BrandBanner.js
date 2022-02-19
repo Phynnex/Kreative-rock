@@ -111,8 +111,8 @@ const BrandBanner = () => {
               </Typography>
             </Typography>
             <Typography variant="h2" className={classes.content}>
-              Build long lasting solutions with customizable 1-way or 2-way
-              texting system
+              Attract the right kind of audience & drive growth with effective
+              brand management
             </Typography>
             <Button
               variant="contained"

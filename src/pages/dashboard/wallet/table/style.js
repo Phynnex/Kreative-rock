@@ -3,27 +3,24 @@ import AppColors from "utils/colors"
 import media from "utils/media"
 // import media from "utils/media"s
 
-export const DReportBody = styled.table`
+export const TTableBody = styled.table`
 	width: 100% !important;
 	border-collapse: collapse !important;
-	border-bottom: 1px solid #e4e7eb;
+	border-bottom: 3px solid #f4f9fe;
 	/* width: 100%; */
 	/* overflow-x: scroll; */
 	td {
 		text-align: left;
-		padding: 15px 10px;
+		padding: 20px 10px;
 		font-size: 14px;
-		border-bottom: 1px solid #e4e7eb;
-	}
-	tr {
-		width: 100%;
+		background: #ffffff;
 	}
 	th {
 		padding: 20px 10px;
-		text-align: left;
+		text-align: center;
 		text-transform: capitalize;
-		color: ${AppColors.white};
-		background-color: rgba(0, 218, 178, 0.89);
+		color: ${AppColors.muted};
+		background-color: ${AppColors.white};
 		font-size: 14px;
 	}
 	td {
@@ -31,30 +28,32 @@ export const DReportBody = styled.table`
 		font-size: 14px;
 	}
 	tr:nth-child(even) {
-		width: 100%;
-		background: #ecf4f7;
+		margin-bottom: 10px;
+		background: #ffffff;
 	}
-	${media.tablet`
-
-  td, th {
-      /* white-space: nowrap; */
-    }
-    `}
-	${media.mobile`
-
-  td, th {
-      /* white-space: nowrap; */
-    }
-    `}
+	tr {
+		border-bottom: 4px solid #f4f9fe;
+	}
 `
 
-export const DreportTextHeader = styled.th`
+export const TTableHeader = styled.thead`
 	text-align: left;
 	padding: 8px;
-	border-bottom: 2px solid red;
+	/* border-bottom: 2px solid red; */
 	td {
 		text-align: left;
 		padding: 8px;
+		/* border-bottom:2px solid red;  */
+		color: ${AppColors.muted};
+	}
+`
+export const TTableBodyMain = styled.tbody`
+	text-align: center;
+	padding: 8px;
+	border-bottom: 2px solid red;
+	td {
+		text-align: center;
+		padding: 20px 8px;
 		/* border-bottom:2px solid red;  */
 		color: ${AppColors.muted};
 	}
@@ -76,12 +75,13 @@ export const DRTableContent = styled.div`
 	border-radius: 10px;
 `
 
-export const DRViewCampBtn = styled.button`
-	width: 61px;
-	height: 22px;
-	outline: none;
-	border: none;
+export const WTstatusLabel = styled.div`
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: ${AppColors.white};
-	background: #ff7900;
-	border-radius: 5px;
+	background: ${({ bc }) => (bc ? bc : "")};
+	border-radius: 35px;
 `

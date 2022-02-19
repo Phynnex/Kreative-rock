@@ -1,6 +1,6 @@
 import { Grid, Typography, Box } from "@material-ui/core";
 import React from "react";
-import group from "../../assets/images/Group.png";
+import group from "../../assets/images/1-way-sms.png";
 import group1 from "../../assets/images/group1.png";
 import group2 from "../../assets/images/group2.png";
 import { makeStyles } from "@material-ui/core";
