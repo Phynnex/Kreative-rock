@@ -1,4 +1,5 @@
 import Authorize from "./AuthContext.jsx"
+import ContactListActions from "./ContactActionsContext.jsx"
 import ToggleCreateKeyword from "./createKewordContext.jsx"
 import DashboardMenu from "./DashboardMenu.jsx"
 import ToggleMenu from "./toggleMenuContext.jsx"
@@ -9,13 +10,15 @@ function Store({ children }) {
 	return (
 		<Authorize>
 			<KreativeUser>
-				<DashboardMenu>
-					<ToggleCreateKeyword>
-						<ToggleNav>
-							<ToggleMenu>{children}</ToggleMenu>
-						</ToggleNav>
-					</ToggleCreateKeyword>
-				</DashboardMenu>
+				<ContactListActions>
+					<DashboardMenu>
+						<ToggleCreateKeyword>
+							<ToggleNav>
+								<ToggleMenu>{children}</ToggleMenu>
+							</ToggleNav>
+						</ToggleCreateKeyword>
+					</DashboardMenu>
+				</ContactListActions>
 			</KreativeUser>
 		</Authorize>
 	)

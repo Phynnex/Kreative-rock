@@ -31,10 +31,11 @@ export const ContactFilterTab = styled.div`
 `
 export const FilterDivBtn = styled.div`
 	display: flex;
-	height: 25px;
+	height: 28px;
 	align-items: center;
 	padding: 0px 0px;
-	/* background-color: #ccc; */
+	margin-top: 20px;
+	margin-bottom: 30px;
 	color: #000;
 	flex: 0 0 auto;
 	border-bottom: ${({ bm }) => (bm ? bm : "")};

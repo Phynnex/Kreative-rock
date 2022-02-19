@@ -1,25 +1,25 @@
 import React from "react"
-import { Img } from "globalStyles/style"
-import { ActionBtnsCampaign, AllCampaignContainer, AllCampaignDiv, AllCampaignTopSection } from "./style"
-import allCampaign from "assets/images/bro_allcampaign.svg"
 import ActionBtnDashboard from "components/dashboard/actionbuttons"
-import AllCampTable from "./table"
+import { Img } from "globalStyles/style"
+import allCampaign from "assets/images/bro_allcampaign.svg"
+import { ActionBtnsCampaign, AllCampaignContainer, AllCampaignDiv, AllCampaignTopSection } from "../style"
+import DetailsTable from "./detailsTable"
 
-function AllCampaignsPage() {
+function CampaignDetails() {
 	return (
 		<AllCampaignContainer>
 			<AllCampaignDiv>
 				<AllCampaignTopSection>
 					<h6>All Campaigns</h6>
-					<Img src={allCampaign} alt="View All Campaign" />
+					<Img src={allCampaign} alt="View Campaign Details" />
 				</AllCampaignTopSection>
 			</AllCampaignDiv>
 			<ActionBtnsCampaign>
 				<ActionBtnDashboard />
 			</ActionBtnsCampaign>
-			<AllCampTable />
+			<DetailsTable />
 		</AllCampaignContainer>
 	)
 }
 
-export default AllCampaignsPage
+export default CampaignDetails

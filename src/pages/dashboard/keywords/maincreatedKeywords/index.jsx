@@ -13,6 +13,7 @@ function KreatedKeywordsMain() {
 				<ActionBtnDashboard />
 			</KeywordTop>
 			<LineDiv />
+			<br />
 			<KreateContent>
 				<h5>Created Responses</h5>
 			</KreateContent>

@@ -93,7 +93,7 @@ function ActionBtnDashboard() {
 			<ScrollDiv>
 				{btnActionData.map(action => (
 					<AButton key={action.id}>
-						{action.title} <Img src={action.icon} alt="action icon" />
+						{action.title} <Img ml="5px" src={action.icon} alt="action icon" />
 					</AButton>
 				))}
 			</ScrollDiv>
