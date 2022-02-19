@@ -31,7 +31,7 @@ export const GuidesButton = styled.button`
   padding:0px 10px;
   `}
 	${media.mobile`
-  width:80%;
+  width:95%;
   border: 1px solid #cfcfcf;
   padding:0px 10px;
   `}

@@ -1,6 +1,6 @@
 // import "../../assets/css/earning.css"
 
-import { TTableBody, TTableBodyMain, TTableHeader, WTstatusLabel } from "./style"
+import { TableScrollDiv, TTableBody, TTableBodyMain, TTableHeader, WTstatusLabel } from "./style"
 
 const Transactions = [
 	{
@@ -45,35 +45,37 @@ const TransactionTable = () => {
 	return (
 		<>
 			<h5>Transaction Table</h5>
-			<TTableBody>
-				<TTableHeader>
-					<tr>
-						<th scope="col">NAME</th>
-						<th scope="col">STATUS</th>
-						<th scope="col">INFLOW</th>
-						<th scope="col">OUTFLOW</th>
-						<th scope="col">DATE</th>
-						<th scope="col">WITHDRAW</th>
-						<th scope="col">BALANCE</th>
-					</tr>
-				</TTableHeader>
-				<TTableBodyMain>
-					{Transactions.map(row => (
+			<TableScrollDiv>
+				<TTableBody>
+					<TTableHeader>
 						<tr>
-							<td data-label="Name">{row.name}</td>
-							<td data-label="status" className="status">
-								<WTstatusLabel bc={row.status === "Successful" ? "#44BBA5" : row.status === "Pending" ? "#FF7900" : "#E94F37"}>{row.status}</WTstatusLabel>
-							</td>
-
-							<td data-label="Inflow">{row.inflow}</td>
-							<td data-label="Outflow">{row.outflow}</td>
-							<td data-label="Date">{row.date}</td>
-							<td data-label="Withdraw">{row.withdraw}</td>
-							<td data-label="Balance">{row.balance}</td>
+							<th scope="col">NAME</th>
+							<th scope="col">STATUS</th>
+							<th scope="col">INFLOW</th>
+							<th scope="col">OUTFLOW</th>
+							<th scope="col">DATE</th>
+							<th scope="col">WITHDRAW</th>
+							<th scope="col">BALANCE</th>
 						</tr>
-					))}
-				</TTableBodyMain>
-			</TTableBody>
+					</TTableHeader>
+					<TTableBodyMain>
+						{Transactions.map(row => (
+							<tr>
+								<td data-label="Name">{row.name}</td>
+								<td data-label="status" className="status">
+									<WTstatusLabel bc={row.status === "Successful" ? "#44BBA5" : row.status === "Pending" ? "#FF7900" : "#E94F37"}>{row.status}</WTstatusLabel>
+								</td>
+
+								<td data-label="Inflow">{row.inflow}</td>
+								<td data-label="Outflow">{row.outflow}</td>
+								<td data-label="Date">{row.date}</td>
+								<td data-label="Withdraw">{row.withdraw}</td>
+								<td data-label="Balance">{row.balance}</td>
+							</tr>
+						))}
+					</TTableBodyMain>
+				</TTableBody>
+			</TableScrollDiv>
 		</>
 	)
 }

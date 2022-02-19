@@ -12,6 +12,7 @@ export const SupportHeader = styled.div`
 	padding: 0px 0px;
   `}
 	${media.mobile`
+	flex-direction: column;
 	padding: 0px 0px;
     `}
 `

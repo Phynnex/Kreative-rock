@@ -9,6 +9,9 @@ export const WBallanceCard = styled.div`
 	box-sizing: border-box;
 	border-radius: 10px;
 	padding: 20px 0px;
+	${media.tablet`
+     width:60%;
+    `}
 	${media.mobile`
      width:100%;
     `}

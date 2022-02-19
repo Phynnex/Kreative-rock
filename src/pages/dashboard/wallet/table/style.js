@@ -34,6 +34,9 @@ export const TTableBody = styled.table`
 	tr {
 		border-bottom: 4px solid #f4f9fe;
 	}
+	${media.mobile`
+    white-space: nowrap;
+    `}
 `
 
 export const TTableHeader = styled.thead`
@@ -84,4 +87,16 @@ export const WTstatusLabel = styled.div`
 	color: ${AppColors.white};
 	background: ${({ bc }) => (bc ? bc : "")};
 	border-radius: 35px;
+	${media.tablet`
+    padding:0px 20px;
+    `}
+	${media.mobile`
+    padding:0px 20px;
+    `}
+`
+export const TableScrollDiv = styled.div`
+	width: 100%;
+	${media.mobile`
+    overflow-x: scroll;
+    `}
 `

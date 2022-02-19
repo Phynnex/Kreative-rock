@@ -1,18 +1,25 @@
 import React from "react"
+import { KHeaderText, Underline } from "../keywords/style"
 import WallBalance from "./ballance"
 import PieCard from "./chart"
-import { WCardContainer } from "./style"
+import { WalletContainer, WCardContainer, WTableDiv } from "./style"
 import TransactionTable from "./table"
 
 function WalletPage() {
 	return (
-		<div>
+		<WalletContainer>
+			<KHeaderText>Wallet </KHeaderText>
+			<Underline></Underline>
+			<br />
+			<br />
 			<WCardContainer>
 				<PieCard />
 				<WallBalance />
 			</WCardContainer>
-			<TransactionTable />
-		</div>
+			<WTableDiv>
+				<TransactionTable />
+			</WTableDiv>
+		</WalletContainer>
 	)
 }
 

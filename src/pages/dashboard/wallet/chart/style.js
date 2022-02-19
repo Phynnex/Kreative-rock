@@ -8,6 +8,9 @@ export const PieChartCrad = styled.div`
 	border: 2px solid #cfcfcf;
 	box-sizing: border-box;
 	border-radius: 10px;
+	${media.tablet`
+     width:35%;
+    `}
 	${media.mobile`
      width:100%;
     `}

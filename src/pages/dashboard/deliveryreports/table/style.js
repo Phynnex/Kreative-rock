@@ -43,7 +43,7 @@ export const DReportBody = styled.table`
 	${media.mobile`
 
   td, th {
-      /* white-space: nowrap; */
+      white-space: nowrap;
     }
     `}
 `
@@ -65,8 +65,6 @@ export const DRTableContainer = styled.div`
 	padding: 0px 5px;
 	${media.mobile`
 	width: 100%;
-	
-	overflow-x: scroll;
 	`}
 `
 export const DRTableContent = styled.div`
