@@ -6,6 +6,7 @@ import CreateCampainForm from "./campaign/createcampaign"
 import OnewayCampainPage from "./campaign/createcampaign/onewayform"
 import ContactsPage from "./contacts"
 import DeliveryReportsPage from "./deliveryreports"
+import ReportPage from "./deliveryreports/report"
 import HelpPage from "./help"
 import DashboardPage from "./home"
 import InboxPage from "./inbox"
@@ -23,6 +24,7 @@ import {
 	CREATCAMPAIGN_TWO,
 	DASHBOARDHOME,
 	DELIVERY_REPORS,
+	DELIVERY_REPORT_DETAILS,
 	D_LOGOUT,
 	HELP,
 	INBOX,
@@ -98,6 +100,12 @@ export const dashboardRoutes = [
 	{
 		path: DELIVERY_REPORS,
 		component: DeliveryReportsPage,
+		exact: true,
+		protected: true
+	},
+	{
+		path: DELIVERY_REPORT_DETAILS,
+		component: ReportPage,
 		exact: true,
 		protected: true
 	},

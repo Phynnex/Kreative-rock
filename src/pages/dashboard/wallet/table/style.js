@@ -98,5 +98,12 @@ export const TableScrollDiv = styled.div`
 	width: 100%;
 	${media.mobile`
     overflow-x: scroll;
+    ::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: transparent;
+	}
     `}
 `

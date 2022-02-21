@@ -200,7 +200,6 @@ const Register = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			;
 		</>
 	)
 }
