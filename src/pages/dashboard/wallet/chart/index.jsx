@@ -1,14 +1,17 @@
 import React from "react"
 import WalletPieChat from "./Pie"
-import { PieChartCrad, PRelate } from "./style"
+import { ChatDivCont, PieChartCrad, PRelate } from "./style"
 
 function PieCard() {
 	return (
-		<PieChartCrad>
-			<PRelate>
-				<WalletPieChat />
-			</PRelate>
-		</PieChartCrad>
+		<ChatDivCont>
+			<h5>Wallet Balance</h5>
+			<PieChartCrad>
+				<PRelate>
+					<WalletPieChat />
+				</PRelate>
+			</PieChartCrad>
+		</ChatDivCont>
 	)
 }
 

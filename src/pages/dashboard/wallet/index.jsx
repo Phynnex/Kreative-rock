@@ -16,6 +16,8 @@ function WalletPage() {
 				<PieCard />
 				<WallBalance />
 			</WCardContainer>
+			<br />
+			<br />
 			<WTableDiv>
 				<TransactionTable />
 			</WTableDiv>
