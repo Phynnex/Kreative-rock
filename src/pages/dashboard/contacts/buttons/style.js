@@ -27,12 +27,13 @@ export const CTAButtonContainer = styled.div`
 	display: flex;
 	position: relative;
 	height: 60px;
+	gap: 10px;
 	${media.smallDesktopMinimum`
-	width: 50%;
+	width: 75%;
 	
 	`}
 	${media.tablet`
-	width: 73%;
+	width: 100%;
 	
 	`}
 	${media.mobile`

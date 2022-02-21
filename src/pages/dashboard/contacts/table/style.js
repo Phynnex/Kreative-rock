@@ -23,6 +23,12 @@ export const TransTableBody = styled.table`
 		background-color: rgba(0, 218, 178, 0.89);
 		font-size: 14px;
 	}
+	th:first-child {
+		border-top-left-radius: 8px;
+	}
+	th:last-child {
+		border-top-right-radius: 8px;
+	}
 	td {
 		color: ${AppColors.muted};
 		font-size: 14px;

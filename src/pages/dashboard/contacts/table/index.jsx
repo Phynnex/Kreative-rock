@@ -7,7 +7,7 @@ import deletecan from "assets/images/deleteCampaign.svg"
 import Editpen from "assets/images/editCampaign.svg"
 import sendMessage from "assets/images/send_message.svg"
 import { Div, Img, KButton, KreativeP } from "globalStyles//style"
-
+import cFlag from "assets/images/countryflag.png"
 import downPointer from "assets/images/elipses_vert.svg"
 import AppColors from "utils/colors"
 import { TableScrollDiv } from "pages/dashboard/wallet/table/style"
@@ -52,7 +52,7 @@ function ContactListTable() {
 
 								<td>
 									<Div display="flex" alignI="center" width="90%" height="30px">
-										<Img within="25px" height="25px" src={Editpen} alt="Delete" />
+										<Img within="25px" height="25px" src={cFlag} alt="Delete" />
 										<KreativeP ml="10px" mb="-4px">
 											+3479258953108
 										</KreativeP>

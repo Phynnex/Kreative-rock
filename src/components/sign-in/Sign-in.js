@@ -48,15 +48,16 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down("sm")]: {
 			display: "flex",
 			justifyContent: "center",
+			padding: "20px 0px",
 			height: "60vh",
 			gap: "30px",
-			flexDirection: "column",
-			padding: "1.5em"
+			flexDirection: "column"
+			// padding: "1.5em"
 		},
 		[theme.breakpoints.down("xs")]: {
 			display: "flex",
 			justifyContent: "center",
-			height: "70vh",
+			height: "80vh",
 			gap: "40px",
 			flexDirection: "column",
 			padding: "1.5em"
@@ -197,7 +198,6 @@ const SignIn = () => {
 					</Grid>
 				</Grid>
 			</Box>
-			;
 		</>
 	)
 }
