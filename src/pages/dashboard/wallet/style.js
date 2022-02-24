@@ -15,6 +15,7 @@ export const WCardContainer = styled.div`
     `}
 	${media.mobile`
      flex-direction: column;
+     gap:3rem;
     `}
 `
 export const WTableDiv = styled.div`
