@@ -7,8 +7,6 @@ export const TransTableBody = styled.table`
 	width: 100% !important;
 	border-collapse: collapse !important;
 	border-bottom: 1px solid #e4e7eb;
-	/* width: 100%; */
-	/* overflow-x: scroll; */
 	td {
 		text-align: left;
 		padding: 15px 10px;
@@ -34,11 +32,10 @@ export const TransTableBody = styled.table`
 		font-size: 14px;
 	}
 	tr:nth-child(even) {
-		/* border-bottom: 1px solid #e4e7eb; */
 		background: #ecf4f7;
 	}
 	${media.mobile`
-  /* width: 150vw; */
+ 
   td, th {
       white-space: nowrap;
     }

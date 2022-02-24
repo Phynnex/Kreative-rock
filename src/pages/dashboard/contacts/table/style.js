@@ -4,8 +4,9 @@ import AppColors from "utils/colors"
 import media from "utils/media"
 
 export const TransTableBody = styled.table`
-	width: 100% !important;
-	border-collapse: collapse !important;
+	width: 100%;
+	border-collapse: collapse;
+	background: #ffffff;
 	border-bottom: 1px solid #e4e7eb;
 	/* width: 100%; */
 	/* overflow-x: scroll; */
@@ -34,12 +35,11 @@ export const TransTableBody = styled.table`
 		font-size: 14px;
 	}
 	tr:nth-child(even) {
-		/* border-bottom: 1px solid #e4e7eb; */
 		background: #ecf4f7;
 	}
 
 	${media.mobile`
-  /* width: 150vw; */
+  width: 100%;
   td {
       white-space: nowrap;
     }
@@ -53,7 +53,6 @@ export const TransTextHeader = styled.th`
 	td {
 		text-align: left;
 		padding: 8px;
-		/* border-bottom:2px solid red;  */
 		color: ${AppColors.muted};
 	}
 `
@@ -65,10 +64,12 @@ export const TransTableContainer = styled.div`
 export const TransTableContent = styled.div`
 	/* width: 100%; */
 	/* overflow-x: scroll; */
-	background: #ffffff;
 	border: 1px solid #b8b8b8;
 	box-sizing: border-box;
 	border-radius: 10px;
+	${media.mobile`
+	border:none;
+	`}
 `
 
 export const TablePopupDiv = styled.div`

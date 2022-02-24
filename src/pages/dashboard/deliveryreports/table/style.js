@@ -4,9 +4,10 @@ import media from "utils/media"
 // import media from "utils/media"s
 
 export const DReportBody = styled.table`
-	width: 100% !important;
-	border-collapse: collapse !important;
-	border-bottom: 1px solid #e4e7eb;
+	width: 100%;
+	border-collapse: collapse;
+	background: #ffffff;
+	/* border-bottom: 1px solid #e4e7eb; */
 	/* width: 100%; */
 	/* overflow-x: scroll; */
 	td {
@@ -74,10 +75,13 @@ export const DRTableContainer = styled.div`
 	`}
 `
 export const DRTableContent = styled.div`
-	background: #ffffff;
+	width: 100%;
 	border: 1px solid #b8b8b8;
 	box-sizing: border-box;
 	border-radius: 10px;
+	${media.mobile`
+	border:none;
+	`}
 `
 
 export const DRViewCampBtn = styled.button`

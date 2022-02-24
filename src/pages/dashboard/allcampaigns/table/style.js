@@ -5,8 +5,10 @@ import media from "utils/media"
 
 export const TransTableBody = styled.table`
 	width: 100% !important;
+	background: #ffffff;
 	border-collapse: collapse !important;
 	border-bottom: 1px solid #e4e7eb;
+
 	/* width: 100%; */
 	/* overflow-x: scroll; */
 	td {
@@ -62,12 +64,13 @@ export const TransTableContainer = styled.div`
 	padding: 0px 5px;
 `
 export const TransTableContent = styled.div`
-	/* width: 100%; */
-	/* overflow-x: scroll; */
-	background: #ffffff;
+	width: 100%;
 	border: 1px solid #b8b8b8;
-	box-sizing: border-box;
 	border-radius: 10px;
+	box-sizing: border-box;
+	${media.mobile`
+	border:none;
+	`}
 `
 
 export const TablePopupDiv = styled.div`
