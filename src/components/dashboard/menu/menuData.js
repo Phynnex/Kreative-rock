@@ -31,10 +31,27 @@ import delivery_reportActive from "assets/images/icons/delivery_reportsActive.sv
 import helpIcon from "assets/images/icons/help.svg"
 import helpActive from "assets/images/icons/helpActive.svg"
 
+import settingsIcon from "assets/images/icons/settings.svg"
+import settingsActive from "assets/images/icons/settingsActive.svg"
+
 import logoutIcon from "assets/images/icons/logout.svg"
 import logoutActive from "assets/images/icons/logoutActive.svg"
 
-import { ALL_CAMPAIGNS, AUTO_RESPONSES, CAMPAIGN, CONTACTS, DASHBOARDHOME, DELIVERY_REPORS, D_LOGOUT, HELP, INBOX, KEYWORDS, SENDER_ID, WALLET } from "pages/dashboard/ROUTESCONTS"
+import {
+	ACCOUNTING_SETTINGS,
+	ALL_CAMPAIGNS,
+	AUTO_RESPONSES,
+	CAMPAIGN,
+	CONTACTS,
+	DASHBOARDHOME,
+	DELIVERY_REPORS,
+	D_LOGOUT,
+	HELP,
+	INBOX,
+	KEYWORDS,
+	SENDER_ID_LIST,
+	WALLET
+} from "pages/dashboard/ROUTESCONTS"
 
 export const menuData = [
 	{
@@ -63,7 +80,7 @@ export const menuData = [
 		activeIcon: senderidActive,
 		text: "Sender Id",
 		isActive: false,
-		link: SENDER_ID
+		link: SENDER_ID_LIST
 	},
 	{
 		icon: keywordsIcon,
@@ -107,6 +124,13 @@ export const menuData = [
 		text: "Delivery Reports",
 		isActive: false,
 		link: DELIVERY_REPORS
+	},
+	{
+		icon: settingsIcon,
+		activeIcon: settingsActive,
+		text: "Profile Settings",
+		isActive: false,
+		link: ACCOUNTING_SETTINGS
 	},
 	{
 		icon: helpIcon,

@@ -18,7 +18,7 @@ export const TransTableBody = styled.table`
 		text-align: left;
 		text-transform: capitalize;
 		color: ${AppColors.white};
-		background-color: rgba(0, 218, 178, 0.89);
+		/* background-color: rgba(0, 218, 178, 0.89); */
 		font-size: 14px;
 	}
 	th:first-child {

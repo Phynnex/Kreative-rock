@@ -48,14 +48,30 @@ function ContactListTable() {
 						</tr>
 						{[...new Array(5)].map((req, i) => (
 							<tr key={(req, i)}>
-								<td>"Campaign Id"</td>
+								<td>
+									<Div display="flex" alignI="center" width="90%" height="30px">
+										<Div>
+											<KreativeP fw="bold" ml="10px" mb="-3px">
+												Guy Hawkins
+											</KreativeP>
+											<KreativeP ml="10px" mb="-3px">
+												2118 Thornridge Cir. Syracuse, Connecticut 35624
+											</KreativeP>
+										</Div>
+									</Div>
+								</td>
 
 								<td>
 									<Div display="flex" alignI="center" width="90%" height="30px">
 										<Img within="25px" height="25px" src={cFlag} alt="Delete" />
-										<KreativeP ml="10px" mb="-4px">
-											+3479258953108
-										</KreativeP>
+										<Div>
+											<KreativeP ml="10px" mb="-4px">
+												+3479258953108
+											</KreativeP>
+											<KreativeP ml="10px" mb="-4px">
+												Message line here
+											</KreativeP>
+										</Div>
 									</Div>
 								</td>
 								<td>12/Feb/2022</td>

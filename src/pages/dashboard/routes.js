@@ -15,6 +15,7 @@ import KreatedKeywordsMain from "./keywords/maincreatedKeywords"
 import LogoutPage from "./logout"
 
 import {
+	ACCOUNTING_SETTINGS,
 	ALL_CAMPAIGNS,
 	AUTO_RESPONSES,
 	CAMPAIGN,
@@ -29,11 +30,12 @@ import {
 	HELP,
 	INBOX,
 	KEYWORDS,
-	SENDER_ID,
+	SENDER_ID_LIST,
 	USERCREATED_RESPONSES,
 	WALLET
 } from "./ROUTESCONTS"
-import SenderIdPage from "./sendId"
+import SenderListPage from "./sendId/senderpage"
+import SettingsPage from "./settings"
 import WalletPage from "./wallet"
 
 export const dashboardRoutes = [
@@ -56,8 +58,8 @@ export const dashboardRoutes = [
 		protected: true
 	},
 	{
-		path: SENDER_ID,
-		component: SenderIdPage,
+		path: SENDER_ID_LIST,
+		component: SenderListPage,
 		exact: true,
 		protected: true
 	},
@@ -136,6 +138,12 @@ export const dashboardRoutes = [
 	{
 		path: CREATCAMPAIGN_ONE,
 		component: OnewayCampainPage,
+		exact: true,
+		protected: true
+	},
+	{
+		path: ACCOUNTING_SETTINGS,
+		component: SettingsPage,
 		exact: true,
 		protected: true
 	}

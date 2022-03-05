@@ -4,6 +4,7 @@ import { TransTableBody, TransTableContainer, TransTableContent } from "./style"
 import cFlag from "assets/images/countryflag.png"
 import { TableScrollDiv } from "pages/dashboard/wallet/table/style"
 import Pagination from "Utilities/pagination"
+
 function ReportPage() {
 	return (
 		<>
@@ -11,21 +12,25 @@ function ReportPage() {
 				<TransTableContainer>
 					<TransTableContent>
 						<TransTableBody>
-							<tr>
+							<tr style={{ backgroundColor: `rgba(0, 218, 178, 0.89)`, borderTopRightRadius: "8px" }}>
 								<th>
-									<Div display="flex" alignI="center">
+									<Div width="100%" display="flex" alignI="center">
 										Contacts
 									</Div>
 								</th>
 
-								<th>
+								<th style={{ float: "right" }}>
 									<Div display="flex" alignI="center">
 										Delivery Status
 									</Div>
 								</th>
 							</tr>
 
-							<td colSpan={2}>Guy Hawkins</td>
+							<tr>
+								<td colSpan="2" style={{ textAlign: "center" }}>
+									Guy Hawkins
+								</td>
+							</tr>
 							{[...new Array(5)].map((req, i) => (
 								<tr key={(req, i)}>
 									<td>
@@ -37,7 +42,7 @@ function ReportPage() {
 										</Div>
 									</td>
 
-									<td>Pending</td>
+									<td style={{ textAlign: "right" }}>Pending</td>
 								</tr>
 							))}
 						</TransTableBody>

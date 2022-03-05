@@ -12,7 +12,6 @@ const AButton = styled.button`
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 	border-radius: 3px;
 	margin-right: 15px;
-	margin-top: -7px;
 	${media.mobile`
 	width: 100px;
 	flex: 0 0 auto;
@@ -23,7 +22,7 @@ const AButton = styled.button`
 const AButtonContainer = styled.div`
 	display: flex;
 	position: relative;
-	height: 50px;
+	height: 70px;
 	${media.smallDesktopMinimum`
 	width: 50%;
 	

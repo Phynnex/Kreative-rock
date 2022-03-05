@@ -69,6 +69,7 @@ export const CButton = styled.button`
 export const BottomActionsDiv = styled.div`
 	width: 100%;
 	display: flex;
+	height: 70px;
 	margin-top: 25px;
 	overflow: hidden;
 	justify-content: flex-end;

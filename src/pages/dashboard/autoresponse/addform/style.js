@@ -89,3 +89,28 @@ export const AutoResTextArea = styled.textarea`
 	border-radius: 5px;
 	outline: none;
 `
+
+export const AddFormDivAResponse = styled.div`
+	width: 50%;
+	padding-top: 20px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 40px;
+	background: linear-gradient(113.35deg, #ffffff 86.42%, #00cca7 130.2%, rgba(225, 237, 247, 0) 130.2%);
+	border: 1px solid #80e6d3;
+	box-sizing: border-box;
+	border-radius: 10px;
+	${media.smallDesktopMinimum`
+		width: 70%;
+  	`}
+	${media.tablet`
+		width: 90%;
+  	`}
+	${media.mobile`
+	width: 90%;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	
+	`}
+`
