@@ -136,3 +136,15 @@ export const KeywordTop = styled.div`
 	
 	`}
 `
+
+export const AutoResponseTop = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	${media.mobile`
+	 flex-direction: column;
+	 gap: 20px;
+	`}
+`

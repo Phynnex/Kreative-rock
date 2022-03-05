@@ -13,6 +13,7 @@ const AppColors = {
 	black: "#000000",
 	black2: "#031021",
 	white: "#FFFFFF",
-	greyGloss: "#E5E5E5"
+	greyGloss: "#E5E5E5",
+	mutedGrey: "#808080"
 }
 export default AppColors

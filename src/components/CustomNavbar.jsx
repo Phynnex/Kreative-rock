@@ -8,13 +8,12 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import { useToggleNav } from "context/toggleNavContext"
 import media from "utils/media"
 
-
 const NavContainer = styled.div`
 	height: 83px;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	padding: 0px 70px;
+	padding: 0px 40px;
 	align-items: center;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	position: fixed;

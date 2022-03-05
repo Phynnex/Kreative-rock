@@ -81,13 +81,13 @@ function AllCampTable() {
 													<Div display="flex" alignI="center" cursor="pointer" width="90%" height="30px">
 														<Img within="20px" height="20px" src={Editpen} alt="Delete" />
 														<KreativeP mb="-4px" ml="5px">
-															Edite Campaign
+															Edit Campaign
 														</KreativeP>
 													</Div>
 													<Div display="flex" alignI="center" cursor="pointer" width="90%" height="30px">
 														<Img within="20px" height="20px" src={deletecan} alt="Delete" />
 														<KreativeP mb="-4px" ml="5px">
-															Delect Campaign
+															Delete Campaign
 														</KreativeP>
 													</Div>
 												</TablePopupDiv>

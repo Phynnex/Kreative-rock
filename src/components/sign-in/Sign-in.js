@@ -7,6 +7,8 @@ import google from "../../assets/images/google.png"
 import { makeStyles } from "@material-ui/core"
 import { LoginBtn, LoginContDiv, LoginTextField } from "./style"
 import { Link } from "react-router-dom"
+import useGeoLocation from "react-ipgeolocation"
+import cogoToast from "cogo-toast"
 
 const useStyles = makeStyles(theme => ({
 	items: {
@@ -157,6 +159,11 @@ const useStyles = makeStyles(theme => ({
 }))
 const SignIn = () => {
 	const classes = useStyles()
+	const location = useGeoLocation()
+	console.log(location, "Couuntry Ip")
+	const HandleLogin = () => {
+		cogoToast.success("Login was Success!", { position: "top-right" })
+	}
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
@@ -183,7 +190,7 @@ const SignIn = () => {
 						<LoginContDiv>
 							<LoginTextField type="email" placeholder="Email" />
 							<LoginTextField type="password" placeholder="Password" />
-							<LoginBtn>Sign In</LoginBtn>
+							<LoginBtn onClick={HandleLogin}>Sign In</LoginBtn>
 							<Box className={classes.LinkArea}>
 								<Typography>Don't have an account?</Typography>
 								<Link to="/register">

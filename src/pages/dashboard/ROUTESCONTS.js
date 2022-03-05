@@ -1,8 +1,9 @@
 // SideMenu Links
 export const DASHBOARDHOME = `/dashboard`
 export const INBOX = `/dashboard/inbox`
+export const ACCOUNTING_SETTINGS = `/dashboard/settings`
 export const CONTACTS = `/dashboard/contacts`
-export const SENDER_ID = `/dashboard/send-id`
+export const SENDER_ID_LIST = `/dashboard/send-id/list`
 export const WALLET = `/dashboard/wallet`
 export const AUTO_RESPONSES = `/dashboard/auto-response`
 export const CAMPAIGN = `/dashboard/campaign`
