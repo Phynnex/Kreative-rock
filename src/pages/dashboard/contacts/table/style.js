@@ -133,3 +133,16 @@ export const ViewCampBtn = styled.button`
 	background: #ff7900;
 	border-radius: 11px;
 `
+
+export const ContactPhoto = styled.div`
+	width: 50px;
+	height: 50px;
+	border: 2px solid #ecf4f7;
+	padding: 3px;
+	border-radius: 50%;
+	img {
+		min-width: 100%;
+		min-height: 100%;
+		border-radius: 50%;
+	}
+`

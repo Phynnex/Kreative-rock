@@ -1,4 +1,5 @@
 import styled from "styled-components/macro"
+import AppColors from "utils/colors"
 import media from "utils/media"
 
 export const LoginTextField = styled.input`
@@ -10,10 +11,10 @@ export const LoginTextField = styled.input`
 	padding: 0px 10px;
 	border-radius: 5px;
 	:focus {
-		border: 1px solid #ff7900;
+		border: 1px solid ${({ error }) => (error ? "#dd0e3b" : AppColors.brandColor)};
 	}
 	:active {
-		border: 1px solid #ff7900;
+		border: 1px solid ${({ error }) => (error ? "#dd0e3b" : AppColors.brandColor)};
 	}
 	&:placeholder {
 		padding: 0px 10px;

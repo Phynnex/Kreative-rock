@@ -6,8 +6,6 @@ const AuthContext = createContext()
 export default function Authorize({ children }) {
 	const [user, setUser] = useSecureStorage("auth", {
 		isAuth: false,
-		token: "",
-		refreshToken: "",
 		data: {}
 	})
 

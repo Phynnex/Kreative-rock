@@ -6,12 +6,13 @@ import viewIcon from "assets/images/view.svg"
 import deletecan from "assets/images/deleteCampaign.svg"
 import Editpen from "assets/images/editCampaign.svg"
 import sendMessage from "assets/images/send_message.svg"
-import { Div, Img, KButton, KreativeP } from "globalStyles//style"
+import { Div, Img, KButton, KreativeP } from "globalStyles/style"
 import cFlag from "assets/images/countryflag.png"
+import cUser from "assets/images/userdp.png"
 import downPointer from "assets/images/elipses_vert.svg"
 import AppColors from "utils/colors"
 import { TableScrollDiv } from "pages/dashboard/wallet/table/style"
-
+import { ContactPhoto } from "./style"
 function ContactListTable() {
 	const [details, setDetails] = useState("")
 
@@ -50,6 +51,9 @@ function ContactListTable() {
 							<tr key={(req, i)}>
 								<td>
 									<Div display="flex" alignI="center" width="90%" height="30px">
+										<ContactPhoto>
+											<Img within="25px" height="25px" src={cUser} alt="Delete" />
+										</ContactPhoto>
 										<Div>
 											<KreativeP fw="bold" ml="10px" mb="-3px">
 												Guy Hawkins

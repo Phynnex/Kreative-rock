@@ -5,7 +5,7 @@ import DashboardMenu from "./DashboardMenu.jsx"
 import SettingTabStatus from "./SettingsContext.jsx"
 import ToggleMenu from "./toggleMenuContext.jsx"
 import ToggleNav from "./toggleNavContext.jsx"
-import KreativeUser from "./userDetails.jsx"
+import KreativeUser from "./userDetailsContext.jsx"
 
 function Store({ children }) {
 	return (

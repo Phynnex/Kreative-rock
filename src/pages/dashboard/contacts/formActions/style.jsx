@@ -216,7 +216,7 @@ export const UploadFileDIv = styled.div`
     `}
 `
 export const UploadFilePicker = styled.div`
-	width: 33%;
+	width: 35%;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -229,7 +229,7 @@ export const UploadFilePicker = styled.div`
 	border-bottom-right-radius: 5px;
 	cursor: pointer;
 	${media.mobile`
-    width: 37%;
+    width: 39%;
     font-spacing:2px;
 	font-size: 13px;
     `}

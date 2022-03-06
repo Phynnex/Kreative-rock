@@ -1,15 +1,21 @@
+import React, { useEffect, useState } from "react"
+import { Formik } from "formik"
+import * as Yup from "yup"
 import { Grid, Box, Typography } from "@material-ui/core"
-import React, { useEffect } from "react"
 import logo from "../../assets/images/logoimg.png"
 import signin from "../../assets/images/signin.png"
 import facebook from "../../assets/images/facebook2.png"
 import google from "../../assets/images/google.png"
 import { makeStyles } from "@material-ui/core"
 import { LoginBtn, LoginContDiv, LoginTextField } from "./style"
-import { Link } from "react-router-dom"
-import useGeoLocation from "react-ipgeolocation"
+import { Link, Redirect, useHistory } from "react-router-dom"
+// import useGeoLocation from "react-ipgeolocation"
 import cogoToast from "cogo-toast"
-
+import ErrorMessage from "components/common/ErrorMessage"
+import { loginUser } from "services/AuthService"
+import { useKreativeUser } from "context/userDetailsContext"
+import { useAuthContext } from "context/AuthContext"
+import { DASHBOARDHOME } from "pages/dashboard/ROUTESCONTS"
 const useStyles = makeStyles(theme => ({
 	items: {
 		paddingTop: "4em",
@@ -158,18 +164,66 @@ const useStyles = makeStyles(theme => ({
 	}
 }))
 const SignIn = () => {
+	const [isLoading, setisLoading] = useState(false)
 	const classes = useStyles()
-	const location = useGeoLocation()
-	console.log(location, "Couuntry Ip")
-	const HandleLogin = () => {
-		cogoToast.success("Login was Success!", { position: "top-right" })
+	const { kreativerUser, setKreativeUser } = useKreativeUser()
+	const { user, setUser } = useAuthContext()
+	const history = useHistory()
+	// const location = useGeoLocation()
+	// console.log(location, "Couuntry Ip")
+
+	const validationSchema = Yup.object().shape({
+		email: Yup.string().required("Email is a required field").email().label("email"),
+		password: Yup.string().min(8).required().label("Password")
+	})
+	const handleLogin = async (data, helpers) => {
+		setisLoading(true)
+		try {
+			const response = await loginUser(data)
+			// console.log(response)
+			if (response?.errors?.length > 0) {
+				setisLoading(false)
+				helpers.setSubmitting(false)
+				cogoToast.error(`${response?.errors[0]?.message}`, { hideAfter: 5 })
+			}
+			if (response?.id) {
+				setisLoading(false)
+				helpers.setSubmitting(false)
+				setUser({
+					...user,
+					data: response,
+					isAuth: true
+				})
+				setKreativeUser({
+					...kreativerUser
+				})
+				cogoToast.success("Login was Success!", { hideAfter: 5 })
+				setTimeout(() => {
+					history.push(DASHBOARDHOME)
+				}, 2000)
+				return
+			}
+		} catch (error) {
+			if (error) {
+				setisLoading(false)
+				helpers.setSubmitting(false)
+				cogoToast.error("Network Error", { hideAfter: 5 })
+				// console.log(error)
+				//   cogoToast.success(`${response?.Error}`, { hideAfter: 5 })
+			}
+		}
 	}
+
 	useEffect(() => {
 		window.scrollTo(0, 0)
 	}, [])
+	function LoggedInStatus() {
+		return <Redirect to={DASHBOARDHOME} />
+	}
 	return (
 		<>
 			<Box className={classes.items}>
+				{user?.isAuth && LoggedInStatus()}
 				<Grid container className={classes.box}>
 					<Grid item xs={12} sm={12} md={5} className={classes.box2}>
 						<Box style={{ marginBottom: "-1em" }}>
@@ -187,13 +241,42 @@ const SignIn = () => {
 								Or the from below
 							</Typography>
 						</Box>
+
 						<LoginContDiv>
-							<LoginTextField type="email" placeholder="Email" />
-							<LoginTextField type="password" placeholder="Password" />
-							<LoginBtn onClick={HandleLogin}>Sign In</LoginBtn>
+							<Formik initialValues={{ email: "", password: "" }} validationSchema={validationSchema} onSubmit={(values, helpers) => handleLogin(values, helpers)}>
+								{({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+									<>
+										<LoginTextField
+											error={errors.email}
+											autoComplete="off"
+											autoFill="off"
+											type="email"
+											name="email"
+											disabled={isLoading}
+											onBlur={() => setFieldTouched("email")}
+											onChange={handleChange("email")}
+											placeholder="Email"
+										/>
+										<ErrorMessage error={errors.email} visible={touched.email} />
+										<LoginTextField
+											autoComplete="off"
+											type="password"
+											name="password"
+											disabled={isLoading}
+											onBlur={() => setFieldTouched("password")}
+											onChange={handleChange("password")}
+											placeholder="Password"
+										/>
+										<ErrorMessage error={errors.password} visible={touched.password} />
+										<LoginBtn type="submit" onClick={handleSubmit} disabled={isLoading}>
+											{isLoading ? "Loading..." : "Sign In"}
+										</LoginBtn>
+									</>
+								)}
+							</Formik>
 							<Box className={classes.LinkArea}>
 								<Typography>Don't have an account?</Typography>
-								<Link to="/register">
+								<Link to="/register" disabled={isLoading}>
 									<Typography className={classes.link}>Sign Up</Typography>
 								</Link>
 							</Box>
