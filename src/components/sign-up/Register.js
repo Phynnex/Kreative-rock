@@ -1,5 +1,5 @@
-import { Grid, Box, Typography, Button, TextField, FormControl } from "@material-ui/core"
-import React from "react"
+import { Grid, Box, Typography, Button, TextField, FormControl, MenuItem, Select } from "@material-ui/core"
+import React, { useState } from "react"
 import logo from "../../assets/images/logoimg.png"
 import signin from "../../assets/images/signin.png"
 import facebook from "../../assets/images/facebook2.png"
@@ -7,7 +7,7 @@ import google from "../../assets/images/google.png"
 import { makeStyles } from "@material-ui/core"
 import { Link } from "react-router-dom"
 import ScrollToTop from "components/ScrollToTop"
-
+import "./style.css"
 const useStyles = makeStyles(theme => ({
 	items: {
 		paddingTop: "4em",
@@ -133,11 +133,25 @@ const useStyles = makeStyles(theme => ({
 		"&:hover": {
 			color: "#00CCA7"
 		}
+	},
+	textfield: {
+		backgroundColor: "#FFFFFF"
+	},
+	select: {
+		backgroundColor: "#FFFFFF",
+		color: "#373737"
+	},
+	menuitem: {
+		backgroundColor: "#FFFFFF",
+		color: "#373737"
 	}
 }))
 const Register = () => {
+	const [country, setCountry] = useState("")
 	const classes = useStyles()
-
+	const handleChange = e => {
+		setCountry(e.target.value)
+	}
 	return (
 		<>
 			<ScrollToTop />
@@ -172,8 +186,36 @@ const Register = () => {
 							<TextField variant="outlined" color="secondary" fullWidth id="fullWidth" className={classes.textfield} placeholder="Phone Number" />
 						</FormControl>
 						<FormControl variant="standard" className={classes.formControl}>
+							<Select
+								className={classes.select}
+								variant="outlined"
+								color="secondary"
+								fullWidth
+								id="fullWidth"
+								value={country}
+								MenuProps={{ color: "#F90" }}
+								onChange={e => handleChange(e)}
+								displayEmpty
+								// inputProps={{ "aria-label": "Without label" }}
+							>
+								<MenuItem className="MuiSelect-selectMenu" value={country}>
+									<em>Country</em>
+								</MenuItem>
+								<MenuItem className={classes.menuitem} value="nigeria">
+									Nigeria
+								</MenuItem>
+								<MenuItem className={classes.menuitem} value="kenya">
+									Kenya
+								</MenuItem>
+								<MenuItem className={classes.menuitem} value="ghana">
+									Ghana
+								</MenuItem>
+								<MenuItem className={classes.menuitem} value="south africa">
+									South Africa
+								</MenuItem>
+							</Select>
 							{/* <label className={classes.label}> Super admin password</label> */}
-							<TextField variant="outlined" color="secondary" fullWidth id="fullWidth" className={classes.textfield} placeholder="Country" />
+							{/* <TextField variant="outlined" color="secondary" fullWidth id="fullWidth" className={classes.textfield} placeholder="Country" /> */}
 						</FormControl>
 						<FormControl variant="standard" className={classes.formControl}>
 							{/* <label className={classes.label}> Super admin password</label> */}
