@@ -1,15 +1,16 @@
 export const baseUrl = "https://kr-user.herokuapp.com/api/v1"
-
-//Auth User
+const baseUrl2 = "https://kreactiverock-texting.herokuapp.com/api"
+//Auth User from Segun
 export const SIGNUP_USER = `${baseUrl}/users/auth/signup`
 export const LOGIN_USER = `${baseUrl}/users/auth/signin`
 export const SIGNOUT_USER = `${baseUrl}/users/auth/signout`
 export const GET_CURRENT_USER = `${baseUrl}/users/auth/currentuser`
 
-//Settings
-export const UPDATE_GEN_SETTINGS = `${baseUrl}/settings/general-settings` //PUT
-export const GET_GEN_SETTINGS = `${baseUrl}/networth-settings/get-networth-settings` //GET
-export const UPDATE_NETWORTH_SETTINGS = `${baseUrl}/settings/networth-settings` //PUT
+//Sender iD from Stanley
+export const CREATE_SENDER_ID = `${baseUrl2}/sender-id` //POST || GET
+export const FIlTER_SENDER_ = `${baseUrl2}/sender-id/filter` //GET
+export const EDIT_SENDER_ID = `${baseUrl2}/sender-id/organisation` //PUT || DELETE
+
 export const GET_NETWORTH_SETTINGS = `${baseUrl}/settings/networth-settings` //PUT
 export const GET_LIABILITIES = `${baseUrl}/liabilities` //PUT
 export const ASSETS = `${baseUrl}/assets` //PUT

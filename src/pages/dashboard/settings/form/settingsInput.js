@@ -3,11 +3,11 @@ import styled from "styled-components/macro"
 import AppColors from "utils/colors"
 
 export const SettingsInput = styled.input`
-	width: 70%;
+	width: ${({ w }) => (w ? w : "70%")};
 	height: 50px;
 	padding: 0px 15px;
 	background: #ffffff;
-	border: 1px solid ${({ error }) => (error ? "#f70" : AppColors.newsLetterBg)};
+	border: 1px solid ${({ error }) => (error ? "red" : AppColors.newsLetterBg)};
 	border-radius: 5px;
 	${media.mobile`
         width: 100%;
@@ -20,7 +20,7 @@ export const SettingsInput = styled.input`
 
 	&:focus {
 		outline: none;
-		border: 1px solid ${({ error }) => (error ? "#f70" : AppColors.brandColor)};
+		border: 1px solid ${AppColors.brandColor};
 	}
 `
 
@@ -118,4 +118,12 @@ export const AddBtnContainer = styled.div`
 				margin-left: 0px;
 			}
 	`}
+`
+export const WithErrorDiv = styled.div`
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	${media.mobile`
+        width: 100%;
+  `}
 `

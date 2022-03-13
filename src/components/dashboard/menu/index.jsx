@@ -9,6 +9,8 @@ import cancelBtn from "assets/images/cancel.svg"
 import PhoneInput from "react-phone-input-2"
 import { useToggleMenu } from "context/toggleMenuContext"
 import ScrollToTop from "components/ScrollToTop"
+import { useQuery } from "react-query"
+import { getCurrentUser } from "services/userService"
 
 export default function Menu() {
 	const { adminMenu } = useAdminMenu()
@@ -21,13 +23,20 @@ export default function Menu() {
 	const handleOpenBigSideNav2 = event => {
 		event.stopPropagation()
 	}
+	const { data } = useQuery("userData", getCurrentUser)
+	var myHeaders = new Headers() // Currently empty
+	const res = myHeaders.get("Authorization")
+	console.log(data, res, "Currently logged in")
+	const userData = data?.data?.profile?.personalInformation
+
+	console.log(userData?.fullname?.split(" ")[0])
 
 	return (
 		<Div>
 			<MenuContainer>
 				<UserInfoMenuContainer>
 					<PhoneInput
-						country={"ng"}
+						country={userData?.country === "nigeria" ? "ng" : userData?.country === "kenya" ? "ke" : userData?.country === "south-africa" ? "za" : userData?.country === "ghana" ? "gh" : "ng"}
 						buttonStyle={{ marginLeft: "75%", height: "40px", width: "70px", background: "transparent", border: "none" }}
 						inputStyle={{ display: "none" }}
 						containerStyle={{ justifySelf: "flex-end" }}
@@ -37,7 +46,7 @@ export default function Menu() {
 					<UserDP>
 						<Img src={userDp} alt="User Dp" />
 					</UserDP>
-					<KreativeP tAlign="center">Ebube</KreativeP>
+					<KreativeP tAlign="center">{userData?.fullname?.split(" ")[0]}</KreativeP>
 				</UserInfoMenuContainer>
 				<BigMenuItemsContainer>
 					{adminMenu?.map((menu, i) => (
@@ -69,7 +78,7 @@ export default function Menu() {
 						<UserDP>
 							<Img src={userDp} alt="User Dp" />
 						</UserDP>
-						<KreativeP tAlign="center">Ebube</KreativeP>
+						<KreativeP tAlign="center">{userData?.fullname?.split(" ")[0]}</KreativeP>
 					</UserInfoMenuContainer>
 					<BigMenuItemsContainer>
 						{adminMenu?.map((menu, i) => (
