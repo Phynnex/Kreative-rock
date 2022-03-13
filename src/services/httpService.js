@@ -14,15 +14,15 @@ axios.interceptors.response.use(null, error => {
 	return Promise.reject(error)
 })
 
-// function setJwt(jwt) {
-// 	axios.defaults.headers.common["Authorization"] = `Bearer ${jwt}`
-// }
+function setJwt(jwt) {
+	axios.defaults.headers.common["Authorization"] = `token ${jwt}`
+}
 
 let http = {
 	get: axios.get,
 	post: axios.post,
 	put: axios.put,
-	delete: axios.delete
-	// setJwt
+	delete: axios.delete,
+	setJwt
 }
 export default http

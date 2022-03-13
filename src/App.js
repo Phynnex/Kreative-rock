@@ -26,35 +26,39 @@ import { DASHBOARDHOME, PAYMENT } from "pages/dashboard/ROUTESCONTS"
 import Dashboard from "pages/dashboard"
 import ProtectedRoute from "Utilities/ProtectedRoutes"
 import PaymentPage from "pages/dashboard/payment"
+import { QueryClient, QueryClientProvider } from "react-query"
 
 function App() {
+	const queryClient = new QueryClient()
 	return (
 		<>
-			<Router>
-				<Mainlayout>
-					<Switch>
-						<Route path="/" exact component={Home} />
-						<Route path="/mobile-texting" exact component={MobileTexting} />
-						<Route path="/digital-marketing" component={DigitalMarketing} />
-						<Route path="/email-templates" exact component={EmailTemplates} />
-						<Route path="/brand-management" component={BrandManagement} />
-						<Route path="/email-signature" component={EmailSignature} />
-						<Route path="/email-signature-details" component={EmailSignatureDetails} />
-						<Route path="/terms" component={TermsOfUse} />
-						<Route path="/contact-us" component={ContactUs} />
-						<Route path="/pricing" component={Pricing} />
-						<Route path="/sign-in" component={SignIn} />
-						<Route path="/policy" component={Policy} />
-						<Route path="/register" component={Register} />
-						<Route path="/referral-code" component={ReferralCode} />
-						<Route path="/place-order" component={PlaceOrder} />
-						<Route path="/view-place-order" component={ViewPlaceOrder} />
-						<Route path="/notification" component={Notification} />
-						<Route path={DASHBOARDHOME} component={Dashboard} />
-						<ProtectedRoute path={PAYMENT} component={PaymentPage} />
-					</Switch>
-				</Mainlayout>
-			</Router>
+			<QueryClientProvider client={queryClient}>
+				<Router>
+					<Mainlayout>
+						<Switch>
+							<Route path="/" exact component={Home} />
+							<Route path="/mobile-texting" exact component={MobileTexting} />
+							<Route path="/digital-marketing" component={DigitalMarketing} />
+							<Route path="/email-templates" exact component={EmailTemplates} />
+							<Route path="/brand-management" component={BrandManagement} />
+							<Route path="/email-signature" component={EmailSignature} />
+							<Route path="/email-signature-details" component={EmailSignatureDetails} />
+							<Route path="/terms" component={TermsOfUse} />
+							<Route path="/contact-us" component={ContactUs} />
+							<Route path="/pricing" component={Pricing} />
+							<Route path="/sign-in" component={SignIn} />
+							<Route path="/policy" component={Policy} />
+							<Route path="/register" component={Register} />
+							<Route path="/referral-code" component={ReferralCode} />
+							<Route path="/place-order" component={PlaceOrder} />
+							<Route path="/view-place-order" component={ViewPlaceOrder} />
+							<Route path="/notification" component={Notification} />
+							<Route path={DASHBOARDHOME} component={Dashboard} />
+							<ProtectedRoute path={PAYMENT} component={PaymentPage} />
+						</Switch>
+					</Mainlayout>
+				</Router>
+			</QueryClientProvider>
 		</>
 	)
 }

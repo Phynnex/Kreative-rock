@@ -1,11 +1,21 @@
 import { Img, KButton } from "globalStyles/style"
 import React from "react"
-import { CObuttonArea, COnewayForm, OnewayFormCOntroller, OneWayInput, OnewayTextarea, SendIdInput, TextAreaCount } from "./style"
+import {
+	CObuttonArea,
+	COnewayForm,
+	OnewayFormCOntroller,
+	OneWayInput,
+	OnewayTextarea,
+	//  SendIdInput,
+	TextAreaCount
+} from "./style"
 import alarmIcon from "assets/images/alarm.svg"
-import arrowdownIcon from "assets/images/arrowdown.svg"
+// import arrowdownIcon from "assets/images/arrowdown.svg"
 import SetTimerCampaign from "./timer"
 import { useCreateKeyword } from "context/createKewordContext"
 import AppColors from "utils/colors"
+import CustomSelectId from "./idselect"
+import { SenderSelectDiv, TopSelDiv } from "./style"
 function OneWayForm() {
 	const { createkeyword, setCreateKeyword } = useCreateKeyword()
 	function toggleCreateKeyword() {
@@ -14,21 +24,18 @@ function OneWayForm() {
 	return (
 		<COnewayForm>
 			<SetTimerCampaign open={createkeyword} close={toggleCreateKeyword} />
-			<OnewayFormCOntroller>
-				<p>Sender ID</p>
-				<SendIdInput>
-					<input type="text" />
-					<KButton>
-						<Img src={arrowdownIcon} alt="sender id" />
-					</KButton>
-				</SendIdInput>
-				<SendIdInput>
-					<input type="text" />
-					<KButton>
-						<Img src={arrowdownIcon} alt="sender id" />
-					</KButton>
-				</SendIdInput>
-			</OnewayFormCOntroller>
+			{/* <OnewayFormCOntroller> */}
+			<TopSelDiv>
+				<SenderSelectDiv>
+					<p>Sender ID</p>
+					<CustomSelectId />
+				</SenderSelectDiv>
+				<SenderSelectDiv>
+					<p>Select Recipients</p>
+					<CustomSelectId />
+				</SenderSelectDiv>
+			</TopSelDiv>
+
 			<OnewayFormCOntroller>
 				<p>Campaign Title</p>
 				<OneWayInput />

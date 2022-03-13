@@ -9,6 +9,7 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import { useToggleNav } from "context/toggleNavContext"
 import media from "utils/media"
 import { SlideInPopUp } from "pages/dashboard/keywords/createkeyword/style"
+import { useAuthContext } from "context/AuthContext"
 
 const MobileNavContainer = styled.div`
 	height: 83px;
@@ -221,6 +222,7 @@ function CustomMobileNav() {
 	const { toggleNav, setToggleNav } = useToggleNav()
 	const [mobilemenu, setMobileMenu] = useState(false)
 	const location = useLocation()
+	const { user } = useAuthContext()
 
 	const handleMobilesDropService = () => {
 		setToggleNav(!toggleNav)
@@ -282,12 +284,16 @@ function CustomMobileNav() {
 					<MCustomNavLink color={location.pathname === "/contact-us" ? true : false} to="/contact-us" onClick={handleMobileMenuTogggle}>
 						Contact Us
 					</MCustomNavLink>
-					<MCustomNavLink color={location.pathname === "/sign-in" ? true : false} to="/sign-in" onClick={handleMobileMenuTogggle}>
-						Login
-					</MCustomNavLink>
-					<MCustomNavLinkSignup to="/register" onClick={handleMobileMenuTogggle}>
-						Sign up for free
-					</MCustomNavLinkSignup>
+					{!user?.isAuth && (
+						<MCustomNavLink color={location.pathname === "/sign-in" ? true : false} to="/sign-in" onClick={handleMobileMenuTogggle}>
+							Login
+						</MCustomNavLink>
+					)}
+					{!user?.isAuth && (
+						<MCustomNavLinkSignup to="/register" onClick={handleMobileMenuTogggle}>
+							Sign up for free
+						</MCustomNavLinkSignup>
+					)}
 				</MobileNavLinksDiv>
 			)}
 		</>

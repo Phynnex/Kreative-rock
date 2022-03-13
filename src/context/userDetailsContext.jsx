@@ -5,6 +5,8 @@ const KreatriveUserContext = createContext()
 
 export default function KreativeUser({ children }) {
 	const [kreativeUser, setKreativeUser] = useSecureStorage("kreative-user", {
+		isuAth: false,
+		token: "",
 		profile: {
 			personalInformation: {
 				fullname: "",

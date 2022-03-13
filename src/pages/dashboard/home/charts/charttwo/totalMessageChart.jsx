@@ -4,37 +4,62 @@ import AppColors from "utils/colors"
 
 const data = [
 	{
-		name: "Page A",
+		name: "Jan",
 		pv: 2400,
 		amt: 2400
 	},
 	{
-		name: "Page B",
+		name: "Feb",
 		pv: 1398,
 		amt: 2210
 	},
 	{
-		name: "Page C",
+		name: "Mar",
 		pv: 3800,
 		amt: 2290
 	},
 	{
-		name: "Page D",
+		name: "Apr",
 		pv: 3908,
 		amt: 2000
 	},
 	{
-		name: "Page E",
+		name: "May",
 		pv: 4800,
 		amt: 2181
 	},
 	{
-		name: "Page F",
+		name: "Jun",
 		pv: 3800,
 		amt: 2500
 	},
 	{
-		name: "Page G",
+		name: "Jul",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Aug",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Sep",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Oct",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Nov",
+		pv: 4300,
+		amt: 2100
+	},
+	{
+		name: "Dec",
 		pv: 4300,
 		amt: 2100
 	}
@@ -74,11 +99,11 @@ export default class TotalMessageSentInMonth extends PureComponent {
 						top: 5,
 						right: 30,
 						left: 20,
-						bottom: 5
+						bottom: -10
 					}}
 				>
 					<CartesianGrid horizontal={false} vertical={true} />
-					<XAxis dataKey="name" hide={true} />
+					<XAxis dataKey="name" hide={false} />
 					<YAxis hide={true} />
 					<Tooltip allowEscapeViewBox={{ x: true, y: true }} />
 					<Line type="monotoneX" name="pv" dataKey="pv" stroke={AppColors.footerBlue} strokeWidth={4} activeDot={<CustomizedDot />} dot={false} />

@@ -94,8 +94,8 @@ export default class ChartTotal extends PureComponent {
 					margin={{
 						top: 5,
 						right: 30,
-						left: 20,
-						bottom: 5
+						left: 20
+						// bottom: 5
 					}}
 				>
 					<CartesianGrid horizontal={false} vertical={true} />
