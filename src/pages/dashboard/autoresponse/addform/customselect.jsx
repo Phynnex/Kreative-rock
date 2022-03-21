@@ -6,10 +6,10 @@ import { Img } from "globalStyles/style"
 function CustomSelectAutoresponse({ value, onChange, name, ...rest }) {
 	return (
 		<AutoResSelect>
-			<select onChange={onChange} name={name} {...rest}>
-				<option value={value}>Keyword list</option>
-				<option value="">Keyword list</option>
-				<option value="">Keyword list</option>
+			<select onChange={onChange} value={value} name={name} {...rest}>
+				<option value="">Select Keyword</option>
+				<option value="dshbdsbhbs">Keyword list</option>
+				<option value="dshdshbhd">Keyword list</option>
 			</select>
 			<div>
 				<Img src={fsjhf} alt="select" />

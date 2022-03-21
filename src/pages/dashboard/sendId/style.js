@@ -48,7 +48,7 @@ export const SendIdCard = styled.div`
 `
 export const SenderNameInput = styled.input`
 	width: 100%;
-	height: 60px;
+	height: ${({ h }) => (h ? h : "60px")};
 	outline: none;
 	padding: 0px 15px;
 	background: #f1f1f1;

@@ -77,7 +77,7 @@ export const KreateButton = styled.button`
 	text-transform: capitalize;
 	color: #fff;
 `
-export const KreateFormBody = styled.div`
+export const KreateFormBody = styled.form`
 	width: 80%;
 	display: flex;
 	flex-direction: column;

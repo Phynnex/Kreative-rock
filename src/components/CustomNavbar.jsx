@@ -8,6 +8,7 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import { useToggleNav } from "context/toggleNavContext"
 import media from "utils/media"
 import { useAuthContext } from "context/AuthContext"
+import { DASHBOARDHOME } from "pages/dashboard/ROUTESCONTS"
 
 const NavContainer = styled.div`
 	height: 83px;
@@ -153,7 +154,7 @@ function CustomNavbar() {
 				</ServicesLinkBtn>
 				{toggleNav && (
 					<DropDownContainer onClick={handleDropService}>
-						<DropDownDiv left={user?.isAuth ? "70%" : "50%"}>
+						<DropDownDiv left={user?.isAuth ? "60%" : "50%"}>
 							<CustomDrpdownLinkLink to="/mobile-texting">
 								<CustomDrpdownBtn color={location.pathname === "/mobile-texting" ? true : false} to="/mobile-texting">
 									Mobile Texting
@@ -184,6 +185,7 @@ function CustomNavbar() {
 				)}
 
 				{!user?.isAuth && <CustomNavLinkSignup to="/register">Sign up for free</CustomNavLinkSignup>}
+				<Link to={DASHBOARDHOME}>Dashboard</Link>
 			</NavLinksDiv>
 		</NavContainer>
 	)
