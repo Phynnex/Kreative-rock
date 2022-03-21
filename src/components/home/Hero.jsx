@@ -39,7 +39,7 @@ const Hero = () => {
 						</div>
 						<div className={styles.heroBtnDiv}>
 							<div className="container">
-								<Link to="#">
+								<Link to="/sign-in">
 									<img width="300" src={HeroBtn} alt="home hero btn" />
 								</Link>
 							</div>

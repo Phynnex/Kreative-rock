@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import "bootstrap/dist/js/bootstrap.bundle.min"
 import MenuIcon from "@material-ui/icons/Menu"
 import { Link, useLocation } from "react-router-dom"
 import { Img } from "globalStyles/style"

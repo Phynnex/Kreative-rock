@@ -1,36 +1,50 @@
-import { Div, KButton, KreativeP } from "globalStyles/style"
 import React from "react"
+import { useFormik } from "formik"
+import * as Yup from "yup"
+import { Div, KButton, KreativeP } from "globalStyles/style"
 import AppColors from "utils/colors"
 import { FormItemContainer, SettingsInput } from "../form/settingsInput"
 import { BusiCertDiv, BusinessCertImg, BusinessInfoContainer, UploadCertDiv } from "./style"
 import uploadCert from "assets/images/uploadwhite.svg"
 
 function BusinessTab() {
+	const formik = useFormik({
+		initialValues: {
+			name: "",
+			address: "",
+			website: "",
+			email: ""
+		},
+
+		onSubmit: async data => {
+			// setLoading(true)
+			// handleCreateSendId(data)
+			console.log("|||||||||||||| Send Id", data)
+			setTimeout(() => {
+				// setLoading(false)
+			}, 5000)
+		},
+		validationSchema: Yup.object({
+			name: Yup.string().max(40).required("sender Id is required."),
+			address: Yup.string().max(50).required("Category is required."),
+			website: Yup.string().max(50).required("Category is required."),
+			email: Yup.string().max(50).required("Category is required.")
+		})
+	})
+
 	return (
-		<BusinessInfoContainer>
+		<BusinessInfoContainer onSubmit={formik.handleSubmit}>
 			<FormItemContainer>
 				<KreativeP mb="-3px" color={AppColors.blackish}>
 					Business Name
 				</KreativeP>
-				<SettingsInput
-					type="text"
-					//   error={touched.discount && errors.discount}
-					//   name="discount"
-					//   onBlur={() => setFieldTouched('discount')}
-					//   onChange={handleChange('discount')}
-				/>
+				<SettingsInput type="text" error={formik.touched.name && formik.errors.name} name="name" id="name" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.name} />
 			</FormItemContainer>
 			<FormItemContainer>
 				<KreativeP mb="-3px" color={AppColors.blackish}>
 					Business Email Address
 				</KreativeP>
-				<SettingsInput
-					type="email"
-					//   error={touched.discount && errors.discount}
-					//   name="discount"
-					//   onBlur={() => setFieldTouched('discount')}
-					//   onChange={handleChange('discount')}
-				/>
+				<SettingsInput type="email" error={formik.touched.email && formik.errors.email} name="email" id="email" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.email} />
 			</FormItemContainer>
 			<FormItemContainer>
 				<KreativeP mb="-3px" color={AppColors.blackish}>
@@ -38,10 +52,12 @@ function BusinessTab() {
 				</KreativeP>
 				<SettingsInput
 					type="text"
-					//   error={touched.discount && errors.discount}
-					//   name="discount"
-					//   onBlur={() => setFieldTouched('discount')}
-					//   onChange={handleChange('discount')}
+					error={formik.touched.address && formik.errors.address}
+					name="address"
+					id="address"
+					onBlur={formik.handleBlur}
+					onChange={formik.handleChange}
+					value={formik.values.address}
 				/>
 			</FormItemContainer>
 			<FormItemContainer>
@@ -50,10 +66,12 @@ function BusinessTab() {
 				</KreativeP>
 				<SettingsInput
 					type="website"
-					//   error={touched.discount && errors.discount}
-					//   name="discount"
-					//   onBlur={() => setFieldTouched('discount')}
-					//   onChange={handleChange('discount')}
+					error={formik.touched.website && formik.errors.website}
+					name="website"
+					id="website"
+					onBlur={formik.handleBlur}
+					onChange={formik.handleChange}
+					value={formik.values.website}
 				/>
 			</FormItemContainer>
 			<FormItemContainer>
@@ -75,7 +93,7 @@ function BusinessTab() {
 			</FormItemContainer>
 
 			<Div width="100%" display="flex" justify="center" mt="40px" mb="50px">
-				<KButton bc={AppColors.brandColor} p="7px 20px" br="50px" color={AppColors.white} w="150px">
+				<KButton type="submit" bc={AppColors.brandColor} p="7px 20px" br="50px" color={AppColors.white} w="150px">
 					Save Changes
 				</KButton>
 			</Div>

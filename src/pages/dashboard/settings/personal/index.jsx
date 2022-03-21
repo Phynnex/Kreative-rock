@@ -9,6 +9,8 @@ import AddMember from "./actions/addmember"
 import ViewMember from "./actions/viewmembers"
 import { PersonFormDiv } from "./style"
 import ErrorMessage from "components/common/ErrorMessage"
+import { changePassword } from "services/userService"
+import cogoToast from "cogo-toast"
 
 function PersonalTab() {
 	const [loading, setLoading] = useState(false)
@@ -21,12 +23,36 @@ function PersonalTab() {
 			confirm_newPassword: ""
 		},
 
-		onSubmit: async data => {
+		onSubmit: async (data, helpers) => {
+			let payload = { ...data }
+			delete payload.confirm_newPassword
 			setLoading(true)
-			console.log("|||||||||||||| form Change", data)
-			setTimeout(() => {
-				setLoading(false)
-			}, 4000)
+			try {
+				const result = await changePassword(payload)
+				if (result?.status === 200) {
+					setLoading(false)
+					helpers.setSubmitting(false)
+					cogoToast.success(`${result?.data}`, { hideAfter: 5 })
+					helpers.resetForm()
+				}
+
+				if (result.response.data) {
+					cogoToast.error(`${result.response.data.errors[0].message}`, { hideAfter: 5 })
+					setLoading(false)
+					helpers.setSubmitting(false)
+				} else if (!result.response) {
+					setLoading(false)
+					helpers.setSubmitting(false)
+					cogoToast.error("Network Error", { hideAfter: 5 })
+				}
+			} catch (error) {
+				console.log(error)
+				if (error) {
+					setLoading(false)
+					helpers.setSubmitting(false)
+					// cogoToast.error("Network Error", { hideAfter: 5 })
+				}
+			}
 		},
 		validationSchema: Yup.object({
 			oldPassword: Yup.string().min(8).max(255).required("Old password is required."),
@@ -129,7 +155,15 @@ function PersonalTab() {
 					</KButton>
 				</AddBtnContainer>
 				<Div width="100%" display="flex" justify="center" mt="30px" mb="50px">
-					<KButton disabled={loading} type="submit" bc={AppColors.brandColor} p="7px 20px" br="50px" color={AppColors.white} w="150px">
+					<KButton
+						// disabled={loading}
+						type="submit"
+						bc={AppColors.brandColor}
+						p="7px 20px"
+						br="50px"
+						color={AppColors.white}
+						w="150px"
+					>
 						{loading ? "Loading..." : "Save Changes"}
 					</KButton>
 				</Div>

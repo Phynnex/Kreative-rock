@@ -4,8 +4,12 @@ import {
 	CObuttonArea,
 	COnewayForm,
 	OnewayFormCOntroller,
+	OnewayFormCOntrollerT,
 	OneWayInput,
 	OnewayTextarea,
+	RecipientDiv,
+	RecipientSelectDiv,
+	SenderIdDiv,
 	//  SendIdInput,
 	TextAreaCount
 } from "./style"
@@ -28,22 +32,28 @@ function OneWayForm() {
 			<TopSelDiv>
 				<SenderSelectDiv>
 					<p>Sender ID</p>
-					<CustomSelectId />
+					<SenderIdDiv>
+						<CustomSelectId />
+						{/* <p>Helllll</p> */}
+					</SenderIdDiv>
 				</SenderSelectDiv>
-				<SenderSelectDiv>
+				<RecipientSelectDiv>
 					<p>Select Recipients</p>
-					<CustomSelectId />
-				</SenderSelectDiv>
+					<RecipientDiv>
+						<CustomSelectId />
+						{/* <p>Helllll</p> */}
+					</RecipientDiv>
+				</RecipientSelectDiv>
 			</TopSelDiv>
 
 			<OnewayFormCOntroller>
 				<p>Campaign Title</p>
 				<OneWayInput />
 			</OnewayFormCOntroller>
-			<OnewayFormCOntroller>
+			<OnewayFormCOntrollerT>
 				<p>Campaign Message</p>
 				<OnewayTextarea rows="7"></OnewayTextarea>
-			</OnewayFormCOntroller>
+			</OnewayFormCOntrollerT>
 			<OnewayFormCOntroller>
 				<TextAreaCount>
 					<p>300</p>

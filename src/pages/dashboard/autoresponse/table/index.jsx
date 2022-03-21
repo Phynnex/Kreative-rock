@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { TableDetailsPageModal, TablePopupDiv, TransTableBody, TextwrappingDiv, TransTableContainer, TransTableContent } from "./style"
 import { TableScrollDiv } from "pages/dashboard/wallet/table/style"
-// import tableItemicon from "assets/icons/tableItemicon.svg";
 import deletecan from "assets/images/deleteCampaign.svg"
 import Editpen from "assets/images/editCampaign.svg"
 import { Div, Img, KButton, KreativeP } from "globalStyles//style"
@@ -9,6 +8,11 @@ import { Div, Img, KButton, KreativeP } from "globalStyles//style"
 import downPointer from "assets/images/elipses_vert.svg"
 import AppColors from "utils/colors"
 import Pagination from "Utilities/pagination"
+import { useQuery } from "react-query"
+import { getUserSenderIds } from "services/senderIdService"
+import LoadingDataUi from "components/loading"
+import EmptyDataUi from "components/emptydoc"
+import ErrorDataUi from "components/Error"
 
 function AutoResponseTable() {
 	const [details, setDetails] = useState("")
@@ -18,6 +22,9 @@ function AutoResponseTable() {
 
 		console.log(doc, "Docjs hbhydsbyd")
 	}
+
+	const { data: autoresponses, isLoading, isError } = useQuery("autoresponses", getUserSenderIds)
+	console.log(autoresponses, isLoading, isError)
 
 	return (
 		<>
@@ -45,7 +52,7 @@ function AutoResponseTable() {
 
 								<th></th>
 							</tr>
-							{[...new Array(5)].map((req, i) => (
+							{autoresponses?.payload?.map((req, i) => (
 								<tr key={(req, i)}>
 									<td>Kreative</td>
 									<td col-span={2}>
@@ -90,7 +97,10 @@ function AutoResponseTable() {
 					</TransTableContent>
 				</TransTableContainer>
 			</TableScrollDiv>
-			<Pagination pageSize={7} itemsCount={16} currentPage={1} />
+			{autoresponses?.payload && autoresponses?.payload.length <= 0 && <EmptyDataUi />}
+			{isLoading && <LoadingDataUi />}
+			{isError && <ErrorDataUi text="Error retrieving data" />}
+			<Pagination pageSize={257} itemsCount={16} currentPage={1} />
 		</>
 	)
 }

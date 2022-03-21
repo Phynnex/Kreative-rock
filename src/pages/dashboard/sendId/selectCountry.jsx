@@ -7,13 +7,12 @@ function CustomSelectCountry({ value, onChange, name, ...rest }) {
 	return (
 		<AutoResSelect>
 			<select value={value} onChange={onChange} name={name} {...rest}>
-				<option value="" disabled>
-					Country
+				<option value="" disabled selected>
+					Select Category
 				</option>
-				<option value="nigeria">Nigeria</option>
-				<option value="ghana">Ghana</option>
-				<option value="south-africa">South Africa</option>
-				<option value="kenya">Kenya</option>
+				<option value="Transactional">Transactional</option>
+				<option value="Promotional">Promotional</option>
+				<option value="Both">Both</option>
 			</select>
 			<div>
 				<Img src={fsjhf} alt="select" />
