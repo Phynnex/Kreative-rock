@@ -4,6 +4,8 @@ import media from "utils/media"
 export const COnewayForm = styled.div`
 	width: 100%;
 	background: #dbf7f7;
+	display: flex;
+	flex-direction: column;
 	margin-bottom: 50px;
 `
 export const OnewayFormCOntroller = styled.div`
@@ -76,4 +78,45 @@ export const SendIdInput = styled.div`
 		outline: none;
 		border: none;
 	}
+`
+export const SenderSelectDiv = styled.div`
+	width: 48%;
+	display: flex;
+	align-items: center;
+	p {
+		margin-bottom: -0px;
+		min-width: 20%;
+	}
+	${media.tablet`
+	width: 100%;
+	/* gap: 10%; */
+	p{
+		margin-bottom: -0px;
+		min-width: 20%;
+	}
+	`}
+	${media.mobile`
+	width: 100%;
+	align-items: flex-start;
+	justify-items:flex-start;
+	flex-direction: column;
+	gap: -20%;
+	p{
+		margin-bottom: -50px;
+	}
+	`}
+`
+
+export const TopSelDiv = styled.div`
+	width: 100%;
+	display: flex;
+	margin-top: 20px;
+	justify-content: space-between;
+
+	${media.tablet`
+	flex-direction: column;
+	`}
+	${media.mobile`
+	flex-direction: column;
+	`}
 `

@@ -7,6 +7,7 @@ import Logo from "../assets/images/logo.png"
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown"
 import { useToggleNav } from "context/toggleNavContext"
 import media from "utils/media"
+import { useAuthContext } from "context/AuthContext"
 
 const NavContainer = styled.div`
 	height: 83px;
@@ -100,7 +101,7 @@ const DropDownDiv = styled.div`
 	position: relative;
 	background-color: ${AppColors.white};
 	top: 9%;
-	left: 50%;
+	left: ${({ left }) => (left ? left : "50%")};
 	border-radius: 3px;
 	border: 1px solid #dfdbdb;
 	background-color: ${AppColors.white};
@@ -132,7 +133,7 @@ const LinkConst = ["/digital-marketing", "/email-signature", "/mobile-texting", 
 function CustomNavbar() {
 	const { toggleNav, setToggleNav } = useToggleNav()
 	const location = useLocation()
-	console.log(location)
+	const { user } = useAuthContext()
 	const handleDropService = () => {
 		setToggleNav(!toggleNav)
 	}
@@ -152,7 +153,7 @@ function CustomNavbar() {
 				</ServicesLinkBtn>
 				{toggleNav && (
 					<DropDownContainer onClick={handleDropService}>
-						<DropDownDiv>
+						<DropDownDiv left={user?.isAuth ? "70%" : "50%"}>
 							<CustomDrpdownLinkLink to="/mobile-texting">
 								<CustomDrpdownBtn color={location.pathname === "/mobile-texting" ? true : false} to="/mobile-texting">
 									Mobile Texting
@@ -176,10 +177,13 @@ function CustomNavbar() {
 				<CustomNavLink color={location.pathname === "/contact-us" ? true : false} to="/contact-us">
 					Contact Us
 				</CustomNavLink>
-				<CustomNavLink color={location.pathname === "/sign-in" ? true : false} to="/sign-in">
-					Login
-				</CustomNavLink>
-				<CustomNavLinkSignup to="/register">Sign up for free</CustomNavLinkSignup>
+				{!user?.isAuth && (
+					<CustomNavLink color={location.pathname === "/sign-in" ? true : false} to="/sign-in">
+						Login
+					</CustomNavLink>
+				)}
+
+				{!user?.isAuth && <CustomNavLinkSignup to="/register">Sign up for free</CustomNavLinkSignup>}
 			</NavLinksDiv>
 		</NavContainer>
 	)

@@ -12,10 +12,13 @@ import MobileTextingCard from "./topSection/analytics"
 import MtDChart1 from "./topSection/chart"
 import copy from "assets/images/copyicon.svg"
 import earningIcon from "assets/images/earningHome.svg"
+import Verifycode from "./topSection/verifycode"
+
 function DashboardPage() {
 	return (
 		<MTmainBody>
 			<MtTopMost></MtTopMost>
+			<Verifycode />
 			<MtHome>
 				<DashboardTopSection />
 				<MtAnalticsContainer>

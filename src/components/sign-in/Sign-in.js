@@ -9,7 +9,6 @@ import google from "../../assets/images/google.png"
 import { makeStyles } from "@material-ui/core"
 import { LoginBtn, LoginContDiv, LoginTextField } from "./style"
 import { Link, Redirect, useHistory } from "react-router-dom"
-// import useGeoLocation from "react-ipgeolocation"
 import cogoToast from "cogo-toast"
 import ErrorMessage from "components/common/ErrorMessage"
 import { loginUser } from "services/AuthService"
@@ -169,8 +168,6 @@ const SignIn = () => {
 	const { kreativerUser, setKreativeUser } = useKreativeUser()
 	const { user, setUser } = useAuthContext()
 	const history = useHistory()
-	// const location = useGeoLocation()
-	// console.log(location, "Couuntry Ip")
 
 	const validationSchema = Yup.object().shape({
 		email: Yup.string().required("Email is a required field").email().label("email"),
@@ -180,19 +177,19 @@ const SignIn = () => {
 		setisLoading(true)
 		try {
 			const response = await loginUser(data)
-			// console.log(response)
+			console.log(response)
 			if (response?.errors?.length > 0) {
 				setisLoading(false)
 				helpers.setSubmitting(false)
 				cogoToast.error(`${response?.errors[0]?.message}`, { hideAfter: 5 })
 			}
-			if (response?.id) {
+			if (response?.token) {
 				setisLoading(false)
 				helpers.setSubmitting(false)
+
 				setUser({
-					...user,
-					data: response,
-					isAuth: true
+					isAuth: true,
+					data: { user: response?.user, token: response?.token }
 				})
 				setKreativeUser({
 					...kreativerUser
@@ -257,7 +254,7 @@ const SignIn = () => {
 											onChange={handleChange("email")}
 											placeholder="Email"
 										/>
-										<ErrorMessage error={errors.email} visible={touched.email} />
+										<ErrorMessage mt="-15px" error={errors.email} visible={touched.email} />
 										<LoginTextField
 											autoComplete="off"
 											type="password"
@@ -267,7 +264,7 @@ const SignIn = () => {
 											onChange={handleChange("password")}
 											placeholder="Password"
 										/>
-										<ErrorMessage error={errors.password} visible={touched.password} />
+										<ErrorMessage mt="-15px" error={errors.password} visible={touched.password} />
 										<LoginBtn type="submit" onClick={handleSubmit} disabled={isLoading}>
 											{isLoading ? "Loading..." : "Sign In"}
 										</LoginBtn>

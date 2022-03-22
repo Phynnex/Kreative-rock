@@ -100,15 +100,36 @@ export const BigMenuItemsContainer = styled.div`
 	height: 66vh;
 	
 	overflow-y:scroll;
+	::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: transparent;
+	}
 	`}
 	${media.mobile`
 	height: 0%;
+	::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: transparent;
+	}
 	/* max-height: 75vh; */
 	overflow-y:scroll;
 	`}
 	${media.smallMobile`
 	overflow-y:scroll;
 	height: 66vh;
+	::-webkit-scrollbar {
+		width: 0;
+		background: transparent;
+	}
+	::-webkit-scrollbar-thumb {
+		background: transparent;
+	}
 	
 	`}
 `
