@@ -5,34 +5,35 @@ import AddBtn from "assets/images/addIcon.svg"
 import UserKeyword from "./userkeywords"
 import CreateKeyword from "./createkeyword"
 import { useCreateKeyword } from "context/createKewordContext"
-import { useEffect } from "react"
-import { useState } from "react"
-import keywordData from "./userkeywords/keywordData"
+
 // import { Link } from "react-router-dom"
 // import { USERCREATED_RESPONSES } from "../ROUTESCONTS"
 import ActionBtnDashboard from "components/dashboard/actionbuttons"
+import { useQuery } from "react-query"
+import { getUserKeywords } from "services/keywordService"
+import LoadingDataUi from "components/loading"
+import EmptyDataUi from "components/emptydoc"
+import ErrorDataUi from "components/Error"
 
 function KeywordsPage() {
 	const { createkeyword, setCreateKeyword } = useCreateKeyword()
-	const [keywords, setKeywords] = useState(null)
 
 	function toggleCreateKeyword() {
 		setCreateKeyword(!createkeyword)
 	}
 
-	const handleAutoreply = id => {
-		const newKeywords = keywords?.map(keyword => {
-			if (keyword.id === id) {
-				return { ...keyword, autoreply: !keyword.autoreply }
-			}
-			return keyword
-		})
-		setKeywords(newKeywords)
-	}
+	// const handleAutoreply = id => {
+	// 	const newKeywords = keywords?.map(keyword => {
+	// 		if (keyword.id === id) {
+	// 			return { ...keyword, autoreply: !keyword.autoreply }
+	// 		}
+	// 		return keyword
+	// 	})
+	// 	setKeywords(newKeywords)
+	// }
+	const { data: keywords, isLoading, isError, error } = useQuery("keywords", getUserKeywords)
+	console.log(keywords?.payload.length, isLoading, isError, error, "keyw")
 
-	useEffect(() => {
-		setKeywords(keywordData)
-	}, [])
 	return (
 		<div>
 			<CreateKeyword open={createkeyword} close={toggleCreateKeyword} />
@@ -57,8 +58,11 @@ function KeywordsPage() {
 				<KreateContent>
 					<h5>Your Keywords</h5>
 				</KreateContent>
-				{keywords?.map(keyword => (
-					<UserKeyword key={keyword.id} text={keyword.keyword} auto={keyword.autoreply} handleChange={() => handleAutoreply(keyword.id)} />
+				{keywords?.payload.length <= 0 && <EmptyDataUi />}
+				{isLoading && <LoadingDataUi />}
+				{!isLoading && isError && <ErrorDataUi text="Error retrieving data" />}
+				{keywords?.payload?.map(keyword => (
+					<UserKeyword key={keyword?.id} text={keyword?.keyword} />
 				))}
 			</KeywordContainer>
 			{/* <Div width="100%" display="flex" justify="center">

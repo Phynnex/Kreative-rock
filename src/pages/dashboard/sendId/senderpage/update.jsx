@@ -14,7 +14,8 @@ import ErrorMessage from "components/common/ErrorMessage"
 import { useQueryClient } from "react-query"
 import { createSenderId } from "services/senderIdService"
 import cogoToast from "cogo-toast"
-function CreateSenderIdForm() {
+
+function UpdateSenderIdForm() {
 	const [loading, setLoading] = useState(false)
 	const { toggleImportContact, stopPropagation, handleToggleImportContact } = useToggleContact()
 	const queryClient = useQueryClient()
@@ -86,4 +87,4 @@ function CreateSenderIdForm() {
 	)
 }
 
-export default CreateSenderIdForm
+export default UpdateSenderIdForm

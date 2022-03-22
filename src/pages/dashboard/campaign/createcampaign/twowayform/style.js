@@ -64,3 +64,32 @@ export const CCBtnDiv = styled.div`
 	margin-top: 50px;
 	justify-content: flex-end;
 `
+
+export const TwoWaySelectDiv = styled.div`
+	display: flex;
+	width: 70%;
+	flex-direction: column;
+	${media.tablet`
+	width: 78%;
+	flex-direction: column;
+	`}
+	${media.mobile`
+	width: 100%;
+	`}
+`
+export const TwoWayInput = styled.input`
+	width: 100%;
+	height: 62px;
+	padding: 0px 10px;
+	outline: none;
+	border: none;
+	background: rgba(255, 255, 255, 0.85);
+	border-radius: 5px;
+	:focus {
+		outline: none;
+		border: none;
+	}
+	${media.mobile`
+    width: 100%;
+    `}
+`

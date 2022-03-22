@@ -34,3 +34,18 @@ export async function signupUser(user) {
 		return error
 	}
 }
+export async function signOutUser(user) {
+	try {
+		const { data } = await http.post(`${SIGNUP_USER}`, user)
+		return data
+	} catch (err) {
+		let error = {}
+		console.log(err, "error from api Sign out")
+		if (err && err.response.data) {
+			error = err.response.data
+		} else {
+			error = { data: { message: "NetWork Error" } }
+		}
+		return error
+	}
+}

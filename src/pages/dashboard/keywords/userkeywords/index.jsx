@@ -1,6 +1,6 @@
 // import { checkedIcon, uncheckedIcon } from "components/socialicons"
 import React from "react"
-// import CustomCheckBox2 from "./customCheckBox"
+
 import { KeyButton, KeywordActionArea, KeywordBody } from "./style"
 
 function UserKeyword({ text, edit, auto, renew, deleteKey, handleChange }) {

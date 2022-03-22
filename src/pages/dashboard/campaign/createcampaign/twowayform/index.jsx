@@ -1,32 +1,42 @@
 import React from "react"
-import { CCBtnDiv, CreateTwoWayBtn, CTwowayForm, CTwowayFormController, CTwowaySelect, CTwowayTextarea } from "./style"
+import Picktimedate from "./picktimedate"
+import CustomSelectIdTwo, { CustomSelectRecipient } from "./select"
+import { CCBtnDiv, CreateTwoWayBtn, CTwowayForm, CTwowayFormController, CTwowayTextarea, TwoWayInput, TwoWaySelectDiv } from "./style"
 
 function TwoWayForm() {
 	return (
 		<CTwowayForm>
 			<CTwowayFormController>
 				<p>Select Keywords</p>
-				<CTwowaySelect>
-					<option>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</option>
-				</CTwowaySelect>
+				<TwoWaySelectDiv>
+					<CustomSelectIdTwo />
+				</TwoWaySelectDiv>
 			</CTwowayFormController>
 			<CTwowayFormController>
 				<p>Select Recipients</p>
-				<CTwowaySelect>
-					<option>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</option>
-				</CTwowaySelect>
+				<TwoWaySelectDiv>
+					<CustomSelectRecipient />
+				</TwoWaySelectDiv>
 			</CTwowayFormController>
 			<CTwowayFormController>
 				<p>Campaign Title</p>
-				<CTwowaySelect>
-					<option>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</option>
-				</CTwowaySelect>
+				<TwoWaySelectDiv>
+					<TwoWayInput />
+				</TwoWaySelectDiv>
 			</CTwowayFormController>
 			<CTwowayFormController>
 				<p>Campaign Start Date & Time</p>
-				<CTwowaySelect>
-					<option>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</option>
-				</CTwowaySelect>
+
+				<TwoWaySelectDiv>
+					<Picktimedate />
+				</TwoWaySelectDiv>
+			</CTwowayFormController>
+			<CTwowayFormController>
+				<p>Campaign End Date & Time</p>
+
+				<TwoWaySelectDiv>
+					<Picktimedate />
+				</TwoWaySelectDiv>
 			</CTwowayFormController>
 			<CTwowayFormController>
 				<p>Campaign Message 1</p>

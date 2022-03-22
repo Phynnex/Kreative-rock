@@ -1,7 +1,7 @@
 import styled from "styled-components/macro"
 import media from "utils/media"
 
-export const BusinessInfoContainer = styled.div`
+export const BusinessInfoContainer = styled.form`
 	width: 100%;
 	display: flex;
 	flex-direction: column;

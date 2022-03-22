@@ -170,7 +170,9 @@ const Register = () => {
 		email: Yup.string().required("Email is required").max(255).email().label("Email"),
 		phoneNumber: Yup.string().min(9).max(14).required("Phone Number is required").label("Phone Number"),
 		password: Yup.string().min(8).max(255).required().label("Password"),
-		c_password: Yup.string().min(8).max(255).required().label("Confirm Password")
+		c_password: Yup.string()
+			.oneOf([Yup.ref("password"), null], "Confirm Password must match Password")
+			.required("Confirm Password is required.")
 	})
 
 	const initialValues = {
@@ -211,14 +213,10 @@ const Register = () => {
 			}
 		} catch (error) {
 			if (error) {
-				// cogoToast.warn(error.errors[0].message)
-				// setIsLoading(false)
-
 				cogoToast.warn("Network Error")
 				setIsLoading(false)
 			}
 		}
-		// helpers.setSubmitting(false)
 	}
 
 	const user_country = location?.country === "NG" ? "nigeria" : location?.country === "KE" ? "kenya" : location?.country === "GH" ? "ghana" : location?.country === "ZA" ? "south-africa" : ""
@@ -353,6 +351,7 @@ const Register = () => {
 									<FormControl variant="standard" className={classes.formControl}>
 										{/* <label className={classes.label}> Super admin password</label> */}
 										<TextField
+											type="password"
 											variant="outlined"
 											color="secondary"
 											disabled={isLoading}

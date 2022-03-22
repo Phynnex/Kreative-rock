@@ -1,19 +1,25 @@
 import React, { useState } from "react"
+import { useQuery } from "react-query"
 import { TableDetailsPageModal, TablePopupDiv, TransTableBody, TransTableContainer, TransTableContent, ViewCampBtn } from "./style"
 import { TableScrollDiv } from "pages/dashboard/wallet/table/style"
 // import tableItemicon from "assets/icons/tableItemicon.svg";
 import deletecan from "assets/images/deleteCampaign.svg"
 import Editpen from "assets/images/editCampaign.svg"
 import { Div, Img, KButton, KreativeP } from "globalStyles//style"
-
 import downPointer from "assets/images/elipses_vert.svg"
 import AppColors from "utils/colors"
 import { Link } from "react-router-dom"
 import { CAMPAIGN_DETAILS_PROPS } from "pages/dashboard/ROUTESCONTS"
 import Pagination from "Utilities/pagination"
 import cFlag from "assets/images/countryflag.png"
+import { getCampaigns } from "services/campaignService"
+import ErrorDataUi from "components/Error"
+import LoadingDataUi from "components/loading"
+import EmptyDataUi from "components/emptydoc"
 function AllCampTable() {
 	const [details, setDetails] = useState("")
+	const { data: campaigns, isLoading, isError } = useQuery("campaigns", getCampaigns)
+	console.log(campaigns, isLoading, isError)
 
 	const handleShowDetails = doc => {
 		setDetails(doc)
@@ -51,8 +57,8 @@ function AllCampTable() {
 								</th>
 								<th></th>
 							</tr>
-							{[...new Array(5)].map((req, i) => (
-								<tr key={(req, i)}>
+							{campaigns?.payload?.map((campaign, i) => (
+								<tr key={campaign?.id}>
 									<td>"Campaign Id"</td>
 									<td>Hey! Merry Christmas.</td>
 									<td>
@@ -100,7 +106,10 @@ function AllCampTable() {
 					</TransTableContent>
 				</TransTableContainer>
 			</TableScrollDiv>
-			<Pagination pageSize={7} itemsCount={16} currentPage={1} />
+			<Pagination pageSize={150} itemsCount={16} currentPage={1} />
+			{campaigns?.payload && campaigns?.payload.length <= 0 && <EmptyDataUi />}
+			{isLoading && <LoadingDataUi />}
+			{isError && <ErrorDataUi text="Error retrieving data" />}
 		</>
 	)
 }
