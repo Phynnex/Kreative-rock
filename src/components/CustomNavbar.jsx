@@ -185,7 +185,7 @@ function CustomNavbar() {
 				)}
 
 				{!user?.isAuth && <CustomNavLinkSignup to="/register">Sign up for free</CustomNavLinkSignup>}
-				<Link to={DASHBOARDHOME}>Dashboard</Link>
+				{user?.isAuth && <Link to={DASHBOARDHOME}>Dashboard</Link>}
 			</NavLinksDiv>
 		</NavContainer>
 	)

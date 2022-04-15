@@ -22,6 +22,9 @@ import ErrorMessage from "components/common/ErrorMessage"
 function AddAutoResponse() {
 	const [loading, setLoading] = useState(false)
 	const { createkeyword, setCreateKeyword } = useCreateKeyword()
+	const { toggleImportContact, stopPropagation, handleToggleImportContact } = useToggleContact()
+
+	const toggleCreateKeyword = () => setCreateKeyword(!createkeyword)
 
 	const formik = useFormik({
 		initialValues: {
@@ -32,11 +35,18 @@ function AddAutoResponse() {
 
 		onSubmit: async data => {
 			setLoading(true)
-			// handleCreateSendId(data)
-			console.log("|||||||||||||| Send Id", data)
-			setTimeout(() => {
-				setLoading(false)
-			}, 5000)
+			try {
+				const response = await AddAutoResponse(data)
+				console.log("|||||||||||||| Auto Response", response)
+				setTimeout(() => {
+					setLoading(false)
+				}, 5000)
+			} catch (error) {
+				console.log(error, "Error ||||||||||||")
+				setTimeout(() => {
+					setLoading(false)
+				}, 5000)
+			}
 		},
 		validationSchema: Yup.object({
 			name: Yup.string().max(50).required("Name is required."),
@@ -44,11 +54,7 @@ function AddAutoResponse() {
 			message: Yup.string().max(255).required("Message is required.")
 		})
 	})
-	const { toggleImportContact, stopPropagation, handleToggleImportContact } = useToggleContact()
 
-	function toggleCreateKeyword() {
-		setCreateKeyword(!createkeyword)
-	}
 	return (
 		<CreateKeywordOverlay open={toggleImportContact} onClick={handleToggleImportContact}>
 			<AddFormDivAResponse onClick={stopPropagation}>

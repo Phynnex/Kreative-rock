@@ -18,10 +18,11 @@ function CreateKeyword({ close, open }) {
 			keyword: ""
 		},
 
-		onSubmit: async data => {
+		onSubmit: async (data, helpers) => {
 			setLoading(true)
 			let keywordPayload = { ...data, duration: 30 }
 			const response = await createKeyword(keywordPayload)
+			console.log(response)
 			if (response?.message && response.message.status === 500) {
 				setLoading(false)
 				cogoToast.error(response.message.error, { hideAfter: 5 })
@@ -34,9 +35,11 @@ function CreateKeyword({ close, open }) {
 				setLoading(false)
 				cogoToast.error(response.message.error, { hideAfter: 5 })
 			}
-			if (response?.message && response.message.status === 201) {
+			if (response?.status === 200) {
 				setLoading(false)
-				cogoToast.success(response.message, { hideAfter: 5 })
+				cogoToast.success("Keyword added successfully", { hideAfter: 5 })
+				close()
+				helpers.resetForm()
 				queryClient.invalidateQueries("keywords")
 			}
 		},

@@ -18,6 +18,7 @@ export const DELIVERY_REPORS = `/dashboard/delivery-reports`
 export const DELIVERY_REPORT_PROPS = `/dashboard/delivery-reports/details`
 export const DELIVERY_REPORT_DETAILS = `/dashboard/delivery-reports/details/:title/:id`
 export const KEYWORDS = `/dashboard/keywords`
+export const REFERALS = `/dashboard/referal`
 export const USERCREATED_RESPONSES = `/dashboard/keywords/response`
 export const PAYMENT = `/user/payment`
 // export const SUBSCRIPTION = `/dashboard/inbox`;

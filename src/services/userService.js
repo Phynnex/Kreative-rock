@@ -1,5 +1,5 @@
 import http from "./httpService"
-import { CHANGE_USER_PASSWORD, GET_CURRENT_USER, GET_USER_TEAM_MEMBERS } from "routes/backendroutes"
+import { CHANGE_DP, CHANGE_USER_PASSWORD, GET_CURRENT_USER, GET_USER_TEAM_MEMBERS } from "routes/backendroutes"
 import cogoToast from "cogo-toast"
 
 export async function getCurrentUser() {
@@ -69,20 +69,11 @@ export async function deleteTeamMember() {
 		return error
 	}
 }
-export async function changeProfilePicture() {
-	try {
-		const { data } = await http.put(`${GET_USER_TEAM_MEMBERS}`)
-		return data
-	} catch (err) {
-		let error = {}
-		if (err && err.response.data) {
-			error = { message: err.response.data.message }
-		} else {
-			error = { message: "NetWork Error" }
-		}
-		return error
-	}
+export function changeProfilePicture(data) {
+	console.log("We got here")
+	return http.put(`${CHANGE_DP}`, data)
 }
+
 export async function editPersonalInfo() {
 	try {
 		const { data } = await http.put(`${GET_USER_TEAM_MEMBERS}`)
