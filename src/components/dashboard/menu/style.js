@@ -219,6 +219,11 @@ export const UserDP = styled.div`
 	background: grey;
 	border-radius: 50%;
 	margin-top: 40px;
+	img {
+		min-width: 100%;
+		min-height: 100%;
+		border-radius: 50%;
+	}
 `
 
 export const MenuToggleContainer = styled.div`

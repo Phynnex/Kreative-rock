@@ -4,7 +4,7 @@ import BigMenu from "./bigMenu"
 import { Div, Img, KreativeP } from "globalStyles/style"
 import { useLocation } from "react-router-dom"
 import { useAdminMenu } from "context/adminMenu"
-import userDp from "assets/images/userdp.png"
+import userDp from "assets/images/userIcon1.svg"
 import cancelBtn from "assets/images/cancel.svg"
 import PhoneInput from "react-phone-input-2"
 import { useToggleMenu } from "context/toggleMenuContext"
@@ -44,7 +44,7 @@ export default function Menu() {
 						dropdownStyle={{ position: "relative", marginLeft: "-170%", width: "250%" }}
 					/>
 					<UserDP>
-						<Img src={userDp} alt="User Dp" />
+						<Img src={userData?.profilePicture ? userData?.profilePicture : userDp} alt="User Dp" />
 					</UserDP>
 					<KreativeP tAlign="center">{userData?.fullname?.split(" ")[0]}</KreativeP>
 				</UserInfoMenuContainer>

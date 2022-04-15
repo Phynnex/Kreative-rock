@@ -31,8 +31,8 @@ function KeywordsPage() {
 	// 	})
 	// 	setKeywords(newKeywords)
 	// }
-	const { data: keywords, isLoading, isError, error } = useQuery("keywords", getUserKeywords)
-	console.log(keywords?.payload.length, isLoading, isError, error, "keyw")
+	const { data: keywords, isLoading, isError, error } = useQuery("keywords", getUserKeywords, { retry: 2 })
+	console.log(keywords?.payload, isLoading, isError, error, "keyw")
 
 	return (
 		<div>

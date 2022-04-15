@@ -49,6 +49,7 @@ import {
 	HELP,
 	INBOX,
 	KEYWORDS,
+	REFERALS,
 	SENDER_ID_LIST,
 	WALLET
 } from "pages/dashboard/ROUTESCONTS"
@@ -131,6 +132,13 @@ export const menuData = [
 		text: "Profile Settings",
 		isActive: false,
 		link: ACCOUNTING_SETTINGS
+	},
+	{
+		icon: settingsIcon,
+		activeIcon: settingsActive,
+		text: "Refer & Earn",
+		isActive: false,
+		link: REFERALS
 	},
 	{
 		icon: helpIcon,

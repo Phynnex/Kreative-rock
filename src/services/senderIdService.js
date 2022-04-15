@@ -27,9 +27,9 @@ export async function createSenderId(payload) {
 		return error
 	}
 }
-export async function updateSenderId(id) {
+export async function updateSenderId(id, payload) {
 	try {
-		const { data } = await http.get(`${EDIT_SENDER_ID}/${id}`)
+		const { data } = await http.put(`${EDIT_SENDER_ID}/${id}`, payload)
 		return data
 	} catch (err) {
 		let error = {}

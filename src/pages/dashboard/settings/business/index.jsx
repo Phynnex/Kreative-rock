@@ -10,25 +10,25 @@ import uploadCert from "assets/images/uploadwhite.svg"
 function BusinessTab() {
 	const formik = useFormik({
 		initialValues: {
-			name: "",
-			address: "",
-			website: "",
-			email: ""
+			businessName: "",
+			businessAddress: "",
+			businessWebsite: "",
+			businessEmail: ""
 		},
 
 		onSubmit: async data => {
 			// setLoading(true)
 			// handleCreateSendId(data)
-			console.log("|||||||||||||| Send Id", data)
+			console.log("|||||||||||||| Business Data", data)
 			setTimeout(() => {
 				// setLoading(false)
 			}, 5000)
 		},
 		validationSchema: Yup.object({
-			name: Yup.string().max(40).required("sender Id is required."),
-			address: Yup.string().max(50).required("Category is required."),
-			website: Yup.string().max(50).required("Category is required."),
-			email: Yup.string().max(50).required("Category is required.")
+			businessName: Yup.string().max(40).required("Name is required."),
+			businessAddress: Yup.string().max(50).required("Address is required."),
+			businessWebsite: Yup.string().max(100).required("Website is required."),
+			businessEmail: Yup.string().max(50).required("Email is required.")
 		})
 	})
 
@@ -38,13 +38,29 @@ function BusinessTab() {
 				<KreativeP mb="-3px" color={AppColors.blackish}>
 					Business Name
 				</KreativeP>
-				<SettingsInput type="text" error={formik.touched.name && formik.errors.name} name="name" id="name" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.name} />
+				<SettingsInput
+					type="text"
+					error={formik.touched.businessName && formik.errors.businessName}
+					name="businessName"
+					id="businessName"
+					onBlur={formik.handleBlur}
+					onChange={formik.handleChange}
+					value={formik.values.businessName}
+				/>
 			</FormItemContainer>
 			<FormItemContainer>
 				<KreativeP mb="-3px" color={AppColors.blackish}>
 					Business Email Address
 				</KreativeP>
-				<SettingsInput type="email" error={formik.touched.email && formik.errors.email} name="email" id="email" onBlur={formik.handleBlur} onChange={formik.handleChange} value={formik.values.email} />
+				<SettingsInput
+					type="email"
+					error={formik.touched.businessEmail && formik.errors.businessEmail}
+					name="businessEmail"
+					id="businessEmail"
+					onBlur={formik.handleBlur}
+					onChange={formik.handleChange}
+					value={formik.values.businessEmail}
+				/>
 			</FormItemContainer>
 			<FormItemContainer>
 				<KreativeP mb="-3px" color={AppColors.blackish}>
@@ -52,12 +68,12 @@ function BusinessTab() {
 				</KreativeP>
 				<SettingsInput
 					type="text"
-					error={formik.touched.address && formik.errors.address}
-					name="address"
-					id="address"
+					error={formik.touched.businessAddress && formik.errors.businessAddress}
+					name="businessAddress"
+					id="businessAddress"
 					onBlur={formik.handleBlur}
 					onChange={formik.handleChange}
-					value={formik.values.address}
+					value={formik.values.businessAddress}
 				/>
 			</FormItemContainer>
 			<FormItemContainer>
