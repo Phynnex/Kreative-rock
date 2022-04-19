@@ -13,6 +13,7 @@ import InboxPage from "./inbox"
 import KeywordsPage from "./keywords"
 import KreatedKeywordsMain from "./keywords/maincreatedKeywords"
 import LogoutPage from "./logout"
+import ReferalPage from "./referal"
 
 import {
 	ACCOUNTING_SETTINGS,
@@ -30,6 +31,7 @@ import {
 	HELP,
 	INBOX,
 	KEYWORDS,
+	REFERALS,
 	SENDER_ID_LIST,
 	USERCREATED_RESPONSES,
 	WALLET
@@ -108,6 +110,12 @@ export const dashboardRoutes = [
 	{
 		path: DELIVERY_REPORT_DETAILS,
 		component: ReportPage,
+		exact: true,
+		protected: true
+	},
+	{
+		path: REFERALS,
+		component: ReferalPage,
 		exact: true,
 		protected: true
 	},
