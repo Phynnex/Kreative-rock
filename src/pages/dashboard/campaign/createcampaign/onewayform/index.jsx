@@ -15,7 +15,7 @@ function OnewayCampainPage() {
 				</Div>
 				<Img width="150px" height="200px" src={createCamp} alt="create Campaign" />
 			</CHeader>
-			<h5>Create Campagin</h5>
+			<h5 style={{marginLeft:"20px"}}>Create Campagin</h5>
 
 			<CreateCampainFormBody>
 				<OneWayForm />

@@ -24,7 +24,7 @@ function EditSenderIdForm({ isOpen, close, detail }) {
 		enableReinitialize: true,
 		initialValues: {
 			senderId: detail?.senderId || "",
-			category: detail?.category || ""
+			category: detail?.category || "",
 		},
 
 		onSubmit: async (data, helpers) => {

@@ -1,6 +1,6 @@
 import React from "react"
 import library_books from "assets/images/library_books.png"
-import group from "assets/images/Group.png"
+import group from "assets/images/group.png"
 import bulb from "assets/images/bulb.png"
 import { GuideHeader, GuidePara, GuidesButton, GuidesContainer, ImageContainer, ImageDiv, ImageDiv2, ImageDiv3, Img } from "./style"
 
