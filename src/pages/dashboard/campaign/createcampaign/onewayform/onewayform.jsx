@@ -37,13 +37,16 @@ import ErrorMessage from "components/common/ErrorMessage"
 import cogoToast from "cogo-toast"
 import { AccessAlarm, Close } from "@material-ui/icons"
 import { createCampaign } from "services/campaignService"
+import { getUserKeywords } from "services/keywordService"
 
 
 function OneWayForm() {
 	const classes = useStyles()
 	const { createkeyword } = useCreateKeyword()
 	const { data: senderId } = useQuery("senderIds", getUserSenderIds)
+	const { data: keywords } = useQuery("keywords", getUserKeywords)
 
+	
 	const [isLoading, setIsLoading] = useState(false)
 	const [dialog, setDialog] = useState(false)
 	const [schedule, setSchedule] = useState({
@@ -103,12 +106,11 @@ function OneWayForm() {
 			recipients: filter[0]?.list
 		}
 
-		//console.log(values)
 
 		try {
 			const response = await createCampaign(values)
-			console.log(response)
-			if (response.status === 201) {
+
+			if (response.status === 202) {
 				setIsLoading(false)
 				cogoToast.success("Campaign successfully created")
 			} else {
@@ -232,279 +234,289 @@ function OneWayForm() {
 
 
 	return (
-    <COnewayForm>
-      <Formik
-        initialValues={{
-          senderId: "",
-          recipients: "",
-          type: "one-way",
-          keyword: "",
-          campaignTitle: "",
-          scheduleType: "one-time",
-          schedule: "",
-          campaignMessage: "",
-        }}
-        validationSchema={Yup.object({
-          senderId: Yup.string().required("Please select Sender"),
+		<COnewayForm>
+			<Formik
+				initialValues={{
+					senderId: "",
+					recipients: "",
+					type: "one-way",
+					keyword: "",
+					campaignTitle: "",
+					scheduleType: "one-time",
+					schedule: "",
+					campaignMessage: "",
+				}}
+				validationSchema={Yup.object({
+					senderId: Yup.string().required("Please select Sender"),
 
-          recipients: Yup.string().required("Please select Recipients"),
+					recipients: Yup.string().required("Please select Recipients"),
 
-          campaignTitle: Yup.string().required(
-            "Please enter the Campaign Title"
-          ),
+					campaignTitle: Yup.string().required(
+						"Please enter the Campaign Title"
+					),
 
-          keyword: Yup.string().required(
-            "Please enter Keyword"
-          ),
+					keyword: Yup.string().required(
+						"Please enter Keyword"
+					),
 
-          campaignMessage: Yup.string().required(
-            "Please enter the Campaign Message"
-          ),
-        })}
-        enableReinitialize={true}
-        onSubmit={handleSubmit}
-      >
-        {({
-          values,
-          errors,
-          touched,
-          handleSubmit,
-          handleChange,
-          setFieldTouched,
-        }) => (
-          <form onSubmit={handleSubmit}>
-            <SetTimerCampaign
-              open={createkeyword}
-              close={toggleCreateKeyword}
-            />
-            {/* <OnewayFormCOntroller> */}
-            <TopSelDiv>
-              <SenderSelectDiv>
-                <p>Sender ID</p>
-                <SenderIdDiv>
-                  {/* <CustomSelectId /> */}
-                  <FormControl
-                    variant="standard"
-                    className={classes.formControl}
-                  >
-                    <Select
-                      className={classes.select}
-                      variant="outlined"
-                      disabled={isLoading}
-                      color="secondary"
-                      fullWidth
-                      value={values.senderId}
-                      MenuProps={{ color: "#F90" }}
-                      onChange={handleChange}
-                      displayEmpty
-                      name="senderId"
-                    >
-                      <MenuItem
-                        className="MuiSelect-selectMenu"
-                        disabled
-                        value={``}
-                      >
-                        Select Sender ID
-                      </MenuItem>
+					campaignMessage: Yup.string().required(
+						"Please enter the Campaign Message"
+					),
+				})}
+				enableReinitialize={true}
+				onSubmit={handleSubmit}
+			>
+				{({
+					values,
+					errors,
+					touched,
+					handleSubmit,
+					handleChange,
+					setFieldTouched,
+				}) => (
+					<form onSubmit={handleSubmit}>
+						<SetTimerCampaign
+							open={createkeyword}
+							close={toggleCreateKeyword}
+						/>
+						{/* <OnewayFormCOntroller> */}
+						<TopSelDiv>
+							<SenderSelectDiv>
+								<p>Sender ID</p>
+								<SenderIdDiv>
+									{/* <CustomSelectId /> */}
+									<FormControl
+										variant="standard"
+										className={classes.formControl}
+									>
+										<Select
+											className={classes.select}
+											variant="outlined"
+											disabled={isLoading}
+											color="secondary"
+											fullWidth
+											value={values.senderId}
+											MenuProps={{ color: "#F90" }}
+											onChange={handleChange}
+											displayEmpty
+											name="senderId"
+										>
+											<MenuItem
+												className="MuiSelect-selectMenu"
+												disabled
+												value={``}
+											>
+												Select Sender ID
+											</MenuItem>
 
-                      {senderId?.payload?.map((item) => (
-                        <MenuItem
-                          className={classes.menuitem}
-                          value={item.senderId}
-                          key={item.senderId}
-                          onClick={() => {
-                            values.keyword = item.senderId;
-                          }}
-                        >
-                          {item.senderId}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                  <ErrorMessage
-                    error={errors.senderId}
-                    visible={touched.senderId}
-                  />
-                </SenderIdDiv>
-              </SenderSelectDiv>
+											{senderId?.payload?.map((item) => (
+												<MenuItem
+													className={classes.menuitem}
+													value={item.senderId}
+													key={item.senderId}
+												>
+													{item.senderId}
+												</MenuItem>
+											))}
+										</Select>
+									</FormControl>
+									<ErrorMessage
+										error={errors.senderId}
+										visible={touched.senderId}
+									/>
+								</SenderIdDiv>
+							</SenderSelectDiv>
 
-              <RecipientSelectDiv>
-                <p>Select Recipients</p>
-                <RecipientDiv>
-                  {/* <CustomSelectId /> */}
-                  {/* <p>Helllll</p> */}
-                  <FormControl
-                    variant="standard"
-                    className={classes.formControl}
-                  >
-                    <Select
-                      className={classes.select}
-                      variant="outlined"
-                      disabled={isLoading}
-                      color="secondary"
-                      fullWidth
-                      value={values.recipients}
-                      MenuProps={{ color: "#F90" }}
-                      onChange={handleChange}
-                      displayEmpty
-                      name="recipients"
-                    >
-                      <MenuItem
-                        className="MuiSelect-selectMenu"
-                        disabled
-                        value={``}
-                      >
-                        Select Recipient
-                      </MenuItem>
+							<RecipientSelectDiv>
+								<p>Select Recipients</p>
+								<RecipientDiv>
+									{/* <CustomSelectId /> */}
+									{/* <p>Helllll</p> */}
+									<FormControl
+										variant="standard"
+										className={classes.formControl}
+									>
+										<Select
+											className={classes.select}
+											variant="outlined"
+											disabled={isLoading}
+											color="secondary"
+											fullWidth
+											value={values.recipients}
+											MenuProps={{ color: "#F90" }}
+											onChange={handleChange}
+											displayEmpty
+											name="recipients"
+										>
+											<MenuItem
+												className="MuiSelect-selectMenu"
+												disabled
+												value={``}
+											>
+												Select Recipient
+											</MenuItem>
 
-                      {recipientList?.map((item) => (
-                        <MenuItem
-                          className={classes.menuitem}
-                          value={item.id}
-                          key={item.id}
-                        >
-                          {item.title}
-                        </MenuItem>
-                      ))}
-                    </Select>
-                  </FormControl>
-                  <ErrorMessage
-                    error={errors.recipients}
-                    visible={touched.recipients}
-                  />
-                </RecipientDiv>
-              </RecipientSelectDiv>
-            </TopSelDiv>
+											{recipientList?.map((item) => (
+												<MenuItem
+													className={classes.menuitem}
+													value={item.id}
+													key={item.id}
+												>
+													{item.title}
+												</MenuItem>
+											))}
+										</Select>
+									</FormControl>
+									<ErrorMessage
+										error={errors.recipients}
+										visible={touched.recipients}
+									/>
+								</RecipientDiv>
+							</RecipientSelectDiv>
+						</TopSelDiv>
 
-            <OnewayFormCOntroller>
-              <p>Keyword</p>
-              {/* <OneWayInput /> */}
-              <div style={{ width: "78%", margin: "1em 0" }}>
-                <FormControl variant="standard" className={classes.formControl}>
-                  <TextField
-                    variant="outlined"
-                    color="secondary"
-                    type="text"
-                    fullWidth
-                    id="keyword"
-                    name="keyword"
-                    className={classes.textfield}
-                    placeholder="Keyword"
-                    disabled={isLoading}
-                    onBlur={() => setFieldTouched("keyword")}
-                    onChange={handleChange("keyword")}
-                  />
-                </FormControl>
-                {errors.keyword && (
-                  <ErrorMessage
-                    error={errors.keyword}
-                    visible={touched.keyword}
-                  />
-                )}
-              </div>
-            </OnewayFormCOntroller>
-            <OnewayFormCOntroller>
-              <p>Campaign Title</p>
-              {/* <OneWayInput /> */}
-              <div style={{ width: "78%", margin: "1em 0 2em" }}>
-                <FormControl variant="standard" className={classes.formControl}>
-                  <TextField
-                    variant="outlined"
-                    color="secondary"
-                    type="text"
-                    fullWidth
-                    id="campaignTitle"
-                    name="campaignTitle"
-                    className={classes.textfield}
-                    placeholder="campaign Title"
-                    disabled={isLoading}
-                    onBlur={() => setFieldTouched("campaignTitle")}
-                    onChange={handleChange("campaignTitle")}
-                  />
-                </FormControl>
-                {errors.campaignTitle && (
-                  <ErrorMessage
-                    error={errors.campaignTitle}
-                    visible={touched.campaignTitle}
-                  />
-                )}
-              </div>
-            </OnewayFormCOntroller>
-            <OnewayFormCOntrollerT>
-              <p>Campaign Message</p>
-              {/* <OnewayTextarea rows="7"></OnewayTextarea> */}
-              <div style={{ width: "78%" }}>
-                <FormControl
-                  variant="standard"
-                  className={classes.formControl}
-                  style={{ width: "100%" }}
-                >
-                  <TextField
-                    variant="outlined"
-                    color="secondary"
-                    type="text"
-                    fullWidth
-                    id="campaignMessage"
-                    name="campaignMessage"
-                    className={classes.textfield}
-                    placeholder="campaign Message"
-                    disabled={isLoading}
-                    onBlur={() => setFieldTouched("campaignMessage")}
-                    onChange={handleChange("campaignMessage")}
-                    multiline
-                    rows={5}
-                    value={values.campaignMessage}
-                  />
-                </FormControl>
-                {errors.campaignMessage && (
-                  <ErrorMessage
-                    error={errors.campaignMessage}
-                    visible={touched.campaignMessage}
-                  />
-                )}
-              </div>
-            </OnewayFormCOntrollerT>
-            <OnewayFormCOntroller>
-              <TextAreaCount>
-                <p>300</p>
-              </TextAreaCount>
-            </OnewayFormCOntroller>
-            <OnewayFormCOntroller>
-              <CObuttonArea>
-                {/* <KButton color="white" br="50px" p="5px 20px;" bc={createkeyword ? AppColors.footerBlue : AppColors.brandColor} onClick={toggleCreateKeyword}>
+						<OnewayFormCOntroller>
+							<p>Keyword</p>
+							{/* <OneWayInput /> */}
+							<div style={{ width: "78%", margin: "1em 0" }}>
+								<FormControl variant="standard" className={classes.formControl}>
+									<Select
+										className={classes.select}
+										variant="outlined"
+										disabled={isLoading}
+										color="secondary"
+										fullWidth
+										value={values.keyword}
+										MenuProps={{ color: "#F90" }}
+										onChange={handleChange}
+										displayEmpty
+										name="keyword"
+									>
+										<MenuItem
+											className="MuiSelect-selectMenu"
+											disabled
+											value={``}
+										>
+											Select Keyword
+										</MenuItem>
+										{keywords?.payload?.map((item) => (
+											<MenuItem
+												key={item.id}
+												value={item.keyword}
+											>
+												{item.keyword}
+											</MenuItem>
+										))}
+									</Select>
+								</FormControl>
+								<ErrorMessage
+									error={errors.Keyword}
+									visible={touched.Keyword}
+								/>
+							</div>
+						</OnewayFormCOntroller>
+						<OnewayFormCOntroller>
+							<p>Campaign Title</p>
+							{/* <OneWayInput /> */}
+							<div style={{ width: "78%", margin: "1em 0 2em" }}>
+								<FormControl variant="standard" className={classes.formControl}>
+									<TextField
+										variant="outlined"
+										color="secondary"
+										type="text"
+										fullWidth
+										id="campaignTitle"
+										name="campaignTitle"
+										className={classes.textfield}
+										placeholder="campaign Title"
+										disabled={isLoading}
+										onBlur={() => setFieldTouched("campaignTitle")}
+										onChange={handleChange("campaignTitle")}
+									/>
+								</FormControl>
+								{errors.campaignTitle && (
+									<ErrorMessage
+										error={errors.campaignTitle}
+										visible={touched.campaignTitle}
+									/>
+								)}
+							</div>
+						</OnewayFormCOntroller>
+						<OnewayFormCOntrollerT>
+							<p>Campaign Message</p>
+							{/* <OnewayTextarea rows="7"></OnewayTextarea> */}
+							<div style={{ width: "78%" }}>
+								<FormControl
+									variant="standard"
+									className={classes.formControl}
+									style={{ width: "100%" }}
+								>
+									<TextField
+										variant="outlined"
+										color="secondary"
+										type="text"
+										fullWidth
+										id="campaignMessage"
+										name="campaignMessage"
+										className={classes.textfield}
+										placeholder="campaign Message"
+										disabled={isLoading}
+										onBlur={() => setFieldTouched("campaignMessage")}
+										onChange={handleChange("campaignMessage")}
+										multiline
+										rows={5}
+										value={values.campaignMessage}
+									/>
+								</FormControl>
+								{errors.campaignMessage && (
+									<ErrorMessage
+										error={errors.campaignMessage}
+										visible={touched.campaignMessage}
+									/>
+								)}
+							</div>
+						</OnewayFormCOntrollerT>
+						<OnewayFormCOntroller>
+							<TextAreaCount>
+								<p>300</p>
+							</TextAreaCount>
+						</OnewayFormCOntroller>
+						<OnewayFormCOntroller>
+							<CObuttonArea>
+								{/* <KButton color="white" br="50px" p="5px 20px;" bc={createkeyword ? AppColors.footerBlue : AppColors.brandColor} onClick={toggleCreateKeyword}>
 									<Img width="25px" height="25px" src={alarmIcon} alt="Schedule time" />
 								</KButton> */}
-                {/* <KButton color="white" bc={AppColors.brandColor} br="50px" p="7px 30px;">
+								{/* <KButton color="white" bc={AppColors.brandColor} br="50px" p="7px 30px;">
 									Send now
 								</KButton> */}
 
-                <Tooltip title="Choose Date and Time">
-                  <IconButton
-                    onClick={openDialog}
-                    className={classes.iconButton}
-                  >
-                    <AccessAlarm />
-                  </IconButton>
-                </Tooltip>
-                <Button
-                  type="submit"
-                  onClick={handleSubmit}
-                  disabled={isLoading}
-                  variant="contained"
-                  color="secondary"
-                  disableElevation
-                  className={classes.btn}
-                >
-                  {isLoading ? "Sending..." : "Send now"}
-                </Button>
-              </CObuttonArea>
-            </OnewayFormCOntroller>
-          </form>
-        )}
-      </Formik>
-      {renderDateTimeSelectionDialog()}
-    </COnewayForm>
-  );
+								<Tooltip title="Choose Date and Time">
+									<IconButton
+										onClick={openDialog}
+										className={classes.iconButton}
+									>
+										<AccessAlarm />
+									</IconButton>
+								</Tooltip>
+								<Button
+									type="submit"
+									onClick={handleSubmit}
+									disabled={isLoading}
+									variant="contained"
+									color="secondary"
+									disableElevation
+									className={classes.btn}
+								>
+									{isLoading ? "Sending..." : "Send now"}
+								</Button>
+							</CObuttonArea>
+						</OnewayFormCOntroller>
+					</form>
+				)}
+			</Formik>
+			{renderDateTimeSelectionDialog()}
+		</COnewayForm>
+	);
 }
 
 
