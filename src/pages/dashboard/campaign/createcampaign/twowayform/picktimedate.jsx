@@ -18,11 +18,9 @@ const useStyles = makeStyles((theme) => ({
   },
   input: {
     width: "300px",
-    outline: "none",
   },
   input2: {
-    width: "400px",
-    outline: "none",
+    width: "300px",
   },
 }));
 
@@ -42,11 +40,10 @@ function Picktimedate() {
               InputLabelProps={{
                 shrink: true,
               }}
-              inputProps={{
-                step: 300, // 5 min
+              InputProps={{
                 className: classes.input,
+                disableUnderline: true,
               }}
-              InputProps={{ disableUnderline: true }}
             />
           </form>
         </TimerBtn>
@@ -58,11 +55,11 @@ function Picktimedate() {
             InputLabelProps={{
               shrink: true,
             }}
-            inputProps={{
+            InputProps={{
+              disableUnderline: true,
               step: 300, // 5 min
-              className: classes.input2,
+              className: classes.input,
             }}
-            InputProps={{ disableUnderline: true }}
           />
         </TimerBtn>
       </TimerBodyBtn>
