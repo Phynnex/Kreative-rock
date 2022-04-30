@@ -544,21 +544,22 @@ const occurrences = [
 ]
 
 const recipientList = [
-	{
-		id: 1,
-		title: 'KGB',
-		list: [
-			{
-				contactId: "89890000-ssdd",
-				phoneNumber: "2348093307276"
-			},
-			{
-				contactId: "89890000-ssrr",
-				phoneNumber: "2348093307476"
-			}
-		]
-	}
-]
+  {
+    id: 1,
+    title: "KGB",
+    list: [
+      {
+        contactId: "89890000-ssdd",
+        phoneNumber: "2348093307276",
+      },
+      {
+        contactId: "89890000-ssrr",
+        phoneNumber: "2348093307476",
+      },
+      
+    ],
+  },
+];
 
 
 const useStyles = makeStyles(theme => ({

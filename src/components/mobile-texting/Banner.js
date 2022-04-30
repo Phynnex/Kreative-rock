@@ -105,7 +105,7 @@ const Banner = () => {
               className={classes.btn}
               elevation={false}
             >
-              Get Started
+              <a href="/sign-in" style={{color:"#fff"}}>Get Started</a>
             </Button>
           </Grid>
           <Grid item xs={11} sm={11} md={6} className={classes.box1}>
