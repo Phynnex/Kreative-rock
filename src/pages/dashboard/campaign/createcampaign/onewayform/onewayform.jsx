@@ -38,6 +38,7 @@ import cogoToast from "cogo-toast"
 import { AccessAlarm, Close } from "@material-ui/icons"
 import { createCampaign } from "services/campaignService"
 import { getUserKeywords } from "services/keywordService"
+import { campaignRecurrence, recipientList } from "../twowayform/select"
 
 
 function OneWayForm() {
@@ -118,7 +119,6 @@ function OneWayForm() {
 				cogoToast.warn("Failed")
 			}
 		} catch (error) {
-			console.log(error)
 			setIsLoading(false)
 			cogoToast.warn("Network Error")
 		}
@@ -208,7 +208,7 @@ function OneWayForm() {
 									select
 									onChange={handleChangeOccurence}
 								>
-									{occurrences.map((item) => (
+									{campaignRecurrence.map((item) => (
 										<MenuItem value={item.id} key={item.id}>{item.title}</MenuItem>
 									))}
 								</TextField>
@@ -279,12 +279,10 @@ function OneWayForm() {
 							open={createkeyword}
 							close={toggleCreateKeyword}
 						/>
-						{/* <OnewayFormCOntroller> */}
 						<TopSelDiv>
 							<SenderSelectDiv>
 								<p>Sender ID</p>
 								<SenderIdDiv>
-									{/* <CustomSelectId /> */}
 									<FormControl
 										variant="standard"
 										className={classes.formControl}
@@ -330,8 +328,6 @@ function OneWayForm() {
 							<RecipientSelectDiv>
 								<p>Select Recipients</p>
 								<RecipientDiv>
-									{/* <CustomSelectId /> */}
-									{/* <p>Helllll</p> */}
 									<FormControl
 										variant="standard"
 										className={classes.formControl}
@@ -377,7 +373,6 @@ function OneWayForm() {
 
 						<OnewayFormCOntroller>
 							<p>Keyword</p>
-							{/* <OneWayInput /> */}
 							<div style={{ width: "78%", margin: "1em 0" }}>
 								<FormControl variant="standard" className={classes.formControl}>
 									<Select
@@ -417,7 +412,6 @@ function OneWayForm() {
 						</OnewayFormCOntroller>
 						<OnewayFormCOntroller>
 							<p>Campaign Title</p>
-							{/* <OneWayInput /> */}
 							<div style={{ width: "78%", margin: "1em 0 2em" }}>
 								<FormControl variant="standard" className={classes.formControl}>
 									<TextField
@@ -444,7 +438,6 @@ function OneWayForm() {
 						</OnewayFormCOntroller>
 						<OnewayFormCOntrollerT>
 							<p>Campaign Message</p>
-							{/* <OnewayTextarea rows="7"></OnewayTextarea> */}
 							<div style={{ width: "78%" }}>
 								<FormControl
 									variant="standard"
@@ -483,13 +476,6 @@ function OneWayForm() {
 						</OnewayFormCOntroller>
 						<OnewayFormCOntroller>
 							<CObuttonArea>
-								{/* <KButton color="white" br="50px" p="5px 20px;" bc={createkeyword ? AppColors.footerBlue : AppColors.brandColor} onClick={toggleCreateKeyword}>
-									<Img width="25px" height="25px" src={alarmIcon} alt="Schedule time" />
-								</KButton> */}
-								{/* <KButton color="white" bc={AppColors.brandColor} br="50px" p="7px 30px;">
-									Send now
-								</KButton> */}
-
 								<Tooltip title="Choose Date and Time">
 									<IconButton
 										onClick={openDialog}
@@ -518,48 +504,6 @@ function OneWayForm() {
 		</COnewayForm>
 	);
 }
-
-
-const occurrences = [
-	{
-		id: "once",
-		title: 'One Time'
-	},
-	{
-		id: "day",
-		title: 'Every Day'
-	},
-	{
-		id: "week",
-		title: 'Every Week'
-	},
-	{
-		id: "month",
-		title: 'Every Month'
-	},
-	{
-		id: "year",
-		title: 'Every Year'
-	}
-]
-
-const recipientList = [
-  {
-    id: 1,
-    title: "KGB",
-    list: [
-      {
-        contactId: "89890000-ssdd",
-        phoneNumber: "2348093307276",
-      },
-      {
-        contactId: "89890000-ssrr",
-        phoneNumber: "2348093307476",
-      },
-      
-    ],
-  },
-];
 
 
 const useStyles = makeStyles(theme => ({
