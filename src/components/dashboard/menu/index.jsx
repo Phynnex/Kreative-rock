@@ -24,12 +24,8 @@ export default function Menu() {
 		event.stopPropagation()
 	}
 	const { data } = useQuery("userData", getCurrentUser)
-	var myHeaders = new Headers() // Currently empty
-	const res = myHeaders.get("Authorization")
-	console.log(data, res, "Currently logged in")
 	const userData = data?.data?.profile?.personalInformation
 
-	console.log(userData?.fullname?.split(" ")[0])
 
 	return (
 		<Div>
