@@ -177,7 +177,6 @@ const SignIn = () => {
 		setisLoading(true)
 		try {
 			const response = await loginUser(data)
-			console.log(response)
 			if (response?.errors?.length > 0) {
 				setisLoading(false)
 				helpers.setSubmitting(false)

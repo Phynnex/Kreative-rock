@@ -16,5 +16,5 @@ export const ENDPOINT_CAMPAIGN = `${baseUrl2}/campaign`
 export const FIlTER_CAMPAIGN = `${baseUrl2}/campaign/filter/search`
 
 // Conversation Model
-export const ENDPOINT_MESSAGING = `${baseUrl2}/conversation`
+export const ENDPOINT_MESSAGING = `${baseUrl2}/conversations`
 export const FIlTER_MESSAGES = `${baseUrl2}/conversation/filter/search`
