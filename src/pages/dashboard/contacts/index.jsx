@@ -38,7 +38,11 @@ function ContactsPage() {
 			<ContactTop>
 				<h5>My Contacts</h5>
 
-				<ContactActionBtns onAddList={handleToggleContact} onAddContact={handleToggleAddContact} onImportContacts={handleToggleImportContact} />
+				<ContactActionBtns
+					onAddList={handleToggleContact}
+					onAddContact={handleToggleAddContact}
+					onImportContacts={handleToggleImportContact}
+				/>
 				<AddContactListForm />
 				<CreateContactsForm />
 				<ImportContactsForm />

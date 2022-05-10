@@ -11,3 +11,8 @@ export const ADD_TEAM_MEMBERS = `${baseUrl}/users/profile/add-team-member`
 export const EDIT_PERSONAL_INFO = `${baseUrl}/users/profile/edit-personal-information`
 export const EDIT_BUSINESS_INFO = `${baseUrl}/users/profile/edit-business-information`
 export const CHANGE_DP = `${baseUrl}/users/profile/edit-profile-picture`
+
+
+//contacts
+export const ADD_CONTACT = `${baseUrl}/users/contact/add-contact`
+export const GET_CONTACTS = `${baseUrl}/users/contact/all-contacts`
