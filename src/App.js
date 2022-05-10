@@ -16,6 +16,7 @@ import SignIn from "./components/sign-in/Sign-in"
 import Policy from "./pages/Policy"
 import EmailSignature from "./pages/EmailSignature"
 import Register from "./components/sign-up/Register"
+import RegisterRef from "./components/sign-up/RegisterRef"
 import ReferralCode from "./pages/ReferralCode"
 import PlaceOrder from "./pages/PlaceOrder"
 import ViewPlaceOrder from "./pages/ViewPlaceOrder"
@@ -49,6 +50,7 @@ function App() {
 							<Route path="/sign-in" component={SignIn} />
 							<Route path="/policy" component={Policy} />
 							<Route path="/register" component={Register} />
+							<Route path="/register-ref/:referralCode" component={RegisterRef} />
 							<Route path="/referral-code" component={ReferralCode} />
 							<Route path="/place-order" component={PlaceOrder} />
 							<Route path="/view-place-order" component={ViewPlaceOrder} />

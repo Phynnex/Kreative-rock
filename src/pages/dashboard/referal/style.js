@@ -117,6 +117,9 @@ export const CopyBtnRef = styled.button`
 	outline: none;
 	color: #ffffff;
 	border-radius: 0px 50px 50px 0px;
+	&:hover{
+		opacity:0.8
+	}
 `
 export const CopyDiv = styled.div`
 	width: 78%;
