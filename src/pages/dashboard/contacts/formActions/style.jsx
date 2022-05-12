@@ -85,7 +85,7 @@ export const CreateContactContainer = styled.div`
     `}
 `
 
-export const AddContactDiv = styled.form`
+export const AddContactDiv = styled.div`
 	width: 100%;
 	height: 100%;
 	display: flex;
