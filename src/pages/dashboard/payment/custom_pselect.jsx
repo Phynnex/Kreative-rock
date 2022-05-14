@@ -9,11 +9,10 @@ function CustomSelectPayment({ value, onChange, name, label, ...rest }) {
 	return (
 		<PaymentSelect>
 			<select onChange={onChange} value={value} name={name} {...rest}>
-				<option value="">{label}</option>
-				<option value="+234">+234</option>
-				<option value="+254">+254</option>
-				<option value="+233">+233</option>
-				<option value="+27">+27</option>
+				<option value="">Country Code</option>
+				<option value="NG">+234</option>
+				<option value="KE">+254</option>
+				<option value="GH">+233</option>
 			</select>
 			<div>
 				<Img width="15px" height="15px" src={fsjhf} alt="select" />
