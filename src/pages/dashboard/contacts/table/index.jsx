@@ -7,24 +7,157 @@ import deletecan from "assets/images/deleteCampaign.svg"
 import Editpen from "assets/images/editCampaign.svg"
 import sendMessage from "assets/images/send_message.svg"
 import { Div, Img, KButton, KreativeP } from "globalStyles/style"
-import cFlag from "assets/images/countryflag.png"
+// import cFlag from "assets/images/countryflag.png"
 import cUser from "assets/images/userdp.png"
 import downPointer from "assets/images/elipses_vert.svg"
 import AppColors from "utils/colors"
 import { TableScrollDiv } from "pages/dashboard/wallet/table/style"
 import { ContactPhoto } from "./style"
+import { getContacts } from "services/contactService"
+import { useQuery } from "react-query"
+import { CircularProgress } from "@material-ui/core"
 function ContactListTable() {
+	const { data: contacts } = useQuery("contacts", getContacts)
+
 	const [details, setDetails] = useState("")
 
 	const handleShowDetails = doc => {
 		setDetails(doc)
 
-		console.log(doc, "Docjs hbhydsbyd")
+		// console.log(doc, "Docjs hbhydsbyd")
+		
+	}
+
+	
+	const handleDisplay = () => {
+		if (!contacts) {
+			return (
+				<div style={{display:'flex', alignItems:'center', padding:'2rem', justifyContent:'center'}}>
+					<CircularProgress size={20}/>
+				</div>
+			)
+		}
+
+		if (contacts && contacts.status) {
+			return contentDisplay()
+		}
+	}
+
+
+	const contentDisplay = () => {
+		return (
+			<TransTableContainer>
+				<TransTableContent>
+					<TransTableBody>
+						<tr>
+							<th>
+								<Div display="flex" alignI="center">
+									Names
+								</Div>
+							</th>
+							<th>
+								<Div display="flex" alignI="center">
+									Country
+								</Div>
+							</th>
+
+							<th>
+								<Div display="flex" alignI="center">
+									Added
+								</Div>
+							</th>
+
+							<th></th>
+						</tr>
+
+						{contacts?.contacts?.map((item) => (
+							<tr key={item.id}>
+								<td>
+									<Div display="flex" alignI="center" width="90%" height="30px">
+										<ContactPhoto>
+											<Img within="25px" height="25px" src={cUser} alt="Delete" />
+										</ContactPhoto>
+										<Div>
+											<KreativeP fw="bold" ml="10px" mb="-3px">
+												{item.firstName} {item.lastName}
+											</KreativeP>
+											<KreativeP ml="10px" mb="-3px">
+												{item.jobTitle}
+											</KreativeP>
+										</Div>
+									</Div>
+								</td>
+
+								<td>
+									<Div display="flex" alignI="center" width="90%" height="30px">
+										{/* <Img within="25px" height="25px" src={cFlag} alt="Delete" /> */}
+										
+										<Div>
+											<KreativeP ml="10px" mb="-4px">
+												{item.phoneNumber}
+											</KreativeP>
+											<KreativeP ml="10px" mb="-4px">
+											{item.location}
+											</KreativeP>
+										</Div>
+									</Div>
+								</td>
+
+								<td>{new Date(item.createdAt).toLocaleDateString()}</td>
+
+								<td>
+									<KButton h="40px" p="2px 5px" bc="transparent" br="3px" color={AppColors.white} onClick={() => {handleShowDetails(item.id)}}>
+										<Img src={downPointer} alt="indicator" />
+									</KButton>
+
+									{details === item.id && (
+										<TableDetailsPageModal onClick={() => setDetails("")}>
+											<TablePopupDiv>
+												<Div display="flex" mb="10px" alignI="center" cursor="pointer" width="90%" height="30px">
+													<Img within="15px" height="15px" src={viewIcon} alt="View Contact" />
+													<KreativeP mb="-4px" ml="5px">
+														View
+													</KreativeP>
+												</Div>
+												<Div display="flex" mb="10px" alignI="center" cursor="pointer" width="90%" height="30px">
+													<Img within="20px" height="20px" src={Editpen} alt="Delete" />
+													<KreativeP mb="-4px" ml="5px">
+														Edit
+													</KreativeP>
+												</Div>
+												<Div display="flex" mb="10px" alignI="center" cursor="pointer" width="90%" height="30px">
+													<Img within="20px" height="20px" src={sendMessage} alt="Send Message" />
+													<KreativeP mb="-3px" ml="5px">
+														Send message
+													</KreativeP>
+												</Div>
+												<Div display="flex" mb="10px" alignI="center" cursor="pointer" width="90%" height="30px">
+													<Img within="20px" height="20px" src={deletecan} alt="Delete" />
+													<KreativeP mb="-4px" ml="5px">
+														Delete
+													</KreativeP>
+												</Div>
+											</TablePopupDiv>
+										</TableDetailsPageModal>
+									)}
+								</td>
+							</tr>
+
+
+						))}
+
+						
+					</TransTableBody>
+				</TransTableContent>
+			</TransTableContainer>
+
+		)
 	}
 
 	return (
 		<TableScrollDiv>
-			<TransTableContainer>
+			{handleDisplay()}
+			{/* <TransTableContainer>
 				<TransTableContent>
 					<TransTableBody>
 						<tr>
@@ -120,7 +253,7 @@ function ContactListTable() {
 						))}
 					</TransTableBody>
 				</TransTableContent>
-			</TransTableContainer>
+			</TransTableContainer> */}
 		</TableScrollDiv>
 	)
 }
