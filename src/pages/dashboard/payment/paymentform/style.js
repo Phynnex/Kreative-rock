@@ -2,7 +2,21 @@ import styled from "styled-components/macro"
 import AppColors from "utils/colors"
 import media from "utils/media"
 
-export const PayFormBody = styled.div`
+
+export const PayFormButton = styled.button`
+	width: auto;
+	// height: 46px;
+	background: #ff7900;
+	border-radius: 50px;
+	color: #fff;
+	padding:0.5rem;
+	text-transform: uppercase;
+	&:hover{
+		opacity:0.8;
+	}
+`
+
+export const PayFormBody = styled.form`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
