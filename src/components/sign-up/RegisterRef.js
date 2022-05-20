@@ -184,7 +184,7 @@ const RegisterRef = (props) => {
 		phoneNumber: "",
 		password: "",
 		c_password: "",
-		referralCode:refCode
+		referredBy:refCode
 	}
 
 	const handleChangeCountry = e => {

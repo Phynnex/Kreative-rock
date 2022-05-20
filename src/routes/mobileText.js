@@ -1,4 +1,5 @@
 const baseUrl2 = "https://kreactiverock-texting.herokuapp.com/api"
+const baseUrl3 = "https://kreactiverock-enquiry.herokuapp.com/api"
 
 //Sender iD from Stanley
 export const CREATE_SENDER_ID = `${baseUrl2}/sender-id`
@@ -18,3 +19,7 @@ export const FIlTER_CAMPAIGN = `${baseUrl2}/campaign/filter/search`
 // Conversation Model
 export const ENDPOINT_MESSAGING = `${baseUrl2}/conversations`
 export const FIlTER_MESSAGES = `${baseUrl2}/conversation/filter/search`
+
+
+//Enquiry
+export const MAKE_ENQUIRY = `${baseUrl3}`

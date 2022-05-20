@@ -29,7 +29,7 @@ export const AddListContainer = styled.div`
 	background-position: 310% 100%;  
     `}
 `
-export const ListItemsDiv = styled.div`
+export const ListItemsDiv = styled.form`
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -212,6 +212,10 @@ export const UploadFileDIv = styled.div`
 		margin-left: 10px;
 		color: #b6b6b6;
         font-size: 12px;
+	}
+	z-index:1;
+	&:hover:{
+		opacity:0.8
 	}
     `}
 `
