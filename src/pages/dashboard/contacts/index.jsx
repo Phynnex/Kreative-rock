@@ -50,39 +50,7 @@ function ContactsPage() {
 						All (22)
 					</KreativeP>
 				</FilterDivBtn>
-				<FilterDivBtn bm={filtertab === 1 ? `3px solid  ${AppColors.brandColor}` : null} onClick={() => setFilterTab(1)}>
-					<Img width="15px" height="15px" src={repliedContacts} alt="Replied Contacts" />
-					<KreativeP fs="14px" fw={filtertab === 1 ? "bold" : "normal"} color={filtertab === 1 ? AppColors.black2 : AppColors.black2}>
-						Replied (12)
-					</KreativeP>
-				</FilterDivBtn>
-				<FilterDivBtn bm={filtertab === 2 ? `3px solid  ${AppColors.brandColor}` : null} onClick={() => setFilterTab(2)} fg="0 0 70px">
-					<Img width="15px" height="15px" src={interestedContacts} alt="Interested" />
-					<KreativeP fs="14px" fw={filtertab === 2 ? "bold" : "normal"} color={filtertab === 2 ? AppColors.black2 : AppColors.black2}>
-						Interested(30)
-					</KreativeP>
-				</FilterDivBtn>
-				<FilterDivBtn bm={filtertab === 3 ? `3px solid  ${AppColors.brandColor}` : null} onClick={() => setFilterTab(3)}>
-					<Img width="15px" height="15px" src={corperateContacts} alt="Corperate Client" />
-					<KreativeP fs="14px" fw={filtertab === 3 ? "bold" : "normal"} color={filtertab === 3 ? AppColors.black2 : AppColors.black2}>
-						Corporate Clients (22)
-					</KreativeP>
-				</FilterDivBtn>
-				<FilterDivBtn bm={filtertab === 5 ? `3px solid  ${AppColors.brandColor}` : null} onClick={() => setFilterTab(5)}>
-					<Img width="15px" height="15px" src={newContacts} alt="Corperate Client" />
-					<KreativeP fs="14px" fw={filtertab === 5 ? "bold" : "normal"} color={filtertab === 5 ? AppColors.black2 : AppColors.black2}>
-						New (22)
-					</KreativeP>
-				</FilterDivBtn>
-				<FilterDivBtn bm={filtertab === 6 ? `3px solid  ${AppColors.brandColor}` : null} onClick={() => setFilterTab(6)}>
-					<Img width="15px" height="15px" src={employeeContacts} alt="Corperate Client" />
-					<KreativeP fs="14px" fw={filtertab === 6 ? "bold" : "normal"} color={filtertab === 6 ? AppColors.black2 : AppColors.black2}>
-						Employee{" "}
-					</KreativeP>
-					<KreativeP fs="11px" mt="-15px" fw={filtertab === 6 ? "bold" : "normal"} color={filtertab === 6 ? AppColors.black2 : AppColors.black2}>
-						( 22 )
-					</KreativeP>
-				</FilterDivBtn>
+				
 			</ContactFilterTab>
 			<ContactListTable />
 			<BottomActionsDiv>

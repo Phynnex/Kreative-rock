@@ -16,18 +16,10 @@ import { ContactPhoto } from "./style"
 import { getContacts } from "services/contactService"
 import { useQuery } from "react-query"
 import { CircularProgress } from "@material-ui/core"
+
 function ContactListTable() {
 	const { data: contacts } = useQuery("contacts", getContacts)
-
 	const [details, setDetails] = useState("")
-
-	const handleShowDetails = doc => {
-		setDetails(doc)
-
-		// console.log(doc, "Docjs hbhydsbyd")
-		
-	}
-
 	
 	const handleDisplay = () => {
 		if (!contacts) {
@@ -46,6 +38,8 @@ function ContactListTable() {
 
 	const contentDisplay = () => {
 		return (
+			<>
+			
 			<TransTableContainer>
 				<TransTableContent>
 					<TransTableBody>
@@ -106,20 +100,23 @@ function ContactListTable() {
 								<td>{new Date(item.createdAt).toLocaleDateString()}</td>
 
 								<td>
-									<KButton h="40px" p="2px 5px" bc="transparent" br="3px" color={AppColors.white} onClick={() => {handleShowDetails(item.id)}}>
+									<KButton h="40px" p="2px 5px" bc="transparent" br="3px" color={AppColors.white}>
 										<Img src={downPointer} alt="indicator" />
 									</KButton>
 
 									{details === item.id && (
-										<TableDetailsPageModal onClick={() => setDetails("")}>
+										<TableDetailsPageModal 
+										onClick={() => setDetails("")}>
 											<TablePopupDiv>
-												<Div display="flex" mb="10px" alignI="center" cursor="pointer" width="90%" height="30px">
-													<Img within="15px" height="15px" src={viewIcon} alt="View Contact" />
+												<Div display="flex" mb="10px" 		alignI="center" 				cursor="pointer" 				width="90%" height="30px" >
+													<Img within="15px" height="15px" src={viewIcon} alt="View Contact" 
+                              						
+							  					/>
 													<KreativeP mb="-4px" ml="5px">
 														View
 													</KreativeP>
 												</Div>
-												<Div display="flex" mb="10px" alignI="center" cursor="pointer" width="90%" height="30px">
+												<Div display="flex" mb="10px" alignI="center" cursor="pointer" width="90%" height="30px" >
 													<Img within="20px" height="20px" src={Editpen} alt="Delete" />
 													<KreativeP mb="-4px" ml="5px">
 														Edit
@@ -150,6 +147,8 @@ function ContactListTable() {
 					</TransTableBody>
 				</TransTableContent>
 			</TransTableContainer>
+			</>
+			
 
 		)
 	}

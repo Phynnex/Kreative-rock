@@ -21,15 +21,13 @@ export async function loginUser(user) {
 export async function signupUser(user) {
 	try {
 		const { data } = await http.post(`${SIGNUP_USER}`, user)
-		// console.log(data, { data: "Sign-up" })
 		return data
 	} catch (err) {
 		let error = {}
-		console.log(err, "error from api Signup")
 		if (err && err.response.data) {
 			error = err.response.data
 		} else {
-			error = { data: { message: "NetWork Error" } }
+			error = { data: { message: "Network Error" } }
 		}
 		return error
 	}
