@@ -5,43 +5,43 @@ import { useToggleContact } from "context/ContactActionsContext"
 import AppColors from "utils/colors"
 import uploadIconWhite from "assets/images/uploadicon_white.svg"
 import { ImportContactContainer, ListItemsDiv, UploadFileDIv, UploadFilePicker } from "./style"
-import { uploadContact } from "services/contactService"
+import { getContactLists, uploadContact } from "services/contactService"
 import { CircularProgress } from "@material-ui/core"
+import { useQuery } from "react-query"
+import cogoToast from "cogo-toast"
 
 function ImportContactsForm() {
 	const { stopPropagation, toggleImportContact, handleToggleImportContact } = useToggleContact()
+
+	const { data: contactListsData } = useQuery("contactLists", getContactLists)
+	const constactLists = contactListsData?.contactLists
 
 
 	const [fileName, setFileName] = useState('')
 	const [message, setMessage] = useState('')
 	const [selectedFile, setSelectedFile] = useState(null)
+	const [selectedListId, setSelectedListId] = useState('')
 	const [loading, setLoading] = useState(false)
-
-
-	const csvType = 'text/csv'
 
 
 	const handleChange = (e) => {
 		const file = e?.target.files[0]
-		if (file?.type !== csvType) {
-			setMessage('Uploaded File must be an excel format')
-		} else {
-			setFileName(file.name)
-			setSelectedFile(file)
-			console.log(file)
-		}
-
+		setFileName(file.name)
+		setSelectedFile(file)
 	}
-
 
 	const handleSubmit = async () => {
 		setLoading(true)
-		try {
-			const response = await uploadContact("1", selectedFile)
-			console.log(response)
-		} catch (e) {
-
-		}
+		
+		uploadContact(selectedListId, selectedFile).then(res => {
+			setLoading(false)
+			console.log(res)
+			cogoToast.success("Success")
+		}).catch(err => {
+			setLoading(false)
+			console.log(err)
+			cogoToast.warn("Failed")
+		})
 	}
 
 
@@ -51,6 +51,17 @@ function ImportContactsForm() {
 			<ImportContactContainer onClick={stopPropagation}>
 				<ListItemsDiv>
 					<KreativeP fw="bold">Import Contact</KreativeP>
+					<Div mt="20px" width="100%" display="flex">
+						<select
+							style={{ border: '1px solid gray', width: '100%' }}
+							onChange={(e) => setSelectedListId(e.target.value)}
+						>
+							<option value="1">Select List</option>
+							{constactLists?.map((list) => (
+								<option value={list.id}>{list.name}</option>
+							))}
+						</select>
+					</Div>
 					<UploadFileDIv>
 						<h6>{fileName === '' ? 'No file selected' : fileName}</h6>
 						<UploadFilePicker>
@@ -59,7 +70,9 @@ function ImportContactsForm() {
 							<input
 								type="file"
 								style={{ width: '100%', position: 'absolute', opacity: '0' }}
+								accept="text/csv"
 								onChange={(e) => handleChange(e)}
+								// onChange={(e) => setSelectedFile(e.target.files[0])}
 								onClick={() => setMessage('')}
 							/>
 						</UploadFilePicker>
