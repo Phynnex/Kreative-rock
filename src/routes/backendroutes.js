@@ -17,6 +17,7 @@ export const CHANGE_DP = `${baseUrl}/users/profile/edit-profile-picture`
 export const ADD_CONTACT = `${baseUrl}/users/contact/add-contact`
 export const ADD_CONTACT_LIST = `${baseUrl}/users/contact/add-contact-list`
 export const GET_CONTACTS = `${baseUrl}/users/contact/all-contacts`
+export const GET_CONTACTLIST = `${baseUrl}/users/contact/all-lists`
 export const UPLOAD_CONTACTS = `${baseUrl}/users/contact/upload-contact`
 
 //Payment Model
