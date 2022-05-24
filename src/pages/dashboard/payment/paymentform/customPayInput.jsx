@@ -20,7 +20,7 @@ const SpecialInput = styled.input`
 	color: #a4a4a4;
 	appearance: none;
 	background: transparent;
-	border-bottom: 1px solid #e2e2e2;
+	border-bottom: 1px solid #a4a4a4;
 	::active {
 		border-bottom: 1px solid ${AppColors.brandColor};
 	}

@@ -7,8 +7,8 @@ export const PayFormButton = styled.button`
 	width: auto;
 	// height: 46px;
 	background: #ff7900;
-	border-radius: 50px;
-	color: #fff;
+	border-radius: 8px;
+	color: ${AppColors.white};
 	padding:0.5rem;
 	text-transform: uppercase;
 	&:hover{
@@ -24,9 +24,11 @@ export const PayFormBody = styled.form`
 export const PayFormContainer = styled.div`
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	gap: 40px;
-	margin-top: 25px;
+	margin: 25px 0px 50px;
 
 	${media.mobile`
     flex-direction: column;
@@ -58,6 +60,7 @@ export const PaymentSelect = styled.div`
 	height: 74.5px;
 	width: 100%;
 	border: none;
+	padding-left: 16px;
 	display: flex;
 	color: ${AppColors.lightBlack};
 	align-items: flex-end;
@@ -85,15 +88,16 @@ export const PaymentSelect = styled.div`
 		appearance: none;
 		option {
 			color: ${AppColors.lightBlack};
-			background: transparent;
+			background: ${AppColors.newsLetterBg};
 			border: none;
 			margin-top: 10px;
+			font-size: 20px;
 		}
 	}
 	div {
 		position: absolute;
 		right: 2%;
-		color: ${AppColors.white};
+		color: ${AppColors.newsLetterBg};
 		background: transparent;
 
 		height: 100%;

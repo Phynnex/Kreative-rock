@@ -86,6 +86,7 @@ export const BottomActionsDiv = styled.div`
 export const ContactTop = styled.div`
   display: flex;
   justify-content: space-between;
+  // margin-bottom: 20px;
   align-items: center;
   /* ${media.smallDesktopMinimum`
 	flex-direction: column;

@@ -110,9 +110,9 @@ export const HalfAddInputDiv = styled.div`
 `
 export const CountrySelect = styled.div`
 	position: relative;
-	height: 50px;
-	width: 20%;
-	margin-top: 18px;
+	height: 40px;
+	width: 100%;
+	margin: 0px 0px 18px;
 	border: none;
 	display: flex;
 	color: ${AppColors.lightBlack};
@@ -135,7 +135,7 @@ export const CountrySelect = styled.div`
 		padding: 0em 1em 0em 1em;
 		background: transparent;
 		color: ${AppColors.lightBlack};
-		border: none;
+		border: ${AppColors.green};
 		outline: none;
 		border-radius: 3px;
 		appearance: none;
@@ -225,7 +225,7 @@ export const UploadFilePicker = styled.div`
 	display: flex;
 	align-items: center;
 	padding: 0px 10px;
-	gap: 10px;
+	gap: 30px;
 	color: ${AppColors.white};
 	background: #00cca7;
 	border-radius: 10px;

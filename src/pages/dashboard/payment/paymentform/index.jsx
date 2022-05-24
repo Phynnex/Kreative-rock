@@ -84,7 +84,7 @@ function PaynowForm() {
 
 		if (paymentChannel === 'flutterwave') {
 			return (
-				<div>Pay with Flutterwav</div>
+				<div>Pay with Flutterwave</div>
 			)
 		}
 	}
@@ -121,7 +121,7 @@ function PaynowForm() {
 						label="Number"
 						type='tel'
 						placeholder="Phone Number"
-						value={user?.data?.user?.profile?.personalInformation?.email}
+						value={user?.data?.user?.profile?.personalInformation?.phoneNumber}
 					/>
 				</PayFormLeft>
 				<PayFormLeft>
@@ -144,9 +144,9 @@ function PaynowForm() {
 				</PayFormLeft>
 			</PayFormContainer>
 			<PayFormContainer>
-				<BottomFormItems>
+				{/* <BottomFormItems>
 					<CustomPayInput label="CARD NUMBER" placeholder="0315237478332" />
-				</BottomFormItems>
+				</BottomFormItems> */}
 				<BottomFormItems>
 					{/* <CustomPayInput label="Number" placeholder="0315237478332" /> */}
 					<PayFormButton type="submit">

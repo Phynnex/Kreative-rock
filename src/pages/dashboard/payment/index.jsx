@@ -1,7 +1,8 @@
 import ScrollToTop from "components/ScrollToTop"
 import React from "react"
 import PaynowForm from "./paymentform"
-import { CardBottomItemsDiv, CardBottomItems, PaymentCardDiv, PaymentCardInner, PaymentContainer, PaymentDiv, PaymentTopDiv } from "./style"
+import { PaymentContainer, PaymentDiv, PaymentHero   } from "./style"
+import payment from "assets/images/payment.png"
 
 function PaymentPage() {
 	return (
@@ -9,8 +10,13 @@ function PaymentPage() {
 			<ScrollToTop />
 			<br />
 			<PaymentContainer>
+
 				<PaymentDiv>
-					<PaymentTopDiv>
+					<PaymentHero>
+						<h1 style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>Your Payment Details</h1>
+						<img src={payment} alt="payment" />
+					</PaymentHero>
+					{/* <PaymentTopDiv>
 						<h4>Your payment details</h4>
 						<PaymentCardDiv>
 							<PaymentCardInner>
@@ -31,7 +37,7 @@ function PaymentPage() {
 								</CardBottomItemsDiv>
 							</PaymentCardInner>
 						</PaymentCardDiv>
-					</PaymentTopDiv>
+					</PaymentTopDiv> */}
 					<PaynowForm />
 				</PaymentDiv>
 			</PaymentContainer>

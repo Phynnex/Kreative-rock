@@ -3,9 +3,15 @@ import paymentProp from "assets/images/payment_prop.svg"
 import AppColors from "utils/colors"
 import media from "utils/media"
 
+export const PaymentHero = styled.div `
+	display: flex;
+	justify-content: space-around;
+	padding-top: 22px;
+`
+
 export const PaymentContainer = styled.div`
 	width: 100%;
-	/* height: 100vh; */
+	// height: 100vh;
 	padding: 0px 50px;
 	margin-top: 56px;
 	/* background: #f9fcff; */
@@ -35,7 +41,7 @@ export const PaymentContainer = styled.div`
 export const PaymentDiv = styled.div`
 	width: 100%;
 	/* height: 80vh; */
-	display: flex;
+	// display: flex;
 	flex-direction: column;
 	margin-top: 125px;
 	background: linear-gradient(270deg, #dbf7f7 50%, rgba(225, 237, 247, 0) 103.88%);

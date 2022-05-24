@@ -4,11 +4,17 @@ import { CreateKeywordOverlay } from "pages/dashboard/keywords/createkeyword/sty
 import { useToggleContact } from "context/ContactActionsContext"
 import AppColors from "utils/colors"
 import uploadIconWhite from "assets/images/uploadicon_white.svg"
-import { ImportContactContainer, ListItemsDiv, UploadFileDIv, UploadFilePicker } from "./style"
+import { CountrySelect, ImportContactContainer, ListItemsDiv, UploadFileDIv, UploadFilePicker } from "./style"
 import { getContactLists, uploadContact } from "services/contactService"
 import { CircularProgress } from "@material-ui/core"
 import { useQuery } from "react-query"
 import cogoToast from "cogo-toast"
+import fsjhf from "assets/images/arrowdown.svg"
+
+
+
+
+
 
 function ImportContactsForm() {
 	const { stopPropagation, toggleImportContact, handleToggleImportContact } = useToggleContact()
@@ -52,15 +58,26 @@ function ImportContactsForm() {
 				<ListItemsDiv>
 					<KreativeP fw="bold">Import Contact</KreativeP>
 					<Div mt="20px" width="100%" display="flex">
-						<select
-							style={{ border: '1px solid gray', width: '100%' }}
-							onChange={(e) => setSelectedListId(e.target.value)}
-						>
-							<option value="1">Select List</option>
-							{constactLists?.map((list) => (
-								<option value={list.id}>{list.name}</option>
-							))}
-						</select>
+						<CountrySelect>
+							<select
+								onChange={(e) => setSelectedListId(e.target.value)}
+							>
+								<option value="1">Select List</option>
+								{constactLists?.map((list) => (
+									<option value={list.id}>{list.name}</option>
+								))}
+								
+							</select>
+							<div>
+								<Img 
+									width="15px" 
+									height="15px" 
+									src={fsjhf} 
+									alt="select" 
+								/>
+							</div>
+						</CountrySelect>
+						
 					</Div>
 					<UploadFileDIv>
 						<h6>{fileName === '' ? 'No file selected' : fileName}</h6>
