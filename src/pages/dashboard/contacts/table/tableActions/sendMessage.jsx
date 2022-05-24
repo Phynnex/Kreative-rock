@@ -79,7 +79,7 @@ function SendMessage({ loading, onContinue, loadingText, closeform, ref }) {
 				<KButton 
 					w="25%" 
 					br="8px" 
-					p="10px 0px" 
+					p="0px" 
 					border={AppColors.brandColor} 
 					bc={AppColors.brandColor} 
 					color={AppColors.white} 

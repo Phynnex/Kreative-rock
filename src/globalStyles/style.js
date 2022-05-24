@@ -19,6 +19,8 @@ export const KDiv = styled.div`
 	margin: ${({ margin }) => (margin ? margin : null)};
 	padding: ${({ padding }) => (padding ? padding : `1rem`)};
 	display: ${({ display }) => display};
+	flex-direction: ${({ fd }) => fd};
+
 	flex-wrap: ${({ wrap }) => wrap};
 	align-items: ${({ alignI }) => alignI};
 	align-self: ${({ align }) => (align ? align : null)};

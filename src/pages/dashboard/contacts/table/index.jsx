@@ -25,6 +25,7 @@ import { CircularProgress } from "@material-ui/core";
 import DeleteContact from "./tableActions/delete";
 import EditContactsForm from "./tableActions/edit";
 import SendMessage from "./tableActions/sendMessage";
+import ViewContact from "./tableActions/view";
 
 
 function ContactListTable() {
@@ -34,7 +35,8 @@ function ContactListTable() {
   const [contact, setContact] = useState({});
 	const [isSubmiting, setIsSubmiting] = useState(false);
 	const [show, setShow] = useState(false);
-	const [message, setMessage] = useState(false)
+	const [message, setMessage] = useState(false);
+	const [viewContact, setViewContact] = useState(false);
 
 
 
@@ -73,6 +75,15 @@ function ContactListTable() {
     // setAdmin({});
   };
 
+  const handleViewContact = (id) => {
+    setContact(id);
+    setViewContact(true);
+  };
+
+  const closeViewContact = () => {
+    setViewContact(false);
+    // setAdmin({});
+  };
  
 
   
@@ -107,10 +118,9 @@ function ContactListTable() {
         detail={contact}
         close={handleCloseEditForm}
       />
-
-      <ContactsOverlay open={show} >
-        <DeleteContact
-          closeform={closeDelete}
+      <ContactsOverlay open={viewContact} >
+        <ViewContact
+          closeform={closeViewContact}
           loadingText="Deleting..."
         //  onContinue={handleDeletePrices}
           loading={isSubmiting}
@@ -125,6 +135,17 @@ function ContactListTable() {
           loading={isSubmiting}
         />
       </ContactsOverlay>
+
+      <ContactsOverlay open={show} >
+        <DeleteContact
+          closeform={closeDelete}
+          loadingText="Deleting..."
+        //  onContinue={handleDeletePrices}
+          loading={isSubmiting}
+        />
+      </ContactsOverlay>
+
+      
       
       <TransTableContainer>
         <TransTableContent>
@@ -215,6 +236,8 @@ function ContactListTable() {
                           cursor="pointer"
                           width="90%"
                           height="30px"
+                          onClick={() => handleViewContact (item)}
+
 
                         >
                           <Img
