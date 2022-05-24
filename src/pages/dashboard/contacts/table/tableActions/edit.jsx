@@ -4,7 +4,7 @@ import { CreateKeywordOverlay } from "pages/dashboard/keywords/createkeyword/sty
 import { useToggleContact } from "context/ContactActionsContext"
 import AppColors from "utils/colors"
 import CustomSelectCountryCode from "./countryCodeSelect"
-import { AddContactDiv, AddListInput, CreateContactContainer, HalfAddInputDiv } from "./style"
+import { AddContactDiv, AddListInput, CreateContactContainer, HalfAddInputDiv } from "../../formActions/style"
 import { useFormik } from "formik"
 import * as Yup from 'yup'
 import ErrorMessage from "components/common/ErrorMessage"
@@ -12,8 +12,8 @@ import { createContact } from "services/contactService"
 import { CircularProgress } from "@material-ui/core"
 import cogoToast from "cogo-toast"
 
-function CreateContactsForm({isOpen, close, detail }) {
-	const { stopPropagation, toggleaddContact, handleToggleAddContact } = useToggleContact()
+function EditContactsForm({isOpen, close, detail }) {
+	const { stopPropagation,  handleToggleAddContact } = useToggleContact()
 	const [loading, setLoading] = useState(false)
 
 
@@ -60,8 +60,7 @@ function CreateContactsForm({isOpen, close, detail }) {
 	}
 
 	return (
-		<CreateKeywordOverlay open={toggleaddContact} onClick={handleToggleAddContact} >
-			{/* open={isOpen} onClick={!loading && close} */}
+		<CreateKeywordOverlay open={isOpen} onClick={!loading && close} >
 			<CreateContactContainer onClick={stopPropagation}>
 				<AddContactDiv onSubmit={formik.handleSubmit}>
 					<KreativeP fw="bold">Create New Contact</KreativeP>
@@ -157,4 +156,4 @@ function CreateContactsForm({isOpen, close, detail }) {
 	)
 }
 
-export default CreateContactsForm
+export default EditContactsForm

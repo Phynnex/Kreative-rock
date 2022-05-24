@@ -6,7 +6,7 @@ import logo from "assets/images/logoimg.png"
 import media from "utils/media"
 
 
-import { KButton } from 'globalStyles/style';
+import { Img, KButton } from 'globalStyles/style';
 
 const VerificationContainer = styled.div `
     display: flex;
@@ -114,8 +114,8 @@ const verificationPage = () => {
             </Left>
          
             <Right>
-				<img src={logo} alt="logo" width="600px" height="120px" />
-                <img src={signin} alt= "verify" width="640px" height="490px"/>
+				<Img src={logo} alt="logo" w="560px" h="180px" />
+                <Img src={signin} alt= "verify" w="600px" h="600px" m="40px 0px 0px"/>
             </Right>
             
         </VerificationContainer>

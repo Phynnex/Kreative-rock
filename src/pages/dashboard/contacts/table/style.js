@@ -146,3 +146,18 @@ export const ContactPhoto = styled.div`
 		border-radius: 50%;
 	}
 `
+
+export const ContactsOverlay = styled.div`
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 600;
+  background: rgba(0, 0, 0, 0.42);
+  display: ${({ open }) => (open ? "flex" : "none")};
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+  animation-duration: 0.5s;
+`;

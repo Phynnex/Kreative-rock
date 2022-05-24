@@ -28,7 +28,7 @@ import Dashboard from "pages/dashboard"
 import ProtectedRoute from "Utilities/ProtectedRoutes"
 import PaymentPage from "pages/dashboard/payment"
 import { QueryClient, QueryClientProvider } from "react-query"
-import verificationPage from "pages/dashboard/verificationPage"
+import verificationPage from "components/verificationPage"
 
 function App() {
 	const queryClient = new QueryClient()
