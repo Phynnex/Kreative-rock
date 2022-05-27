@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { KreativeP, KButton, Div, Img, KTextArea } from "globalStyles/style"
 import closebtn from "assets/images/cancel.svg"
 import AppColors from "utils/colors"
@@ -37,59 +37,64 @@ const BtnContainer = styled.div`
 	justify-content: flex-end;
 `
 
-function SendMessage({ loading, onContinue, loadingText, closeform, ref }) {
+function SendMessage({ loading, onContinue, loadingText, closeform, ref, detail }) {
+	const [message, setMessage] = useState('')
+
+	const handleSendMessage = () => {
+		console.log(message)
+	}
 	return (
 		<VerifyFormContainer>
 			<Div width="100%" display="flex" justify="flex-end">
-				<KButton 
+				<KButton
 					w="40px"
-				 	h="40px" 
-					r="50%" 
-					ref={ref} 
-					bc="transparent" 
+					h="40px"
+					r="50%"
+					ref={ref}
+					bc="transparent"
 					color={AppColors.brandColor}
-					onClick={!loading && closeform} 
+					onClick={!loading && closeform}
 					disabled={loading}
 				>
-					<Img 
-						width="15px" 
+					<Img
+						width="15px"
 						height="15px"
-						src={closebtn} 
-						alt="Close Verification" 
+						src={closebtn}
+						alt="Close Verification"
 					/>
 				</KButton>
 			</Div>
 
 			<Div width="100%">
-				<KreativeP tAlign=" left">+2347034390904</KreativeP>
+				<KreativeP tAlign=" left">{detail.phoneNumber}</KreativeP>
 			</Div>
-            < KTextArea
+			< KTextArea
 				border={AppColors.green}
 				h="100%"
 				br="8px"
 				p="10px"
 				color={AppColors.grey}
-
+				onChange={(e) => setMessage(e.target.value)}
 			>
 
-                Enter Message Here
-            </KTextArea>
+				Enter Message Here
+			</KTextArea>
 
 			<BtnContainer>
-				<KButton 
-					w="25%" 
-					br="8px" 
-					p="0px" 
-					border={AppColors.brandColor} 
-					bc={AppColors.brandColor} 
-					color={AppColors.white} 
-					disabled={loading} 
-					onClick={!loading && onContinue}
+				<KButton
+					w="25%"
+					br="8px"
+					p="0px"
+					border={AppColors.brandColor}
+					bc={AppColors.brandColor}
+					color={AppColors.white}
+					disabled={loading}
+					onClick={handleSendMessage}
 				>
 					{loading ? loadingText : "SEND"}
 				</KButton>
 			</BtnContainer>
-			
+
 		</VerifyFormContainer>
 	)
 }

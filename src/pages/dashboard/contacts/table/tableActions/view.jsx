@@ -37,7 +37,7 @@ const BtnContainer = styled.div`
 	justify-content: flex-end;
 `
 
-function ViewContact({ loading, onContinue, loadingText, closeform, ref }) {
+function ViewContact({ loading, onContinue, loadingText, closeform, ref, detail }) {
 	return (
 		<VerifyFormContainer>
 			<Div 
@@ -50,15 +50,15 @@ function ViewContact({ loading, onContinue, loadingText, closeform, ref }) {
 					display="flex"
 					mb="8px"
 				>
-					<KreativeP tAlign=" left" fw="bold">Name :</KreativeP>
-					<KreativeP ml="12px">Fyne</KreativeP>
+					<KreativeP tAlign=" left" fw="bold">First Name :</KreativeP>
+					<KreativeP ml="12px">{detail?.firstName}</KreativeP>
 				</Div>
 				<Div 
 					display="flex"
 					mb="8px"
 				>
 					<KreativeP tAlign=" left" fw="bold">Last Name :</KreativeP>
-					<KreativeP ml="12px">Angala</KreativeP>
+					<KreativeP ml="12px">{detail?.lastName}</KreativeP>
 
 				</Div>
 				<Div 
@@ -66,28 +66,28 @@ function ViewContact({ loading, onContinue, loadingText, closeform, ref }) {
 					mb="8px"
 				>
 					<KreativeP tAlign=" left" fw="bold">Email :</KreativeP>
-					<KreativeP ml="12px">angalafynetonye@gmail.com</KreativeP>
+					<KreativeP ml="12px">{detail?.email}</KreativeP>
 				</Div>
 				<Div 
 					display="flex"
 					mb="8px"
 				>
 					<KreativeP tAlign=" left" fw="bold">Phone Number :</KreativeP>
-					<KreativeP ml="12px">+2347034390904</KreativeP>
+					<KreativeP ml="12px">{detail?.phoneNumber}</KreativeP>
 				</Div>
 				<Div 
 					display="flex"
 					mb="8px"
 				>
 					<KreativeP tAlign=" left" fw="bold">Job Title:</KreativeP>
-					<KreativeP ml="12px">Software Developer</KreativeP>
+					<KreativeP ml="12px">{detail?.jobTitle}</KreativeP>
 				</Div>
 				<Div 
 					display="flex"
 					mb="8px"
 				>
 					<KreativeP tAlign=" left" fw="bold">Location:</KreativeP>
-					<KreativeP ml="12px">Lagos</KreativeP>
+					<KreativeP ml="12px">{detail?.location}</KreativeP>
 				</Div>
 				
 			</Div>

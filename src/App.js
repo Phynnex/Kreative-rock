@@ -28,7 +28,7 @@ import Dashboard from "pages/dashboard"
 import ProtectedRoute from "Utilities/ProtectedRoutes"
 import PaymentPage from "pages/dashboard/payment"
 import { QueryClient, QueryClientProvider } from "react-query"
-import verificationPage from "components/verificationPage"
+import VerificationPage from "components/VerificationPage"
 
 function App() {
 	const queryClient = new QueryClient()
@@ -50,7 +50,7 @@ function App() {
 							<Route path="/pricing" component={Pricing} />
 							<Route path="/sign-in" component={SignIn} />
 							<Route path="/policy" component={Policy} />
-							<Route path="/verify" component={verificationPage} />
+							<Route path="/verify" component={VerificationPage} />
 							<Route path="/register" component={Register} />
 							<Route path="/register-ref/:referralCode" component={RegisterRef} />
 							<Route path="/referral-code" component={ReferralCode} />

@@ -17,6 +17,7 @@ import useGeoLocation from "react-ipgeolocation"
 import { useAuthContext } from "context/AuthContext"
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min"
 import { DASHBOARDHOME } from "pages/dashboard/ROUTESCONTS"
+import { useKreativeUser } from "context/userDetailsContext"
 const useStyles = makeStyles(theme => ({
 	items: {
 		paddingTop: "4em",
@@ -158,9 +159,10 @@ const useStyles = makeStyles(theme => ({
 	}
 }))
 const Register = () => {
+	const { kreativerUser, setKreativeUser } = useKreativeUser()
+	const { user, setUser } = useAuthContext()
 	const [country, setCountry] = useState("nigeria")
 	const [isLoading, setIsLoading] = useState(false)
-	const { user } = useAuthContext()
 	const location = useGeoLocation()
 	const history = useHistory()
 	const classes = useStyles()
@@ -203,9 +205,17 @@ const Register = () => {
 			const response = await signupUser(mainData)
 			console.log(response)
 			if (response.id) {
+				setUser({
+					isAuth: true,
+					data: { user: response?.user, token: response?.token }
+				})
+				setKreativeUser({
+					...kreativerUser
+				})
 				cogoToast.success("Registration was successful")
 				setIsLoading(false)
-				history.push("/sign-in")
+				// history.push("/sign-in")
+				history.push("/verify")
 			}
 			if (response.errors.length > 0) {
 				cogoToast.warn(response.errors[0].message)
