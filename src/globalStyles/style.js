@@ -141,6 +141,7 @@ export const KButton = styled.button`
 	border-bottom: ${({ bm }) => (bm ? bm : null)};
 	&:hover {
 		background: ${({ hv }) => (hv ? hv : null)};
+		opacity:0.8;
 	}
 `
 

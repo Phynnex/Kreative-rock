@@ -62,11 +62,11 @@ function ContactListTable() {
 
   const handleCloseEditForm = () => {
     setIsOpen(!isOpen);
-    setContact({});
+    // setContact({});
   };
 
-  const handleSendMessage = (id) => {
-    setContact(id);
+  const handleSendMessage = (doc) => {
+    setContact(doc);
     setMessage(true);
   };
 
@@ -124,6 +124,7 @@ function ContactListTable() {
           loadingText="Deleting..."
         //  onContinue={handleDeletePrices}
           loading={isSubmiting}
+          detail={contact}
         />
       </ContactsOverlay>
 
@@ -133,6 +134,7 @@ function ContactListTable() {
           loadingText="Deleting..."
         //  onContinue={handleDeletePrices}
           loading={isSubmiting}
+          detail={contact}
         />
       </ContactsOverlay>
 

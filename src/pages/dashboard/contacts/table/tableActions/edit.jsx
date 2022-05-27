@@ -8,47 +8,46 @@ import { AddContactDiv, AddListInput, CreateContactContainer, HalfAddInputDiv } 
 import { useFormik } from "formik"
 import * as Yup from 'yup'
 import ErrorMessage from "components/common/ErrorMessage"
-import { createContact } from "services/contactService"
+import { editContact } from "services/contactService"
 import { CircularProgress } from "@material-ui/core"
 import cogoToast from "cogo-toast"
 
-function EditContactsForm({isOpen, close, detail }) {
-	const { stopPropagation,  handleToggleAddContact } = useToggleContact()
+function EditContactsForm({ isOpen, close, detail }) {
+	const { stopPropagation, handleToggleAddContact } = useToggleContact()
 	const [loading, setLoading] = useState(false)
-
 
 
 	const formik = useFormik({
 		initialValues: {
-			firstName: "",
-			lastName: "",
+			firstName:detail?.firstName,
+			lastName: detail?.lastName,
 			countryCode: "",
-			phoneNumber: "",
-			email: "",
-			jobTitle: "",
-			location: "",
-			note: ""
+			phoneNumber: detail?.email,
+			email: detail?.phoneNumber,
+			jobTitle: detail?.jobTitle,
+			location: detail?.location,
+			note: detail?.note
 		},
 		validationSchema: Yup.object({
 			phoneNumber: Yup.string()
-				.required("Please enter the phone numbet")
+				.required("Please enter the phone number")
 		}),
 		onSubmit: (values) => { handleSubmit(values) }
 	})
 
 	const handleSubmit = async (values) => {
-
 		setLoading(true)
 
 		values = { ...values, phoneNumber: values.phoneNumber.toString() }
 		console.log(values)
 		try {
-			const response = await createContact(values)
+			const response = await editContact(detail?.id, values)
+			console.log(response)
 
 			if (response.status === true) {
 				setLoading(false)
-				cogoToast.success("Contact successfully created")
-				handleToggleAddContact(false)
+				cogoToast.success("Contact successfully updated")
+				close()
 			} else {
 				setLoading(false)
 				cogoToast.warn("Failed")
@@ -63,7 +62,7 @@ function EditContactsForm({isOpen, close, detail }) {
 		<CreateKeywordOverlay open={isOpen} onClick={!loading && close} >
 			<CreateContactContainer onClick={stopPropagation}>
 				<AddContactDiv onSubmit={formik.handleSubmit}>
-					<KreativeP fw="bold">Create New Contact</KreativeP>
+					<KreativeP fw="bold">Edit Contact</KreativeP>
 					<HalfAddInputDiv>
 						<AddListInput
 							w="49%"

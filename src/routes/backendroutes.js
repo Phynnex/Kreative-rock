@@ -15,6 +15,7 @@ export const CHANGE_DP = `${baseUrl}/users/profile/edit-profile-picture`
 
 //contacts
 export const ADD_CONTACT = `${baseUrl}/users/contact/add-contact`
+export const EDIT_CONTACT = `${baseUrl}/users/contact/edit-contact`
 export const ADD_CONTACT_LIST = `${baseUrl}/users/contact/add-contact-list`
 export const GET_CONTACTS = `${baseUrl}/users/contact/all-contacts`
 export const GET_CONTACTLIST = `${baseUrl}/users/contact/all-lists`

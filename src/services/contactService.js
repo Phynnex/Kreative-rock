@@ -1,6 +1,13 @@
 
 
-import { ADD_CONTACT, ADD_CONTACT_LIST, GET_CONTACTLIST, GET_CONTACTS, UPLOAD_CONTACTS } from "routes/backendroutes"
+import {
+	ADD_CONTACT,
+	ADD_CONTACT_LIST,
+	EDIT_CONTACT,
+	GET_CONTACTLIST,
+	GET_CONTACTS,
+	UPLOAD_CONTACTS
+} from "routes/backendroutes"
 import http from "./httpService"
 
 export async function getContacts() {
@@ -37,6 +44,21 @@ export async function getContactLists() {
 export async function createContact(payload) {
 	try {
 		const { data } = await http.post(`${ADD_CONTACT}`, payload)
+		return data
+	} catch (err) {
+		let error = {}
+		if (err && err.response.data) {
+			error = { message: err.response.data.message }
+		} else {
+			error = { message: "NetWork Error" }
+		}
+		return error
+	}
+}
+
+export async function editContact(id, payload) {
+	try {
+		const { data } = await http.put(`${EDIT_CONTACT}/${id}`, payload)
 		return data
 	} catch (err) {
 		let error = {}
