@@ -1,6 +1,5 @@
 import React from "react"
-import { KreativeP, KButton, Div, Img, KTextArea } from "globalStyles/style"
-import closebtn from "assets/images/cancel.svg"
+import { KreativeP, KButton, Div } from "globalStyles/style"
 import AppColors from "utils/colors"
 import styled from "styled-components"
 import media from "utils/media"
