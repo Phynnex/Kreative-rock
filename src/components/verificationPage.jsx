@@ -90,9 +90,11 @@ const VerificationPage = () => {
     const [loadingCode, setLoadingCode] = useState(false)
 
 
+
+
     const handleSubmit = async (values) => {
         setLoading(true)
-        const combine = Object.values(values).join('')
+        //const combine = Object.values(values).join('')
         const url = `${baseUrl}/user/profile/verify-email`
         const headers = { 'Authorization': `Bearer ${user.token}` }
 
