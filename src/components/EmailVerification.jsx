@@ -82,19 +82,16 @@ display:none;
 `}
 `
 
-const VerificationPage = () => {
+const EmailVerification = () => {
     const history = useHistory()
     const { user } = useAuthContext()
 
     const [loading, setLoading] = useState(false)
     const [loadingCode, setLoadingCode] = useState(false)
 
-
-
-
     const handleSubmit = async (values) => {
         setLoading(true)
-        //const combine = Object.values(values).join('')
+        const combine = Object.values(values).join('')
         const url = `${baseUrl}/user/profile/verify-email`
         const headers = { 'Authorization': `Bearer ${user.token}` }
 
@@ -248,4 +245,4 @@ const VerificationPage = () => {
 
 
 
-export default VerificationPage;
+export default EmailVerification;
