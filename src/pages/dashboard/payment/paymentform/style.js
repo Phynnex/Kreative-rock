@@ -4,14 +4,13 @@ import media from "utils/media"
 
 
 export const PayFormButton = styled.button`
-	width: 150px;
+	width: auto;
 	// height: 46px;
 	background: #ff7900;
 	border-radius: 8px;
 	color: ${AppColors.white};
 	padding:0.5rem;
 	text-transform: uppercase;
-	color:#FFFFFF;
 	&:hover{
 		opacity:0.8;
 	}
