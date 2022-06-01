@@ -13,7 +13,7 @@ import { CircularProgress } from "@material-ui/core"
 import cogoToast from "cogo-toast"
 
 function EditContactsForm({ isOpen, close, detail }) {
-	const { stopPropagation, handleToggleAddContact } = useToggleContact()
+	const { stopPropagation } = useToggleContact()
 	const [loading, setLoading] = useState(false)
 
 
