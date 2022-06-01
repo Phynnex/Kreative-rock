@@ -3,7 +3,6 @@ import CustomSelectPayment from "../custom_pselect"
 import CustomPayInput from "./customPayInput"
 import { BottomFormItems, PayFormBody, PayFormButton, PayFormContainer, PayFormLeft } from "./style"
 import { PaystackButton } from 'react-paystack'
-import { FlutterWaveButton, closePaymentModal } from 'flutterwave-react-v3';
 import { useFormik } from "formik"
 import { useAuthContext } from "context/AuthContext"
 import { makePayment } from "services/paymentService"
@@ -11,80 +10,56 @@ import cogoToast from "cogo-toast"
 
 function PaynowForm() {
 	const { user } = useAuthContext()
-	const [amount, setAmount] = useState()
-	const [onPaystackPaymentSuccess, setOnPaystackPaymentSuccess] = useState(false)
-	const [onFlutterwavePaymentSuccess, setOnFlutterwavePaymentSuccess] = useState(false)
+	const [paymentChannel, setPaymentChannel] = useState('paystack')
+	const [amount, setAmount] = useState(0)
+	const [onPaymentSuccess, setOnPaymentSuccess] = useState(false)
+	const amountPerUnit = 2
 
-	const publicKey = "pk_live_1e105f5cccc44742e89176e056ba648c6ea0ff20"
+	const publicKey = "pk_test_84b3767aee8c1415ddff028d4f5ee66640fc9d5e"
 
 	const componentProps = {
 		email: user?.data?.user?.profile?.personalInformation?.email,
-		amount: amount * 100,
+		amount: `${amount}`,
 		metadata: {
 			name: user?.data?.user?.profile?.personalInformation?.fullname,
 			phone: user?.data?.user?.profile?.personalInformation?.phoneNumber,
 		},
 		publicKey,
-		text: "Pay Now",
-		onSuccess: () => setOnPaystackPaymentSuccess(true),
-		onClose: () => setOnPaystackPaymentSuccess(false),
+		text: "Pay with Paystack",
+		onSuccess: () => setOnPaymentSuccess(true),
+		onClose: () => setOnPaymentSuccess(false),
+	}
+
+	console.log(onPaymentSuccess)
+
+	const handleSelectPaymentMethod = (value) => {
+		console.log(value)
+		if (value === 'NG' || value === '') {
+			setPaymentChannel('paystack')
+		} else {
+			setPaymentChannel('flutterwave')
+		}
 	}
 
 
-	const config = {
-		public_key: 'FLWPUBK-9cb2df7832b406d5568bb7a366f723d2-X',
-		tx_ref: Date.now(),
-		amount: amount,
-		currency: 'NGN',
-		payment_options: 'card,mobilemoney,ussd',
-		customer: {
-			email: user?.data?.user?.profile?.personalInformation?.email,
-			phonenumber: user?.data?.user?.profile?.personalInformation?.phoneNumber,
-			name: user?.data?.user?.profile?.personalInformation?.fullname,
-		},
-		customizations: {
-			title: 'Top your wallet',
-			description: 'Payment for items in cart',
-			// logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
-		},
-	};
-
-
-	const fwConfig = {
-		...config,
-		text: 'Pay Now',
-		callback: (response) => {
-			setOnFlutterwavePaymentSuccess(true)
-			console.log(response);
-			closePaymentModal() // this will close the modal programmatically
-		},
-		onClose: () => {
-			setOnFlutterwavePaymentSuccess(false)
-		},
-	};
-
-
 	useEffect(() => {
-		handlePaystackPayment()
+		handlePayment()
 		// eslint-disable-next-line
-	}, [onPaystackPaymentSuccess, onFlutterwavePaymentSuccess])
+	}, [onPaymentSuccess])
 
 
-	const handlePaystackPayment = async () => {
+	const handlePayment = async () => {
 		try {
-			if (onPaystackPaymentSuccess || onFlutterwavePaymentSuccess) {
-				console.log(`paystack: ${onPaystackPaymentSuccess}`)
-				console.log(`paystack: ${onFlutterwavePaymentSuccess}`)
-
+			if (onPaymentSuccess) {
 				const param = {
 					customerEmail: user?.data?.user?.profile?.personalInformation?.email,
 					amountDue: amount
 				}
+				console.log(param)
 				const response = await makePayment(param)
 				console.log(response)
-
 				if (response.status) {
-					cogoToast.success("Payment submitted successfully")
+					cogoToast.success("Payment submitted successfully. Your unit will be topped")
 				} else {
 					cogoToast.ward("Failed to subbmit payment")
 				}
@@ -95,12 +70,34 @@ function PaynowForm() {
 	}
 
 
+
+
+	const renderPaymentButton = () => {
+		if (paymentChannel === 'paystack') {
+			return (
+				<PaystackButton
+					{...componentProps}
+					style={{ background: '#ff7900', border: '1px solid gray' }}
+				/>
+			)
+		}
+
+		if (paymentChannel === 'flutterwave') {
+			return (
+				<div>Pay with Flutterwave</div>
+			)
+		}
+	}
+
 	const formik = useFormik({
 		initialValues: {
+			fullName: '',
+			email: '',
+			phone: '',
 			countryCode: '',
-			amount: ''
+			purchaseQuantity: ''
 		},
-		//onSubmit: (values) => { handleSubmit(values) }
+		onSubmit: (values) => { }
 	})
 
 
@@ -134,34 +131,27 @@ function PaynowForm() {
 						placeholder="Select Country"
 						value={formik.values.countryCode}
 						onChange={formik.handleChange}
+						onMouseUp={(e) => handleSelectPaymentMethod(e.target.value)}
 					/>
 					<CustomPayInput
 						type="number"
-						label="Purchase Amount"
-						value={amount}
-						onChange={(e) => setAmount(Number(e.target.value))}
+						label="Purchase Quantity"
+						name="purchaseQuantity"
+						value={formik.values.purchaseQuantity}
+						onChange={formik.handleChange}
+						onKeyUp={e => setAmount(Number(amountPerUnit * e.target.value * 100))}
 					/>
 				</PayFormLeft>
 			</PayFormContainer>
 			<PayFormContainer>
+				{/* <BottomFormItems>
+					<CustomPayInput label="CARD NUMBER" placeholder="0315237478332" />
+				</BottomFormItems> */}
 				<BottomFormItems>
-					<div style={{ display: "flex", alignItems:'center' }}>
-						<PayFormButton type="submit">
-							<PaystackButton
-								{...componentProps}
-							/>
-						</PayFormButton>
-						<div style={{marginLeft:'10px'}}>Local Only</div>
-					</div>
-
-					<div style={{ display: "flex", alignItems:'center' }}>
-						<PayFormButton type="submit">
-							<FlutterWaveButton
-								{...fwConfig}
-							/>
-						</PayFormButton>
-						<div style={{marginLeft:'10px'}}>Local & International</div>
-					</div>
+					{/* <CustomPayInput label="Number" placeholder="0315237478332" /> */}
+					<PayFormButton type="submit">
+						{renderPaymentButton()}
+					</PayFormButton>
 				</BottomFormItems>
 			</PayFormContainer>
 
