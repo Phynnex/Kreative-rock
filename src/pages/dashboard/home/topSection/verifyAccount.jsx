@@ -35,7 +35,6 @@ function VerifyAccountInput() {
 			}).catch(error => {
 				setLoading(false)
 				cogoToast.error("Something went wrong. Please try again!!")
-				handleToggleContact()
 			})
 		}
 	}
