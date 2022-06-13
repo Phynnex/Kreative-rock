@@ -1,5 +1,5 @@
 import http from "./httpService"
-import { LOGIN_USER, SIGNUP_USER } from "routes/backendroutes"
+import { LOGIN_USER, SIGNUP_USER, VERIFY_PHONENUMBER } from "routes/backendroutes"
 
 export async function loginUser(user) {
 	try {
@@ -43,6 +43,22 @@ export async function signOutUser(user) {
 			error = err.response.data
 		} else {
 			error = { data: { message: "NetWork Error" } }
+		}
+		return error
+	}
+}
+
+
+export async function sendSmsVerificationCode(payload) {
+	try {
+		const { data } = await http.post(`${VERIFY_PHONENUMBER}`, payload)
+		return data
+	} catch (err) {
+		let error = {}
+		if (err && err.response.data) {
+			error = { message: err.response.data.message }
+		} else {
+			error = { message: "NetWork Error" }
 		}
 		return error
 	}

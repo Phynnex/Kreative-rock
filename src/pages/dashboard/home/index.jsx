@@ -7,20 +7,20 @@ import MTLabelSection from "./charts/labelsection"
 import MTchartPie from "./charts/piechart"
 import { MtAnaltics, MtAnalticsContainer, MTChartsLeft, MTChartsRight, MtHome, MTmainBody, MTmainCharts, MtTopMost } from "./style"
 
-import DashboardTopSection from "./topSection"
+//import DashboardTopSection from "./topSection"
 import MobileTextingCard from "./topSection/analytics"
 import MtDChart1 from "./topSection/chart"
 import copy from "assets/images/copyicon.svg"
 import earningIcon from "assets/images/earningHome.svg"
-import Verifycode from "./topSection/verifycode"
+//import Verifycode from "./topSection/verifycode"
 
 function DashboardPage() {
 	return (
 		<MTmainBody>
 			<MtTopMost></MtTopMost>
-			<Verifycode />
+			{/* <Verifycode /> */}
 			<MtHome>
-				<DashboardTopSection />
+				{/* <DashboardTopSection /> */}
 				<MtAnalticsContainer>
 					<MtAnaltics>
 						<MobileTextingCard icon={earningIcon} textBolod="41.7K" desc="Earning" />

@@ -184,7 +184,7 @@ const RegisterRef = (props) => {
 		phoneNumber: "",
 		password: "",
 		c_password: "",
-		referredBy:refCode
+		referredBy: refCode
 	}
 
 	const handleChangeCountry = e => {
@@ -208,7 +208,7 @@ const RegisterRef = (props) => {
 			if (response.id) {
 				cogoToast.success("Registration was successful")
 				setIsLoading(false)
-				history.push("/sign-in")
+				history.push("/verify")
 			}
 			if (response.errors.length > 0) {
 				cogoToast.warn(response.errors[0].message)
@@ -216,7 +216,7 @@ const RegisterRef = (props) => {
 			}
 		} catch (error) {
 			if (error) {
-				cogoToast.warn("Network Error")
+				cogoToast.error("Network Error")
 				setIsLoading(false)
 			}
 		}
@@ -313,7 +313,7 @@ const RegisterRef = (props) => {
 											MenuProps={{ color: "#F90" }}
 											onChange={e => handleChangeCountry(e)}
 											displayEmpty
-											// inputProps={{ "aria-label": "Without label" }}
+										// inputProps={{ "aria-label": "Without label" }}
 										>
 											<MenuItem className="MuiSelect-selectMenu" disabled value={country}>
 												<em>Country</em>

@@ -12,7 +12,7 @@ import { Img, KButton } from 'globalStyles/style';
 import { useAuthContext } from 'context/AuthContext';
 import axios from 'axios';
 import { baseUrl } from 'routes/backendroutes';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useHistory } from 'react-router-dom';
 import cogoToast from 'cogo-toast';
 import { CircularProgress } from '@material-ui/core';
 
@@ -86,6 +86,8 @@ const EmailVerification = () => {
     const history = useHistory()
     const { user } = useAuthContext()
 
+    const userToken = user?.data?.token
+
     const [loading, setLoading] = useState(false)
     const [loadingCode, setLoadingCode] = useState(false)
 
@@ -93,14 +95,17 @@ const EmailVerification = () => {
         setLoading(true)
         const combine = Object.values(values).join('')
         const url = `${baseUrl}/user/profile/verify-email`
-        const headers = { 'Authorization': `Bearer ${user.token}` }
+        const headers = { 'Authorization': `Bearer ${userToken}` }
+        const param = {
+            verificationCode: combine
+        }
 
-        axios.post(url, null, { headers }).then(res => {
+        axios.post(url, param, { headers }).then(res => {
             setLoading(false)
             cogoToast.success("Verification Successfull")
 
             setInterval(() => {
-                history.push("/sign-in")
+                history.push('/dashboard/logout')
             }, 2000)
         }).catch(error => {
             setLoading(false)
@@ -112,7 +117,7 @@ const EmailVerification = () => {
     const handleResendCode = () => {
         setLoadingCode(true)
         const url = `${baseUrl}/user/auth/resend-verification-code`
-        const headers = { 'Authorization': `Bearer ${user.token}` }
+        const headers = { 'Authorization': `Bearer ${userToken}` }
 
         axios.post(url, null, { headers }).then(res => {
             setLoadingCode(false)
