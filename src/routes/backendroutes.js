@@ -12,6 +12,8 @@ export const EDIT_PERSONAL_INFO = `${baseUrl}/users/profile/edit-personal-inform
 export const EDIT_BUSINESS_INFO = `${baseUrl}/users/profile/edit-business-information`
 export const CHANGE_DP = `${baseUrl}/users/profile/edit-profile-picture`
 
+export const VERIFY_PHONENUMBER = `${baseUrl}/users/auth/send-sms-verification-code`
+
 
 //contacts
 export const ADD_CONTACT = `${baseUrl}/users/contact/add-contact`
@@ -20,6 +22,8 @@ export const ADD_CONTACT_LIST = `${baseUrl}/users/contact/add-contact-list`
 export const GET_CONTACTS = `${baseUrl}/users/contact/all-contacts`
 export const GET_CONTACTLIST = `${baseUrl}/users/contact/all-lists`
 export const UPLOAD_CONTACTS = `${baseUrl}/users/contact/upload-contact`
+
+
 
 //Payment Model
 export const MAKE_PAYMENT = `${baseUrl}/users/referral/request-payment`
