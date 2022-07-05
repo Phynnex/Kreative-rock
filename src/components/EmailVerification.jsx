@@ -103,7 +103,6 @@ const EmailVerification = () => {
         axios.post(url, param, { headers }).then(res => {
             setLoading(false)
             cogoToast.success("Verification Successfull")
-
             setInterval(() => {
                 history.push('/dashboard/logout')
             }, 2000)
