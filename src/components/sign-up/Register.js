@@ -182,16 +182,37 @@ const Register = () => {
 		email: "",
 		phoneNumber: "",
 		password: "",
-		c_password: ""
+		c_password: "",
+		country: country
 	}
 
+
 	const handleChangeCountry = e => {
-		setCountry(e.target.value)
+		const { value } = e.target
+		console.log(value)
+		setCountry(value)
 	}
 	function LoggedInStatus() {
 		return <Redirect to={DASHBOARDHOME} />
 	}
 	const handleSignup = async (values, helpers) => {
+		if (country === 'nigeria') {
+			values = { ...values, country: 'NG' }
+		}
+
+		if (country === 'kenya') {
+			values = { ...values, country: 'KE' }
+		}
+
+		if (country === 'ghana') {
+			values = { ...values, country: 'GH' }
+		}
+
+		if (country === 'south-africa') {
+			values = { ...values, country: 'ZA' }
+		}
+
+		//console.log(values)
 		setIsLoading(true)
 		if (values.password !== values.c_password) {
 			cogoToast.warn("Confirm Password must be equal to password")
@@ -202,30 +223,56 @@ const Register = () => {
 		let mainData = { ...userData, country }
 		delete mainData.c_password
 		try {
-			const response = await signupUser(mainData)
-			console.log(response)
-			if (response.id) {
-				setUser({
-					isAuth: true,
-					data: { user: response?.user, token: response?.token }
-				})
-				setKreativeUser({
-					...kreativerUser
-				})
-				cogoToast.success("Registration was successful")
-				setIsLoading(false)
-				// history.push("/sign-in")
-				history.push("/verify")
-			}
-			if (response.errors.length > 0) {
-				cogoToast.warn(response.errors[0].message)
-				setIsLoading(false)
-			}
+			signupUser(values).then(res => {
+
+				if (res?.token != undefined) {
+					setUser({
+						isAuth: true,
+						data: { user: res?.user, token: res?.token }
+					})
+					setKreativeUser({
+						...kreativerUser
+					})
+					setIsLoading(false)
+					cogoToast.success("Registration was successful")
+					history.push("/verify")
+				} else {
+					if (res.errors.length > 0) {
+						cogoToast.warn(res.errors[0].message)
+						setIsLoading(false)
+					}
+				}
+
+
+			}).catch(error => {
+				console.log(error.response)
+				cogoToast.warn(error.response.errors[0].message)
+			})
+
+			// console.log(response)
+			// if (response.id) {
+			// 	setUser({
+			// 		isAuth: true,
+			// 		data: { user: response?.user, token: response?.token }
+			// 	})
+			// 	setKreativeUser({
+			// 		...kreativerUser
+			// 	})
+			// 	cogoToast.success("Registration was successful")
+			// 	setIsLoading(false)
+			// 	// history.push("/sign-in")
+			// 	history.push("/verify")
+			// }
+			// if (response.errors.length > 0) {
+			// 	cogoToast.warn(response.errors[0].message)
+			// 	setIsLoading(false)
+			// }
 		} catch (error) {
 			if (error) {
 				cogoToast.warn("Network Error")
 				setIsLoading(false)
 			}
+			//history.push("/verify")
 		}
 	}
 
@@ -318,11 +365,13 @@ const Register = () => {
 											disabled={isLoading}
 											color="secondary"
 											fullWidth
+											name="country"
+											id="country"
 											value={country}
 											MenuProps={{ color: "#F90" }}
 											onChange={e => handleChangeCountry(e)}
 											displayEmpty
-											// inputProps={{ "aria-label": "Without label" }}
+										// inputProps={{ "aria-label": "Without label" }}
 										>
 											<MenuItem className="MuiSelect-selectMenu" disabled value={country}>
 												<em>Country</em>
